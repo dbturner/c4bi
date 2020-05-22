@@ -1,11 +1,13 @@
 Package: c4bi
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Coding for broader impact
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: person("Daniel", "Turner", email = "danturner137@gmail.com",
+                  role = c("aut", "cre"))
+Description: A collection of tools to create iteratively produced customizable documents using R and RMarkdown.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    ggplot2
+RoxygenNote: 7.1.0
