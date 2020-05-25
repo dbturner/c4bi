@@ -1,0 +1,745 @@
+Site,sitetype,Scientific name,Present,Common Name
+A,Garden,Aratinga pertinax,1,Brown-throated Parrot
+B,Garden,Aratinga pertinax,0,Brown-throated Parrot
+C,Forest,Aratinga pertinax,1,Brown-throated Parrot
+D,Garden,Aratinga pertinax,1,Brown-throated Parrot
+E,Scrub,Aratinga pertinax,1,Brown-throated Parrot
+F,Scrub,Aratinga pertinax,1,Brown-throated Parrot
+G,Forest,Aratinga pertinax,1,Brown-throated Parrot
+H,Forest,Aratinga pertinax,1,Brown-throated Parrot
+I,Forest,Aratinga pertinax,1,Brown-throated Parrot
+J,Garden,Aratinga pertinax,1,Brown-throated Parrot
+K,Garden,Aratinga pertinax,1,Brown-throated Parrot
+L,Scrub,Aratinga pertinax,1,Brown-throated Parrot
+M,Garden,Aratinga pertinax,1,Brown-throated Parrot
+N,Garden,Aratinga pertinax,1,Brown-throated Parrot
+O,Garden,Aratinga pertinax,0,Brown-throated Parrot
+P,Forest,Aratinga pertinax,1,Brown-throated Parrot
+Q,Garden,Aratinga pertinax,1,Brown-throated Parrot
+R,Garden,Aratinga pertinax,1,Brown-throated Parrot
+S,Scrub,Aratinga pertinax,1,Brown-throated Parrot
+T,Forest,Aratinga pertinax,1,Brown-throated Parrot
+U,Garden,Aratinga pertinax,1,Brown-throated Parrot
+V,Garden,Aratinga pertinax,1,Brown-throated Parrot
+X,Garden,Aratinga pertinax,1,Brown-throated Parrot
+Y,Garden,Aratinga pertinax,1,Brown-throated Parrot
+Z,Scrub,Aratinga pertinax,1,Brown-throated Parrot
+AA,Garden,Aratinga pertinax,1,Brown-throated Parrot
+BB,Scrub,Aratinga pertinax,1,Brown-throated Parrot
+CC,Garden,Aratinga pertinax,1,Brown-throated Parrot
+DD,Garden,Aratinga pertinax,1,Brown-throated Parrot
+EE,Scrub,Aratinga pertinax,1,Brown-throated Parrot
+FF,Garden,Aratinga pertinax,1,Brown-throated Parrot
+A,Garden,Caracara cheriway,0,Crested Caracara
+B,Garden,Caracara cheriway,0,Crested Caracara
+C,Forest,Caracara cheriway,0,Crested Caracara
+D,Garden,Caracara cheriway,0,Crested Caracara
+E,Scrub,Caracara cheriway,1,Crested Caracara
+F,Scrub,Caracara cheriway,0,Crested Caracara
+G,Forest,Caracara cheriway,0,Crested Caracara
+H,Forest,Caracara cheriway,0,Crested Caracara
+I,Forest,Caracara cheriway,1,Crested Caracara
+J,Garden,Caracara cheriway,0,Crested Caracara
+K,Garden,Caracara cheriway,0,Crested Caracara
+L,Scrub,Caracara cheriway,0,Crested Caracara
+M,Garden,Caracara cheriway,0,Crested Caracara
+N,Garden,Caracara cheriway,0,Crested Caracara
+O,Garden,Caracara cheriway,0,Crested Caracara
+P,Forest,Caracara cheriway,0,Crested Caracara
+Q,Garden,Caracara cheriway,0,Crested Caracara
+R,Garden,Caracara cheriway,0,Crested Caracara
+S,Scrub,Caracara cheriway,1,Crested Caracara
+T,Forest,Caracara cheriway,0,Crested Caracara
+U,Garden,Caracara cheriway,0,Crested Caracara
+V,Garden,Caracara cheriway,0,Crested Caracara
+X,Garden,Caracara cheriway,0,Crested Caracara
+Y,Garden,Caracara cheriway,0,Crested Caracara
+Z,Scrub,Caracara cheriway,0,Crested Caracara
+AA,Garden,Caracara cheriway,0,Crested Caracara
+BB,Scrub,Caracara cheriway,1,Crested Caracara
+CC,Garden,Caracara cheriway,0,Crested Caracara
+DD,Garden,Caracara cheriway,0,Crested Caracara
+EE,Scrub,Caracara cheriway,0,Crested Caracara
+FF,Garden,Caracara cheriway,0,Crested Caracara
+A,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+B,Garden,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+C,Forest,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+D,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+E,Scrub,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+F,Scrub,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+G,Forest,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+H,Forest,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+I,Forest,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+J,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+K,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+L,Scrub,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+M,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+N,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+O,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+P,Forest,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+Q,Garden,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+R,Garden,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+S,Scrub,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+T,Forest,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+U,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+V,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+X,Garden,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+Y,Garden,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+Z,Scrub,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+AA,Garden,Chlorostilbon mellisugus,0,Blue-tailed Emerald
+BB,Scrub,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+CC,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+DD,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+EE,Scrub,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+FF,Garden,Chlorostilbon mellisugus,1,Blue-tailed Emerald
+A,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+B,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+C,Forest,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+D,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+E,Scrub,Chrysolampis mosquitus,1,Ruby-topaz Hummingbird
+F,Scrub,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+G,Forest,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+H,Forest,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+I,Forest,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+J,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+K,Garden,Chrysolampis mosquitus,1,Ruby-topaz Hummingbird
+L,Scrub,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+M,Garden,Chrysolampis mosquitus,1,Ruby-topaz Hummingbird
+N,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+O,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+P,Forest,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+Q,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+R,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+S,Scrub,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+T,Forest,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+U,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+V,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+X,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+Y,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+Z,Scrub,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+AA,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+BB,Scrub,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+CC,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+DD,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+EE,Scrub,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+FF,Garden,Chrysolampis mosquitus,0,Ruby-topaz Hummingbird
+A,Garden,Coereba Hveola,1,Bananaquit
+B,Garden,Coereba Hveola,1,Bananaquit
+C,Forest,Coereba Hveola,1,Bananaquit
+D,Garden,Coereba Hveola,1,Bananaquit
+E,Scrub,Coereba Hveola,1,Bananaquit
+F,Scrub,Coereba Hveola,1,Bananaquit
+G,Forest,Coereba Hveola,1,Bananaquit
+H,Forest,Coereba Hveola,1,Bananaquit
+I,Forest,Coereba Hveola,1,Bananaquit
+J,Garden,Coereba Hveola,1,Bananaquit
+K,Garden,Coereba Hveola,1,Bananaquit
+L,Scrub,Coereba Hveola,0,Bananaquit
+M,Garden,Coereba Hveola,1,Bananaquit
+N,Garden,Coereba Hveola,1,Bananaquit
+O,Garden,Coereba Hveola,1,Bananaquit
+P,Forest,Coereba Hveola,1,Bananaquit
+Q,Garden,Coereba Hveola,1,Bananaquit
+R,Garden,Coereba Hveola,1,Bananaquit
+S,Scrub,Coereba Hveola,1,Bananaquit
+T,Forest,Coereba Hveola,1,Bananaquit
+U,Garden,Coereba Hveola,1,Bananaquit
+V,Garden,Coereba Hveola,1,Bananaquit
+X,Garden,Coereba Hveola,1,Bananaquit
+Y,Garden,Coereba Hveola,1,Bananaquit
+Z,Scrub,Coereba Hveola,1,Bananaquit
+AA,Garden,Coereba Hveola,0,Bananaquit
+BB,Scrub,Coereba Hveola,1,Bananaquit
+CC,Garden,Coereba Hveola,1,Bananaquit
+DD,Garden,Coereba Hveola,1,Bananaquit
+EE,Scrub,Coereba Hveola,1,Bananaquit
+FF,Garden,Coereba Hveola,1,Bananaquit
+A,Garden,Colinus cristatus,0,Bananaquit
+B,Garden,Colinus cristatus,0,Bananaquit
+C,Forest,Colinus cristatus,0,Bananaquit
+D,Garden,Colinus cristatus,0,Bananaquit
+E,Scrub,Colinus cristatus,0,Bananaquit
+F,Scrub,Colinus cristatus,0,Bananaquit
+G,Forest,Colinus cristatus,0,Bananaquit
+H,Forest,Colinus cristatus,0,Bananaquit
+I,Forest,Colinus cristatus,0,Bananaquit
+J,Garden,Colinus cristatus,0,Bananaquit
+K,Garden,Colinus cristatus,1,Bananaquit
+L,Scrub,Colinus cristatus,0,Bananaquit
+M,Garden,Colinus cristatus,0,Bananaquit
+N,Garden,Colinus cristatus,0,Bananaquit
+O,Garden,Colinus cristatus,0,Bananaquit
+P,Forest,Colinus cristatus,0,Bananaquit
+Q,Garden,Colinus cristatus,0,Bananaquit
+R,Garden,Colinus cristatus,0,Bananaquit
+S,Scrub,Colinus cristatus,0,Bananaquit
+T,Forest,Colinus cristatus,0,Bananaquit
+U,Garden,Colinus cristatus,1,Bananaquit
+V,Garden,Colinus cristatus,0,Bananaquit
+X,Garden,Colinus cristatus,1,Bananaquit
+Y,Garden,Colinus cristatus,0,Bananaquit
+Z,Scrub,Colinus cristatus,1,Bananaquit
+AA,Garden,Colinus cristatus,0,Bananaquit
+BB,Scrub,Colinus cristatus,0,Bananaquit
+CC,Garden,Colinus cristatus,0,Bananaquit
+DD,Garden,Colinus cristatus,0,Bananaquit
+EE,Scrub,Colinus cristatus,0,Bananaquit
+FF,Garden,Colinus cristatus,0,Bananaquit
+A,Garden,Columbina passerina,1,Common Ground Dove
+B,Garden,Columbina passerina,1,Common Ground Dove
+C,Forest,Columbina passerina,0,Common Ground Dove
+D,Garden,Columbina passerina,1,Common Ground Dove
+E,Scrub,Columbina passerina,0,Common Ground Dove
+F,Scrub,Columbina passerina,0,Common Ground Dove
+G,Forest,Columbina passerina,0,Common Ground Dove
+H,Forest,Columbina passerina,1,Common Ground Dove
+I,Forest,Columbina passerina,0,Common Ground Dove
+J,Garden,Columbina passerina,0,Common Ground Dove
+K,Garden,Columbina passerina,1,Common Ground Dove
+L,Scrub,Columbina passerina,0,Common Ground Dove
+M,Garden,Columbina passerina,0,Common Ground Dove
+N,Garden,Columbina passerina,1,Common Ground Dove
+O,Garden,Columbina passerina,1,Common Ground Dove
+P,Forest,Columbina passerina,0,Common Ground Dove
+Q,Garden,Columbina passerina,0,Common Ground Dove
+R,Garden,Columbina passerina,1,Common Ground Dove
+S,Scrub,Columbina passerina,1,Common Ground Dove
+T,Forest,Columbina passerina,0,Common Ground Dove
+U,Garden,Columbina passerina,1,Common Ground Dove
+V,Garden,Columbina passerina,1,Common Ground Dove
+X,Garden,Columbina passerina,0,Common Ground Dove
+Y,Garden,Columbina passerina,1,Common Ground Dove
+Z,Scrub,Columbina passerina,0,Common Ground Dove
+AA,Garden,Columbina passerina,0,Common Ground Dove
+BB,Scrub,Columbina passerina,0,Common Ground Dove
+CC,Garden,Columbina passerina,0,Common Ground Dove
+DD,Garden,Columbina passerina,1,Common Ground Dove
+EE,Scrub,Columbina passerina,1,Common Ground Dove
+FF,Garden,Columbina passerina,0,Common Ground Dove
+A,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+B,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+C,Forest,Crotophaga sulcirostris,0,Groove-billed Ani
+D,Garden,Crotophaga sulcirostris,1,Groove-billed Ani
+E,Scrub,Crotophaga sulcirostris,0,Groove-billed Ani
+F,Scrub,Crotophaga sulcirostris,0,Groove-billed Ani
+G,Forest,Crotophaga sulcirostris,0,Groove-billed Ani
+H,Forest,Crotophaga sulcirostris,0,Groove-billed Ani
+I,Forest,Crotophaga sulcirostris,0,Groove-billed Ani
+J,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+K,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+L,Scrub,Crotophaga sulcirostris,0,Groove-billed Ani
+M,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+N,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+O,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+P,Forest,Crotophaga sulcirostris,0,Groove-billed Ani
+Q,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+R,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+S,Scrub,Crotophaga sulcirostris,0,Groove-billed Ani
+T,Forest,Crotophaga sulcirostris,0,Groove-billed Ani
+U,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+V,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+X,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+Y,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+Z,Scrub,Crotophaga sulcirostris,0,Groove-billed Ani
+AA,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+BB,Scrub,Crotophaga sulcirostris,0,Groove-billed Ani
+CC,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+DD,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+EE,Scrub,Crotophaga sulcirostris,0,Groove-billed Ani
+FF,Garden,Crotophaga sulcirostris,0,Groove-billed Ani
+A,Garden,Dendroica Yechia,0,Yellow Warbler
+B,Garden,Dendroica Yechia,0,Yellow Warbler
+C,Forest,Dendroica Yechia,1,Yellow Warbler
+D,Garden,Dendroica Yechia,1,Yellow Warbler
+E,Scrub,Dendroica Yechia,1,Yellow Warbler
+F,Scrub,Dendroica Yechia,1,Yellow Warbler
+G,Forest,Dendroica Yechia,0,Yellow Warbler
+H,Forest,Dendroica Yechia,1,Yellow Warbler
+I,Forest,Dendroica Yechia,0,Yellow Warbler
+J,Garden,Dendroica Yechia,0,Yellow Warbler
+K,Garden,Dendroica Yechia,1,Yellow Warbler
+L,Scrub,Dendroica Yechia,1,Yellow Warbler
+M,Garden,Dendroica Yechia,0,Yellow Warbler
+N,Garden,Dendroica Yechia,1,Yellow Warbler
+O,Garden,Dendroica Yechia,1,Yellow Warbler
+P,Forest,Dendroica Yechia,0,Yellow Warbler
+Q,Garden,Dendroica Yechia,0,Yellow Warbler
+R,Garden,Dendroica Yechia,0,Yellow Warbler
+S,Scrub,Dendroica Yechia,1,Yellow Warbler
+T,Forest,Dendroica Yechia,1,Yellow Warbler
+U,Garden,Dendroica Yechia,1,Yellow Warbler
+V,Garden,Dendroica Yechia,1,Yellow Warbler
+X,Garden,Dendroica Yechia,0,Yellow Warbler
+Y,Garden,Dendroica Yechia,0,Yellow Warbler
+Z,Scrub,Dendroica Yechia,1,Yellow Warbler
+AA,Garden,Dendroica Yechia,0,Yellow Warbler
+BB,Scrub,Dendroica Yechia,1,Yellow Warbler
+CC,Garden,Dendroica Yechia,0,Yellow Warbler
+DD,Garden,Dendroica Yechia,1,Yellow Warbler
+EE,Scrub,Dendroica Yechia,1,Yellow Warbler
+FF,Garden,Dendroica Yechia,0,Yellow Warbler
+A,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+B,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+C,Forest,Elaenia chiriquensis,1,Lesser Elaenia
+D,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+E,Scrub,Elaenia chiriquensis,1,Lesser Elaenia
+F,Scrub,Elaenia chiriquensis,0,Lesser Elaenia
+G,Forest,Elaenia chiriquensis,0,Lesser Elaenia
+H,Forest,Elaenia chiriquensis,0,Lesser Elaenia
+I,Forest,Elaenia chiriquensis,1,Lesser Elaenia
+J,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+K,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+L,Scrub,Elaenia chiriquensis,1,Lesser Elaenia
+M,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+N,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+O,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+P,Forest,Elaenia chiriquensis,0,Lesser Elaenia
+Q,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+R,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+S,Scrub,Elaenia chiriquensis,1,Lesser Elaenia
+T,Forest,Elaenia chiriquensis,0,Lesser Elaenia
+U,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+V,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+X,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+Y,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+Z,Scrub,Elaenia chiriquensis,0,Lesser Elaenia
+AA,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+BB,Scrub,Elaenia chiriquensis,0,Lesser Elaenia
+CC,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+DD,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+EE,Scrub,Elaenia chiriquensis,0,Lesser Elaenia
+FF,Garden,Elaenia chiriquensis,0,Lesser Elaenia
+A,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+B,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+C,Forest,Elaenia Vtinica,0,Caribbean Elaenia
+D,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+E,Scrub,Elaenia Vtinica,0,Caribbean Elaenia
+F,Scrub,Elaenia Vtinica,0,Caribbean Elaenia
+G,Forest,Elaenia Vtinica,0,Caribbean Elaenia
+H,Forest,Elaenia Vtinica,0,Caribbean Elaenia
+I,Forest,Elaenia Vtinica,0,Caribbean Elaenia
+J,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+K,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+L,Scrub,Elaenia Vtinica,0,Caribbean Elaenia
+M,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+N,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+O,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+P,Forest,Elaenia Vtinica,0,Caribbean Elaenia
+Q,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+R,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+S,Scrub,Elaenia Vtinica,1,Caribbean Elaenia
+T,Forest,Elaenia Vtinica,0,Caribbean Elaenia
+U,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+V,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+X,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+Y,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+Z,Scrub,Elaenia Vtinica,0,Caribbean Elaenia
+AA,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+BB,Scrub,Elaenia Vtinica,0,Caribbean Elaenia
+CC,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+DD,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+EE,Scrub,Elaenia Vtinica,0,Caribbean Elaenia
+FF,Garden,Elaenia Vtinica,0,Caribbean Elaenia
+A,Garden,Falco sparverius,0,American Kestrel
+B,Garden,Falco sparverius,0,American Kestrel
+C,Forest,Falco sparverius,0,American Kestrel
+D,Garden,Falco sparverius,0,American Kestrel
+E,Scrub,Falco sparverius,1,American Kestrel
+F,Scrub,Falco sparverius,0,American Kestrel
+G,Forest,Falco sparverius,0,American Kestrel
+H,Forest,Falco sparverius,0,American Kestrel
+I,Forest,Falco sparverius,0,American Kestrel
+J,Garden,Falco sparverius,0,American Kestrel
+K,Garden,Falco sparverius,0,American Kestrel
+L,Scrub,Falco sparverius,1,American Kestrel
+M,Garden,Falco sparverius,0,American Kestrel
+N,Garden,Falco sparverius,0,American Kestrel
+O,Garden,Falco sparverius,0,American Kestrel
+P,Forest,Falco sparverius,0,American Kestrel
+Q,Garden,Falco sparverius,0,American Kestrel
+R,Garden,Falco sparverius,0,American Kestrel
+S,Scrub,Falco sparverius,0,American Kestrel
+T,Forest,Falco sparverius,0,American Kestrel
+U,Garden,Falco sparverius,0,American Kestrel
+V,Garden,Falco sparverius,0,American Kestrel
+X,Garden,Falco sparverius,0,American Kestrel
+Y,Garden,Falco sparverius,0,American Kestrel
+Z,Scrub,Falco sparverius,1,American Kestrel
+AA,Garden,Falco sparverius,0,American Kestrel
+BB,Scrub,Falco sparverius,0,American Kestrel
+CC,Garden,Falco sparverius,0,American Kestrel
+DD,Garden,Falco sparverius,0,American Kestrel
+EE,Scrub,Falco sparverius,1,American Kestrel
+FF,Garden,Falco sparverius,0,American Kestrel
+A,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+B,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+C,Forest,Geranoaetus albicaudatus,0,White-tailed Hawk
+D,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+E,Scrub,Geranoaetus albicaudatus,0,White-tailed Hawk
+F,Scrub,Geranoaetus albicaudatus,0,White-tailed Hawk
+G,Forest,Geranoaetus albicaudatus,0,White-tailed Hawk
+H,Forest,Geranoaetus albicaudatus,0,White-tailed Hawk
+I,Forest,Geranoaetus albicaudatus,0,White-tailed Hawk
+J,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+K,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+L,Scrub,Geranoaetus albicaudatus,0,White-tailed Hawk
+M,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+N,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+O,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+P,Forest,Geranoaetus albicaudatus,0,White-tailed Hawk
+Q,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+R,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+S,Scrub,Geranoaetus albicaudatus,0,White-tailed Hawk
+T,Forest,Geranoaetus albicaudatus,0,White-tailed Hawk
+U,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+V,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+X,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+Y,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+Z,Scrub,Geranoaetus albicaudatus,0,White-tailed Hawk
+AA,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+BB,Scrub,Geranoaetus albicaudatus,0,White-tailed Hawk
+CC,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+DD,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+EE,Scrub,Geranoaetus albicaudatus,0,White-tailed Hawk
+FF,Garden,Geranoaetus albicaudatus,0,White-tailed Hawk
+A,Garden,Icterus icterus,1,Venezuelan Troupial
+B,Garden,Icterus icterus,1,Venezuelan Troupial
+C,Forest,Icterus icterus,1,Venezuelan Troupial
+D,Garden,Icterus icterus,1,Venezuelan Troupial
+E,Scrub,Icterus icterus,1,Venezuelan Troupial
+F,Scrub,Icterus icterus,1,Venezuelan Troupial
+G,Forest,Icterus icterus,1,Venezuelan Troupial
+H,Forest,Icterus icterus,1,Venezuelan Troupial
+I,Forest,Icterus icterus,1,Venezuelan Troupial
+J,Garden,Icterus icterus,1,Venezuelan Troupial
+K,Garden,Icterus icterus,1,Venezuelan Troupial
+L,Scrub,Icterus icterus,1,Venezuelan Troupial
+M,Garden,Icterus icterus,1,Venezuelan Troupial
+N,Garden,Icterus icterus,1,Venezuelan Troupial
+O,Garden,Icterus icterus,1,Venezuelan Troupial
+P,Forest,Icterus icterus,1,Venezuelan Troupial
+Q,Garden,Icterus icterus,1,Venezuelan Troupial
+R,Garden,Icterus icterus,1,Venezuelan Troupial
+S,Scrub,Icterus icterus,1,Venezuelan Troupial
+T,Forest,Icterus icterus,1,Venezuelan Troupial
+U,Garden,Icterus icterus,1,Venezuelan Troupial
+V,Garden,Icterus icterus,1,Venezuelan Troupial
+X,Garden,Icterus icterus,1,Venezuelan Troupial
+Y,Garden,Icterus icterus,1,Venezuelan Troupial
+Z,Scrub,Icterus icterus,1,Venezuelan Troupial
+AA,Garden,Icterus icterus,1,Venezuelan Troupial
+BB,Scrub,Icterus icterus,1,Venezuelan Troupial
+CC,Garden,Icterus icterus,1,Venezuelan Troupial
+DD,Garden,Icterus icterus,1,Venezuelan Troupial
+EE,Scrub,Icterus icterus,1,Venezuelan Troupial
+FF,Garden,Icterus icterus,1,Venezuelan Troupial
+A,Garden,Icterus nigrogularis,1,Yellow Oriole
+B,Garden,Icterus nigrogularis,0,Yellow Oriole
+C,Forest,Icterus nigrogularis,0,Yellow Oriole
+D,Garden,Icterus nigrogularis,1,Yellow Oriole
+E,Scrub,Icterus nigrogularis,0,Yellow Oriole
+F,Scrub,Icterus nigrogularis,0,Yellow Oriole
+G,Forest,Icterus nigrogularis,0,Yellow Oriole
+H,Forest,Icterus nigrogularis,1,Yellow Oriole
+I,Forest,Icterus nigrogularis,0,Yellow Oriole
+J,Garden,Icterus nigrogularis,1,Yellow Oriole
+K,Garden,Icterus nigrogularis,0,Yellow Oriole
+L,Scrub,Icterus nigrogularis,1,Yellow Oriole
+M,Garden,Icterus nigrogularis,0,Yellow Oriole
+N,Garden,Icterus nigrogularis,1,Yellow Oriole
+O,Garden,Icterus nigrogularis,0,Yellow Oriole
+P,Forest,Icterus nigrogularis,0,Yellow Oriole
+Q,Garden,Icterus nigrogularis,0,Yellow Oriole
+R,Garden,Icterus nigrogularis,0,Yellow Oriole
+S,Scrub,Icterus nigrogularis,1,Yellow Oriole
+T,Forest,Icterus nigrogularis,0,Yellow Oriole
+U,Garden,Icterus nigrogularis,0,Yellow Oriole
+V,Garden,Icterus nigrogularis,0,Yellow Oriole
+X,Garden,Icterus nigrogularis,0,Yellow Oriole
+Y,Garden,Icterus nigrogularis,0,Yellow Oriole
+Z,Scrub,Icterus nigrogularis,0,Yellow Oriole
+AA,Garden,Icterus nigrogularis,0,Yellow Oriole
+BB,Scrub,Icterus nigrogularis,0,Yellow Oriole
+CC,Garden,Icterus nigrogularis,1,Yellow Oriole
+DD,Garden,Icterus nigrogularis,0,Yellow Oriole
+EE,Scrub,Icterus nigrogularis,0,Yellow Oriole
+FF,Garden,Icterus nigrogularis,0,Yellow Oriole
+A,Garden,Leptotila verreauxi,1,White-tipped Dove
+B,Garden,Leptotila verreauxi,1,White-tipped Dove
+C,Forest,Leptotila verreauxi,0,White-tipped Dove
+D,Garden,Leptotila verreauxi,1,White-tipped Dove
+E,Scrub,Leptotila verreauxi,1,White-tipped Dove
+F,Scrub,Leptotila verreauxi,1,White-tipped Dove
+G,Forest,Leptotila verreauxi,0,White-tipped Dove
+H,Forest,Leptotila verreauxi,1,White-tipped Dove
+I,Forest,Leptotila verreauxi,1,White-tipped Dove
+J,Garden,Leptotila verreauxi,1,White-tipped Dove
+K,Garden,Leptotila verreauxi,1,White-tipped Dove
+L,Scrub,Leptotila verreauxi,0,White-tipped Dove
+M,Garden,Leptotila verreauxi,1,White-tipped Dove
+N,Garden,Leptotila verreauxi,0,White-tipped Dove
+O,Garden,Leptotila verreauxi,1,White-tipped Dove
+P,Forest,Leptotila verreauxi,1,White-tipped Dove
+Q,Garden,Leptotila verreauxi,1,White-tipped Dove
+R,Garden,Leptotila verreauxi,0,White-tipped Dove
+S,Scrub,Leptotila verreauxi,1,White-tipped Dove
+T,Forest,Leptotila verreauxi,0,White-tipped Dove
+U,Garden,Leptotila verreauxi,1,White-tipped Dove
+V,Garden,Leptotila verreauxi,1,White-tipped Dove
+X,Garden,Leptotila verreauxi,1,White-tipped Dove
+Y,Garden,Leptotila verreauxi,1,White-tipped Dove
+Z,Scrub,Leptotila verreauxi,1,White-tipped Dove
+AA,Garden,Leptotila verreauxi,0,White-tipped Dove
+BB,Scrub,Leptotila verreauxi,0,White-tipped Dove
+CC,Garden,Leptotila verreauxi,1,White-tipped Dove
+DD,Garden,Leptotila verreauxi,1,White-tipped Dove
+EE,Scrub,Leptotila verreauxi,0,White-tipped Dove
+FF,Garden,Leptotila verreauxi,0,White-tipped Dove
+A,Garden,Mimus gilvus,1,Tropical Mockingbird
+B,Garden,Mimus gilvus,1,Tropical Mockingbird
+C,Forest,Mimus gilvus,1,Tropical Mockingbird
+D,Garden,Mimus gilvus,1,Tropical Mockingbird
+E,Scrub,Mimus gilvus,1,Tropical Mockingbird
+F,Scrub,Mimus gilvus,1,Tropical Mockingbird
+G,Forest,Mimus gilvus,1,Tropical Mockingbird
+H,Forest,Mimus gilvus,1,Tropical Mockingbird
+I,Forest,Mimus gilvus,1,Tropical Mockingbird
+J,Garden,Mimus gilvus,1,Tropical Mockingbird
+K,Garden,Mimus gilvus,1,Tropical Mockingbird
+L,Scrub,Mimus gilvus,1,Tropical Mockingbird
+M,Garden,Mimus gilvus,1,Tropical Mockingbird
+N,Garden,Mimus gilvus,1,Tropical Mockingbird
+O,Garden,Mimus gilvus,1,Tropical Mockingbird
+P,Forest,Mimus gilvus,1,Tropical Mockingbird
+Q,Garden,Mimus gilvus,1,Tropical Mockingbird
+R,Garden,Mimus gilvus,1,Tropical Mockingbird
+S,Scrub,Mimus gilvus,1,Tropical Mockingbird
+T,Forest,Mimus gilvus,1,Tropical Mockingbird
+U,Garden,Mimus gilvus,1,Tropical Mockingbird
+V,Garden,Mimus gilvus,1,Tropical Mockingbird
+X,Garden,Mimus gilvus,1,Tropical Mockingbird
+Y,Garden,Mimus gilvus,1,Tropical Mockingbird
+Z,Scrub,Mimus gilvus,1,Tropical Mockingbird
+AA,Garden,Mimus gilvus,1,Tropical Mockingbird
+BB,Scrub,Mimus gilvus,1,Tropical Mockingbird
+CC,Garden,Mimus gilvus,1,Tropical Mockingbird
+DD,Garden,Mimus gilvus,1,Tropical Mockingbird
+EE,Scrub,Mimus gilvus,1,Tropical Mockingbird
+FF,Garden,Mimus gilvus,1,Tropical Mockingbird
+A,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+B,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+C,Forest,Patagioenas corensis,0,Bare-eyed Pigeon
+D,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+E,Scrub,Patagioenas corensis,0,Bare-eyed Pigeon
+F,Scrub,Patagioenas corensis,1,Bare-eyed Pigeon
+G,Forest,Patagioenas corensis,1,Bare-eyed Pigeon
+H,Forest,Patagioenas corensis,1,Bare-eyed Pigeon
+I,Forest,Patagioenas corensis,1,Bare-eyed Pigeon
+J,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+K,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+L,Scrub,Patagioenas corensis,0,Bare-eyed Pigeon
+M,Garden,Patagioenas corensis,0,Bare-eyed Pigeon
+N,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+O,Garden,Patagioenas corensis,0,Bare-eyed Pigeon
+P,Forest,Patagioenas corensis,1,Bare-eyed Pigeon
+Q,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+R,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+S,Scrub,Patagioenas corensis,0,Bare-eyed Pigeon
+T,Forest,Patagioenas corensis,1,Bare-eyed Pigeon
+U,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+V,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+X,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+Y,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+Z,Scrub,Patagioenas corensis,0,Bare-eyed Pigeon
+AA,Garden,Patagioenas corensis,0,Bare-eyed Pigeon
+BB,Scrub,Patagioenas corensis,0,Bare-eyed Pigeon
+CC,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+DD,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+EE,Scrub,Patagioenas corensis,0,Bare-eyed Pigeon
+FF,Garden,Patagioenas corensis,1,Bare-eyed Pigeon
+A,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+B,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+C,Forest,Patagioenas squamosa,0,Scaly-naped Pigeon
+D,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+E,Scrub,Patagioenas squamosa,0,Scaly-naped Pigeon
+F,Scrub,Patagioenas squamosa,0,Scaly-naped Pigeon
+G,Forest,Patagioenas squamosa,0,Scaly-naped Pigeon
+H,Forest,Patagioenas squamosa,0,Scaly-naped Pigeon
+I,Forest,Patagioenas squamosa,1,Scaly-naped Pigeon
+J,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+K,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+L,Scrub,Patagioenas squamosa,0,Scaly-naped Pigeon
+M,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+N,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+O,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+P,Forest,Patagioenas squamosa,0,Scaly-naped Pigeon
+Q,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+R,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+S,Scrub,Patagioenas squamosa,0,Scaly-naped Pigeon
+T,Forest,Patagioenas squamosa,0,Scaly-naped Pigeon
+U,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+V,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+X,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+Y,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+Z,Scrub,Patagioenas squamosa,0,Scaly-naped Pigeon
+AA,Garden,Patagioenas squamosa,1,Scaly-naped Pigeon
+BB,Scrub,Patagioenas squamosa,0,Scaly-naped Pigeon
+CC,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+DD,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+EE,Scrub,Patagioenas squamosa,0,Scaly-naped Pigeon
+FF,Garden,Patagioenas squamosa,0,Scaly-naped Pigeon
+A,Garden,Quiscalus lugubris,0,Carib Grackle
+B,Garden,Quiscalus lugubris,0,Carib Grackle
+C,Forest,Quiscalus lugubris,0,Carib Grackle
+D,Garden,Quiscalus lugubris,0,Carib Grackle
+E,Scrub,Quiscalus lugubris,0,Carib Grackle
+F,Scrub,Quiscalus lugubris,0,Carib Grackle
+G,Forest,Quiscalus lugubris,0,Carib Grackle
+H,Forest,Quiscalus lugubris,0,Carib Grackle
+I,Forest,Quiscalus lugubris,0,Carib Grackle
+J,Garden,Quiscalus lugubris,0,Carib Grackle
+K,Garden,Quiscalus lugubris,0,Carib Grackle
+L,Scrub,Quiscalus lugubris,0,Carib Grackle
+M,Garden,Quiscalus lugubris,0,Carib Grackle
+N,Garden,Quiscalus lugubris,0,Carib Grackle
+O,Garden,Quiscalus lugubris,0,Carib Grackle
+P,Forest,Quiscalus lugubris,0,Carib Grackle
+Q,Garden,Quiscalus lugubris,0,Carib Grackle
+R,Garden,Quiscalus lugubris,0,Carib Grackle
+S,Scrub,Quiscalus lugubris,1,Carib Grackle
+T,Forest,Quiscalus lugubris,0,Carib Grackle
+U,Garden,Quiscalus lugubris,0,Carib Grackle
+V,Garden,Quiscalus lugubris,0,Carib Grackle
+X,Garden,Quiscalus lugubris,0,Carib Grackle
+Y,Garden,Quiscalus lugubris,0,Carib Grackle
+Z,Scrub,Quiscalus lugubris,0,Carib Grackle
+AA,Garden,Quiscalus lugubris,0,Carib Grackle
+BB,Scrub,Quiscalus lugubris,0,Carib Grackle
+CC,Garden,Quiscalus lugubris,0,Carib Grackle
+DD,Garden,Quiscalus lugubris,0,Carib Grackle
+EE,Scrub,Quiscalus lugubris,0,Carib Grackle
+FF,Garden,Quiscalus lugubris,0,Carib Grackle
+A,Garden,Tiaris bicolor,1,Black-faced Grassquit
+B,Garden,Tiaris bicolor,1,Black-faced Grassquit
+C,Forest,Tiaris bicolor,0,Black-faced Grassquit
+D,Garden,Tiaris bicolor,0,Black-faced Grassquit
+E,Scrub,Tiaris bicolor,1,Black-faced Grassquit
+F,Scrub,Tiaris bicolor,1,Black-faced Grassquit
+G,Forest,Tiaris bicolor,0,Black-faced Grassquit
+H,Forest,Tiaris bicolor,1,Black-faced Grassquit
+I,Forest,Tiaris bicolor,1,Black-faced Grassquit
+J,Garden,Tiaris bicolor,1,Black-faced Grassquit
+K,Garden,Tiaris bicolor,1,Black-faced Grassquit
+L,Scrub,Tiaris bicolor,0,Black-faced Grassquit
+M,Garden,Tiaris bicolor,1,Black-faced Grassquit
+N,Garden,Tiaris bicolor,1,Black-faced Grassquit
+O,Garden,Tiaris bicolor,1,Black-faced Grassquit
+P,Forest,Tiaris bicolor,1,Black-faced Grassquit
+Q,Garden,Tiaris bicolor,0,Black-faced Grassquit
+R,Garden,Tiaris bicolor,1,Black-faced Grassquit
+S,Scrub,Tiaris bicolor,1,Black-faced Grassquit
+T,Forest,Tiaris bicolor,0,Black-faced Grassquit
+U,Garden,Tiaris bicolor,1,Black-faced Grassquit
+V,Garden,Tiaris bicolor,1,Black-faced Grassquit
+X,Garden,Tiaris bicolor,1,Black-faced Grassquit
+Y,Garden,Tiaris bicolor,1,Black-faced Grassquit
+Z,Scrub,Tiaris bicolor,1,Black-faced Grassquit
+AA,Garden,Tiaris bicolor,1,Black-faced Grassquit
+BB,Scrub,Tiaris bicolor,0,Black-faced Grassquit
+CC,Garden,Tiaris bicolor,1,Black-faced Grassquit
+DD,Garden,Tiaris bicolor,0,Black-faced Grassquit
+EE,Scrub,Tiaris bicolor,1,Black-faced Grassquit
+FF,Garden,Tiaris bicolor,0,Black-faced Grassquit
+A,Garden,Tyrannus dominicensis,0,Grey Kingbird
+B,Garden,Tyrannus dominicensis,0,Grey Kingbird
+C,Forest,Tyrannus dominicensis,0,Grey Kingbird
+D,Garden,Tyrannus dominicensis,1,Grey Kingbird
+E,Scrub,Tyrannus dominicensis,0,Grey Kingbird
+F,Scrub,Tyrannus dominicensis,0,Grey Kingbird
+G,Forest,Tyrannus dominicensis,0,Grey Kingbird
+H,Forest,Tyrannus dominicensis,0,Grey Kingbird
+I,Forest,Tyrannus dominicensis,0,Grey Kingbird
+J,Garden,Tyrannus dominicensis,1,Grey Kingbird
+K,Garden,Tyrannus dominicensis,0,Grey Kingbird
+L,Scrub,Tyrannus dominicensis,0,Grey Kingbird
+M,Garden,Tyrannus dominicensis,0,Grey Kingbird
+N,Garden,Tyrannus dominicensis,1,Grey Kingbird
+O,Garden,Tyrannus dominicensis,1,Grey Kingbird
+P,Forest,Tyrannus dominicensis,0,Grey Kingbird
+Q,Garden,Tyrannus dominicensis,0,Grey Kingbird
+R,Garden,Tyrannus dominicensis,1,Grey Kingbird
+S,Scrub,Tyrannus dominicensis,0,Grey Kingbird
+T,Forest,Tyrannus dominicensis,0,Grey Kingbird
+U,Garden,Tyrannus dominicensis,0,Grey Kingbird
+V,Garden,Tyrannus dominicensis,0,Grey Kingbird
+X,Garden,Tyrannus dominicensis,0,Grey Kingbird
+Y,Garden,Tyrannus dominicensis,0,Grey Kingbird
+Z,Scrub,Tyrannus dominicensis,0,Grey Kingbird
+AA,Garden,Tyrannus dominicensis,0,Grey Kingbird
+BB,Scrub,Tyrannus dominicensis,0,Grey Kingbird
+CC,Garden,Tyrannus dominicensis,0,Grey Kingbird
+DD,Garden,Tyrannus dominicensis,0,Grey Kingbird
+EE,Scrub,Tyrannus dominicensis,0,Grey Kingbird
+FF,Garden,Tyrannus dominicensis,0,Grey Kingbird
+A,Garden,Zenaida auriculata,1,Eared Dove
+B,Garden,Zenaida auriculata,0,Eared Dove
+C,Forest,Zenaida auriculata,0,Eared Dove
+D,Garden,Zenaida auriculata,1,Eared Dove
+E,Scrub,Zenaida auriculata,0,Eared Dove
+F,Scrub,Zenaida auriculata,0,Eared Dove
+G,Forest,Zenaida auriculata,0,Eared Dove
+H,Forest,Zenaida auriculata,0,Eared Dove
+I,Forest,Zenaida auriculata,0,Eared Dove
+J,Garden,Zenaida auriculata,0,Eared Dove
+K,Garden,Zenaida auriculata,0,Eared Dove
+L,Scrub,Zenaida auriculata,0,Eared Dove
+M,Garden,Zenaida auriculata,0,Eared Dove
+N,Garden,Zenaida auriculata,0,Eared Dove
+O,Garden,Zenaida auriculata,0,Eared Dove
+P,Forest,Zenaida auriculata,0,Eared Dove
+Q,Garden,Zenaida auriculata,0,Eared Dove
+R,Garden,Zenaida auriculata,1,Eared Dove
+S,Scrub,Zenaida auriculata,0,Eared Dove
+T,Forest,Zenaida auriculata,0,Eared Dove
+U,Garden,Zenaida auriculata,0,Eared Dove
+V,Garden,Zenaida auriculata,0,Eared Dove
+X,Garden,Zenaida auriculata,0,Eared Dove
+Y,Garden,Zenaida auriculata,0,Eared Dove
+Z,Scrub,Zenaida auriculata,0,Eared Dove
+AA,Garden,Zenaida auriculata,0,Eared Dove
+BB,Scrub,Zenaida auriculata,0,Eared Dove
+CC,Garden,Zenaida auriculata,0,Eared Dove
+DD,Garden,Zenaida auriculata,1,Eared Dove
+EE,Scrub,Zenaida auriculata,0,Eared Dove
+FF,Garden,Zenaida auriculata,1,Eared Dove
+A,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+B,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+C,Forest,Zonotrichia capensis,1,Rufous-collared Sparrow
+D,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+E,Scrub,Zonotrichia capensis,0,Rufous-collared Sparrow
+F,Scrub,Zonotrichia capensis,1,Rufous-collared Sparrow
+G,Forest,Zonotrichia capensis,0,Rufous-collared Sparrow
+H,Forest,Zonotrichia capensis,0,Rufous-collared Sparrow
+I,Forest,Zonotrichia capensis,0,Rufous-collared Sparrow
+J,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+K,Garden,Zonotrichia capensis,1,Rufous-collared Sparrow
+L,Scrub,Zonotrichia capensis,1,Rufous-collared Sparrow
+M,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+N,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+O,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+P,Forest,Zonotrichia capensis,0,Rufous-collared Sparrow
+Q,Garden,Zonotrichia capensis,1,Rufous-collared Sparrow
+R,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+S,Scrub,Zonotrichia capensis,1,Rufous-collared Sparrow
+T,Forest,Zonotrichia capensis,0,Rufous-collared Sparrow
+U,Garden,Zonotrichia capensis,1,Rufous-collared Sparrow
+V,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+X,Garden,Zonotrichia capensis,1,Rufous-collared Sparrow
+Y,Garden,Zonotrichia capensis,1,Rufous-collared Sparrow
+Z,Scrub,Zonotrichia capensis,1,Rufous-collared Sparrow
+AA,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+BB,Scrub,Zonotrichia capensis,1,Rufous-collared Sparrow
+CC,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+DD,Garden,Zonotrichia capensis,0,Rufous-collared Sparrow
+EE,Scrub,Zonotrichia capensis,1,Rufous-collared Sparrow
+FF,Garden,Zonotrichia capensis,1,Rufous-collared Sparrow
