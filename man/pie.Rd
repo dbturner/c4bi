@@ -9,12 +9,12 @@ pie(df, prop, cat)
 \arguments{
 \item{df}{A dataframe.}
 
-\item{prop}{A column in the 'df' dataframe. Must be a proportion from 0-1.}
+\item{prop}{A column in the 'df' dataframe. Must be of class 'numeric' and a proportion from 0-1.}
 
-\item{cat}{A column in the 'df' dataframe. Must be be a factor.}
+\item{cat}{A column in the 'df' dataframe. Must be of class factor or character.}
 }
 \value{
-A ggplot rendering of the proportion of values in each category.
+A ggplot rendering of the proportions across categories.
 }
 \description{
 Create a pie plot.
