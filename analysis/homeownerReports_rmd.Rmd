@@ -11,6 +11,13 @@ output:
 #### Report release: *December 2018 v1_2* 
 </center>
 
+```{r setup, echo = FALSE}
+# set root directory because Rmd automatically chooses its location for working directory
+# which we need to change
+knitr::opts_knit$set(root.dir = here())
+```
+
+
 ```{r echo = FALSE, results = "asis"}
 
 # report aesthetics and formatting
@@ -39,9 +46,9 @@ Native species are species that occur naturally on Cura&#231;ao. There are eight
 <br>
 <br>
 <br>
-<center>
-![native_herps_pic](photos/Native Herps Collage.jpg)
-</center>
+```{r nat_herp_collage, out.width = "650px", echo = FALSE, warning = FALSE, fig.align = "center"}
+knitr::include_graphics(here("data/photos/Native Herps Collage.JPG"))
+```
 <br>
 <P style="page-break-before: always">
 Here are the abundances of each native reptile species in your garden compared to the *average* abundance across all forest, garden, and scrub sites we surveyed. 
@@ -112,10 +119,9 @@ if(is.na(herps_NA)) {
   
 ```{r herp_nat_message, out.width = "800px", echo = FALSE, warning = FALSE, fig.align = "left"}
 if(is.na(herps_NA)){ # if we did not perform nocturnal surveys at a site, print out this message
-  knitr::include_graphics("photos/herps_nat_message.png")
+  knitr::include_graphics(here("data/photos/herps_nat_message.png"))
 }
 ```
-<br>
 <br>
 The three nocturnal native gecko species and *Laurent's Whiptail* had relatively equal abundance across the site types, while the diurnal *Striped Anole* was most abundant in forest sites.
 
@@ -126,9 +132,9 @@ The three nocturnal native gecko species and *Laurent's Whiptail* had relatively
 Exotic species are species that are not native to Cura&#231;ao and were introduced to Cura&#231;ao from another location by humans. Exotic species become invasive when they start to cause ecological or economic problems. To our knowledge, there are seven exotic reptile and amphibian species currently living on Cura&#231;ao, and we surveyed six of them. The seventh exotic species, *Tokay Gecko,* was discovered in 2018. Individuals of this large predatory gecko were kept as pets, but escaped. All of the exotic species are primarily nocturnal, and at this point they have not been studied well enough to know conclusively if any can be considered invasive.
 <br>
 <br>
-<center>
-![exotic_herps_pic](photos/Exotic Herps Collage.jpg)
-</center>
+```{r exo_herp_collage, out.width = "650px", echo = FALSE, warning = FALSE, fig.align = "center"}
+knitr::include_graphics(here("data/photos/Exotic Herps Collage.JPG"))
+```
   
 <P style="page-break-before: always">
 This is the percentage of all forest, garden, and scrub sites we surveyed that had each exotic species. 
@@ -145,9 +151,9 @@ j <- 1
 herp_dataList = list()
 
 if(is.na(herps_exoList[[i]][1, 5])) {
-  knitr::include_graphics("photos/herps_exo_message1.png") # if there were no nighttime surveys performed, thenprint this message saying there were no nighttime surveys performed
+  knitr::include_graphics(here("data/photos/herps_exo_message1.png")) # if there were no nighttime surveys performed, thenprint this message saying there were no nighttime surveys performed
 } else if (herps_exoList[[i]][1, 5] == 0) {
-  knitr::include_graphics("photos/herps_exo_message2.png") # if we found no exotic herps, then print this message saying that none were found
+  knitr::include_graphics(here("data/photos/herps_exo_message2.png")) # if we found no exotic herps, then print this message saying that none were found
 } else {
   while (herps_exoList[[i]][j, 5] == 1){ 
     herp_data <- herps_exoList[[i]][j, 4]
@@ -201,9 +207,10 @@ knitr::kable(all_birdData, caption = "These are the native species that we found
 There are approximatly 13 exotic bird species on Cura&#231;ao, eight of which are parrots. Many of these exotics were accidentally introduced to Cura&#231;ao as pets who escaped. We focused on surveying five of these exotic species. Note, there are actually three *Amazona* exotic parrots, but they are difficult to distinguish in surveys.
 <br>
 <br>
-<center>  
-![birds_exo_collage](photos/Exotic Birds Collage.jpg){width=78%}
-</center>
+```{r exo_birds_collage, out.width = "500px", echo = FALSE, warning = FALSE, fig.align = "center"}
+knitr::include_graphics(here("data/photos/Exotic Birds Collage.JPG"))
+```
+
 
 <P style="page-break-before: always">
 
@@ -221,7 +228,7 @@ newBird_exoList <- list()
 
 
 if (birdsExo_List[[i]][1, 5] == 0) {
-  knitr::include_graphics("photos/birds_exo_message.png") # if we did not find any exotic birds at the site, then print a message that says none were observed
+  knitr::include_graphics(here("data/photos/birds_exo_message.png")) # if we did not find any exotic birds at the site, then print a message that says none were observed
 } else {
   while(birdsExo_List[[i]][l, 5] == 1){
     birdExo_data <- birdsExo_List[[i]][l, 4]
@@ -242,9 +249,10 @@ if (birdsExo_List[[i]][1, 5] == 0) {
 We surveyed the arthropods (insects and spiders) that live on the plants in your garden.  In total, we found 395 arthropod species, however, the species are not well-enough studied to know which are exotic. 
 <br>
 <br>
-<center>
-![arth_collage](photos/Arthropods Collage.jpg){width=70%}
-</center>
+```{r arths_collage, out.width = "500px", echo = FALSE, warning = FALSE, fig.align = "center"}
+knitr::include_graphics(here("data/photos/Arthropods Collage.JPG"))
+```
+
 
 <P style="page-break-before: always">
 
@@ -272,7 +280,7 @@ Again, garden sites had the highest abundance of arthropods across all site type
 <P style="page-break-before: always">
 Based on the abundances of each order, we calculated the arthropod composition of each site. The plots below show the composition of arthropods in your garden compared to the average composition of arthropods in garden, forest and scrub sites we surveyed.
   
-```{r arth_pieSite, fig.height = 5.5, out.height = "300px", out.width = "550px", echo = FALSE, warning = FALSE, fig.align = "center", eval = TRUE}
+```{r arth_pieSite, fig.height = 5.5, out.width = "550px", echo = FALSE, warning = FALSE, fig.align = "center", eval = TRUE}
 print(arthSite_pie)
 
 ```
@@ -285,7 +293,9 @@ Garden sites are dominated by true bugs; roughly half of all individuals we coll
 
 <br>
 <br>
-![ieco_logo](photos/iEco Logo.jpg){width=50%}
+```{r ieco_logo, out.width = "250px", echo = FALSE, warning = FALSE, fig.align = "left"}
+knitr::include_graphics(here("data/photos/iEco Logo.JPG"))
+```
 <br>
 <br>
 

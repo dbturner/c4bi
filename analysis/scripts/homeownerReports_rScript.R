@@ -12,6 +12,8 @@ library(rmarkdown)
 library(reshape2)
 library(tidyr)
 library(kableExtra)
+library(knitr)
+library(here)
 
 # global parameters -----------------------------------------------------------------------------------------------------------------
 puk <- 0 # number of digits to round
@@ -35,10 +37,10 @@ herps_nat_noNA <- na.omit(herps_nat) # create dataframe of sites without NAs to 
 
 herps_nat_means <- herps_nat_noNA %>%
   group_by(sitetype) %>%
-  summarise(Dutch.Leaf.toed.Gecko = round(mean(Dutch.Leaf.toed.Gecko), puk), 
-            Antillean.Dwarf.Gecko = round(mean(Antillean.Dwarf.Gecko), puk), 
-            Striped.Anole = round(mean(Striped.Anole), puk), 
-            Laurent.s.Whiptail = round(mean(Laurent.s.Whiptail), puk), 
+  summarise(Dutch.Leaf.toed.Gecko = round(mean(Dutch.Leaf.toed.Gecko), puk),
+            Antillean.Dwarf.Gecko = round(mean(Antillean.Dwarf.Gecko), puk),
+            Striped.Anole = round(mean(Striped.Anole), puk),
+            Laurent.s.Whiptail = round(mean(Laurent.s.Whiptail), puk),
             Turnip.tailed.Gecko = round(mean(Turnip.tailed.Gecko), puk)) # create summary dataframe for means across all species for all categories
 
 
@@ -46,7 +48,7 @@ meanNames <- as.factor(c("forestMeans", "gardenMeans", "scrubMeans")) # set fact
 herps_nat_means$sitetype <- meanNames
 herps_nat_means$Site <- NA # create these columns to combine dataframes later
 herps_nat_means$ReportName <- NA # create these columns to combine dataframes later
-herps_nat_means$Site<- c("Forest", "Garden", "Scrub") 
+herps_nat_means$Site<- c("Forest", "Garden", "Scrub")
 
 colnames(herps_nat)[3:7] <- c("Dutch Leaf-toed Gecko", "Antillean Dwarf Gecko", "Striped Anole", "Laurent's Whiptail", "Turnip-tailed Gecko")
 colnames(herps_nat_means)[2:6] <- c("Dutch Leaf-toed Gecko", "Antillean Dwarf Gecko", "Striped Anole", "Laurent's Whiptail", "Turnip-tailed Gecko")
@@ -78,11 +80,11 @@ herps_exo_prop_plot <- ggplot(data = herps_exo_prop, aes(x = `Site Type`, y = `P
   geom_bar(stat="identity") +
   geom_text(aes(label = `Percentage of sites`), position = position_dodge(width = 0.9), vjust = .5, size = 3.9) +
   scale_fill_manual(values = fun_colors3) +
-  facet_wrap(~ species) + 
+  facet_wrap(~ species) +
   labs(title="Percentage of sites \nwith exotic reptile or amphibian species") +
        ylab("Percentage of sites") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = "black"),          
+        panel.background = element_blank(), axis.line = element_line(colour = "black"),
         axis.text.x = element_text(color = "grey20", size=12.1, angle=30, hjust=.5, vjust=.5, face="plain"),
         axis.text.y = element_text(color = "grey20", size=10, angle=0, hjust=.5, vjust=.5, face="plain"),
         axis.title.x=element_blank(),
@@ -153,7 +155,7 @@ ggplot(birdsNat_srTotal[c(26, 32:34),], aes(x = reorder(Site, ord), y = SR)) +
         axis.title.x=element_blank(),
         legend.position = "none",
         axis.title=element_text(size=13.6),
-        plot.title = element_text(size=18)) 
+        plot.title = element_text(size=18))
 
 # exotic birds ------------
 # load exotic birds data
@@ -176,9 +178,9 @@ birds_exo_prop_plot <- ggplot(data = birds_exo, aes(x=`Site Type`, y = `Percenta
   facet_wrap(~ species) +
   scale_fill_manual(values = fun_colors3) +
   labs(title = "Percentage of sites with exotic bird species") +
-  ylab("Percentage of sites") + 
+  ylab("Percentage of sites") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.line = element_line(colour = "black"),          
+        panel.background = element_blank(), axis.line = element_line(colour = "black"),
         axis.text.x = element_text(color = "grey20", size=12.1, angle=30, hjust=.5, vjust=.5, face="plain"),
         axis.text.y = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5, face="plain"),
         axis.title.x=element_blank(),
@@ -233,7 +235,7 @@ ggplot(arthTot[c(4, 32:34),], aes(x = reorder(Site, ord), y = SR)) +
         axis.text.x = element_text(color = "grey20", size=10, angle=30, hjust=.5, vjust=.5, face="plain"),
         axis.text.y = element_text(color = "grey20", size=10, angle=0, hjust=.5, vjust=.5, face="plain"),
         axis.title.x=element_blank(),
-        legend.position = "none") 
+        legend.position = "none")
 
 # sample arthropod abundance plot
 ggplot(arthTot[c(4, 32:34),], aes(x = reorder(Site, ord), y = AB)) +
@@ -266,14 +268,14 @@ arthMelt$Order <- factor(arthMelt$Order,c("Beetles", "True Bugs","Butterflies","
 arthList <- split(arthMelt, f = arthMelt$Site)
 
 # sample individual garden arthropod pie plot
-ggplot(data = arthList[[6]], aes(x = "", y = Proportion, fill = Order)) + 
-  geom_bar(width = 1, stat = "identity") + 
+ggplot(data = arthList[[6]], aes(x = "", y = Proportion, fill = Order)) +
+  geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start = 0) +
   scale_fill_brewer(palette = "Set1") +
   theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
         panel.grid  = element_blank(),
-        axis.title = element_blank(),          
+        axis.title = element_blank(),
         plot.title = element_text(size=22),
         panel.background = element_blank(),
         legend.text = element_text(size=14),
@@ -283,14 +285,14 @@ ggplot(data = arthList[[6]], aes(x = "", y = Proportion, fill = Order)) +
 
 
 # plot for the three categories
-arthType_pie <- ggplot(data = compmeans1, aes(x = "", y = Proportion, fill = Order)) + 
-  geom_bar(width = 1, stat = "identity") + 
+arthType_pie <- ggplot(data = compmeans1, aes(x = "", y = Proportion, fill = Order)) +
+  geom_bar(width = 1, stat = "identity") +
   coord_polar("y", start = 0) +
   scale_fill_brewer(palette = "Set1") +
   theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
         panel.grid  = element_blank(),
-        axis.title = element_blank(),          
+        axis.title = element_blank(),
         plot.title = element_text(size=18),
         panel.background = element_blank(),
         legend.text = element_text(size=14),
@@ -315,11 +317,11 @@ for (i in 1:5) { # <>< edits to have all reports spit out at once
                  # for the sake of demonstration, we will only produce the first five sites' reports
   # vector of garden report names
   report_name <- report_names[i]
-  
+
   # Native herp plots
   herps_NA <- herps_nat[i, 3] # create a vector for the if else statement in Rmd to evaluate gardens without nighttime surveys differently
-  
-  
+
+
   # Native bird species richness plot
   birdsNat_SR_plot <- ggplot(birdsNat_srTotal[c(i, 32:34),], aes(x = reorder(Site, ord), y = SR)) +
     geom_bar(stat = "identity", aes(fill = Site)) +
@@ -329,14 +331,14 @@ for (i in 1:5) { # <>< edits to have all reports spit out at once
          title = "Number of native bird species") +
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
           panel.background = element_blank(), axis.line = element_line(colour = "black"),
-          axis.text.x = element_text(color = "grey20", size=12.2, angle=0, hjust=.5, vjust=.5, 
+          axis.text.x = element_text(color = "grey20", size=12.2, angle=0, hjust=.5, vjust=.5,
                                      face=c("bold","plain","plain","plain")),
           axis.text.y = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5, face="plain"),
           axis.title.x=element_blank(),
           legend.position = "none",
           axis.title=element_text(size=13.6),
           plot.title = element_text(size=18))  # This object will be called to compare native bird observations across focal site and site categories.
-  
+
   # arthropod species richness plot
   arthSR_plot <- ggplot(arthTot[c(i, 32:34),], aes(x = reorder(Site, ord), y = SR)) +
     geom_bar(stat = "identity", aes(fill = Site)) +
@@ -346,14 +348,14 @@ for (i in 1:5) { # <>< edits to have all reports spit out at once
          title = "Number of arthropod species ") +
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
           panel.background = element_blank(), axis.line = element_line(colour = "black"),
-          axis.text.x = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5, 
+          axis.text.x = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5,
                                      face=c("bold","plain","plain","plain")),
           axis.text.y = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5, face="plain"),
           axis.title.x=element_blank(),
           legend.position = "none",
           axis.title=element_text(size=13.6),
           plot.title = element_text(size=18)) # This object will be called to compare arthropod species richness across focal site and site categories.
-  
+
   # arthropod abundance plot
   arthAB_plot <- ggplot(arthTot[c(i, 32:34),], aes(x = reorder(Site, ord), y = AB)) +
     geom_bar(stat = "identity", aes(fill = Site)) +
@@ -363,23 +365,23 @@ for (i in 1:5) { # <>< edits to have all reports spit out at once
          title = "Abundance of arthropods") +
     theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
           panel.background = element_blank(), axis.line = element_line(colour = "black"),
-          axis.text.x = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5, 
+          axis.text.x = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5,
                                      face=c("bold","plain","plain","plain")),
           axis.text.y = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5, face="plain"),
           axis.title.x=element_blank(),
           legend.position = "none",
           axis.title=element_text(size=13.6),
           plot.title = element_text(size=18)) # This object will be called to compare arthropod abundances across focal site and site categories.
-  
+
   # arthropod composition pie plot for each site
-  arthSite_pie <- ggplot(data = arthList[[i]], aes(x = "", y = Proportion, fill = Order)) + 
-    geom_bar(width = 1, stat = "identity") + 
+  arthSite_pie <- ggplot(data = arthList[[i]], aes(x = "", y = Proportion, fill = Order)) +
+    geom_bar(width = 1, stat = "identity") +
     coord_polar("y", start = 0) +
     scale_fill_brewer(palette = "Set1") +
     theme(axis.text = element_blank(),
           axis.ticks = element_blank(),
           panel.grid  = element_blank(),
-          axis.title = element_blank(),          
+          axis.title = element_blank(),
           plot.title = element_text(size=20),
           panel.background = element_blank(),
           legend.text = element_text(size=15),
@@ -389,5 +391,5 @@ for (i in 1:5) { # <>< edits to have all reports spit out at once
 
   # render Rmarkdown files
   knitr::knit_meta(class=NULL, clean = TRUE) # this fixes the error: cannot allocate vector of size
-  rmarkdown::render("homeownerReports_rmd.Rmd", output_file = paste0('userReports/homeownerReport_example_', report_name, '.html')) # This line executes each site's .html report by calling the "child" .rmd file.
+  rmarkdown::render("analysis/userReports_caseStudy1/homeownerReports_rmd.Rmd", output_file = paste0('homeownerReport_example_', report_name, '.html')) # This line executes each site's .html report by calling the "child" .rmd file.
 }
