@@ -1,0 +1,55 @@
+---
+title: "Preliminary Beneficial Arthropod Diversity Report"
+output: 
+  html_document:
+    theme: sandstone
+---
+
+```{r setup, echo = FALSE}
+# set root directory because Rmd automatically chooses its location for working directory
+# which we need to change
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+## This is a preliminary report of the beneficial predatory arthropods (insects, spiders, centipedes) that we found on your farm during our research in Summer 2017.
+
+
+***********************************************************************************
+
+### A summary of our study:
+#### We collected insects, spiders, centipedes, and other beneficial ground crawling predators on farms in southeastern Pennsylvania to understand how urbanization affects the health of ecosystems on farms. We used data on land use around each of the farms to classify farms into three urban intensity categories. Urban intensity is measured by the amount of land around each farm that is developed by structures such as parking lots, roads, buildings, sidewalks, and other surfaces not penetrable by water.
+
+
+#### Based on our calculations of the urban landscape around your farm is of *__`r urbanCat`__*.
+
+***********************************************************************************
+
+### Abundance of beneficial arthropod predators on your farm:
+```{r, fig.align = 'center', echo = FALSE}
+abun_bar_plot # Print the predator abundance object that was created in the respective for loop from the R script.
+```
+
+This bar plot shows the average number of individual arthropods that we found in each of the traps that we set out on your farm. We have three other bars to show you how your farm stacks up to average number of arthropods found in the three other categories of farms: high intensity (a lot of urban land around farm), medium intensity (some urban land around farm), low intensity (very little urban land around farm).
+
+
+***********************************************************************************
+
+### Richness (number of types) of beneficial arthropod predators on your farm:
+```{r, fig.align = 'center', echo = FALSE}
+rich_bar_plot # Print the predator richness object that was created in the respective for loop from the R script.
+```
+
+This bar plot shows the average number of the types of arthropods that we found in each of the traps that we set out on your farm. The three other bars here show how your farm compares to average number of types of arthropods found in the three other categories of farms: high intensity (a lot of urban land around farm), medium intensity (some urban land around farm), low intensity (very little urban land around farm).
+
+
+***********************************************************************************
+
+### Types and percentages of insects and spiders found on your farm:
+```{r, fig.align = 'center', echo = FALSE}
+real_pie_plot # Display the predator community pie chart object that was created in the respective for loop from the R script.
+```
+
+This pie chart shows the percentage of each family of beneficial predatory insect or spider that we found on your farm. They are listed by their common names.
+
+
+This report was created by Dan Turner at the iEcoLab at Temple University (http://www.iecolab.org/).

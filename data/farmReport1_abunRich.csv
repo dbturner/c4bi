@@ -1,0 +1,10 @@
+farmName,meanAbun,meanRich,urbanCat
+highUrbanFarm_1,49.1,6.4,high intensity
+highUrbanFarm_2,40.5,5,high intensity
+mediumUrbanFarm_1,17.77777778,4.444444444,medium intensity
+mediumUrbanFarm_2,21.4,5.4,medium intensity
+lowUrbanFarm_1,57.81818182,6.181818182,low intensity
+lowFarm_2,17.2,4.5,low intensity
+highIntensity_mean,34.78363636,5.196363636,NA
+mediumIntensity_mean,31.625,5.1375,NA
+lowIntensity_mean,24.44768519,4.693518519,NA

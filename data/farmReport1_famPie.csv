@@ -1,0 +1,63 @@
+farmName,family,meanAbun,prop
+highUrbanFarm_1,Ant,11.14915675,0.145794048
+highUrbanFarm_1,Anystid Mites,0.142857143,0.001868098
+highUrbanFarm_1,Carabid (Ground) Beetle,7.530952381,0.098479917
+highUrbanFarm_1,Cricket,4.203791887,0.054971676
+highUrbanFarm_1,Harvestman (Daddy longlegs),0.4375,0.005721051
+highUrbanFarm_1,Parasitid Mites,1.491269841,0.019500871
+highUrbanFarm_1,Rove Beetles,15.89388889,0.207839431
+highUrbanFarm_1,Sheet Weaver Spider,11.53258377,0.150808004
+highUrbanFarm_1,Stone Centipede (2),0.111111111,0.001452965
+highUrbanFarm_1,Wolf Spider,22.8677381,0.299034284
+highUrbanFarm_1,Woodlouse Hunter Spider,1.111111111,0.014529654
+mediumUrbanFarm_1,Ant,40.385,0.492155962
+mediumUrbanFarm_1,Carabid (Ground) Beetle,6.765,0.082442369
+mediumUrbanFarm_1,Cricket,0.5,0.006093302
+mediumUrbanFarm_1,Lightning Bug,0.25,0.003046651
+mediumUrbanFarm_1,Rove Beetles,7.328571429,0.089310391
+mediumUrbanFarm_1,Sheet Weaver Spider,6.39375,0.077918093
+mediumUrbanFarm_1,Stone Centipede (2),0.55,0.006702632
+mediumUrbanFarm_1,Wolf Spider,19.885,0.242330601
+lowUrbanFarm_2,Ant,5.022222222,0.131104329
+lowUrbanFarm_2,Anystid Mites,0.142857143,0.003729263
+lowUrbanFarm_2,Carabid (Ground) Beetle,15.4110119,0.402302065
+lowUrbanFarm_2,Cricket,2.077777778,0.054240065
+lowUrbanFarm_2,Parasitid Mites,0.392857143,0.010255475
+lowUrbanFarm_2,Rove Beetles,2.408095238,0.062862951
+lowUrbanFarm_2,Sheet Weaver Spider,0.55,0.014357664
+lowUrbanFarm_2,Stone Centipede (1),0.25,0.006526211
+lowUrbanFarm_2,Stone Centipede (2),8.897959184,0.232279839
+lowUrbanFarm_2,Wolf Spider,3.154285714,0.082342137
+mediumUrbanFarm_2,Ant,13.2952381,0.349667073
+mediumUrbanFarm_2,Carabid (Ground) Beetle,4.62585034,0.121660668
+mediumUrbanFarm_2,Cricket,0.642857143,0.016907255
+mediumUrbanFarm_2,Harvestman (Daddy longlegs),3.135714286,0.082469831
+mediumUrbanFarm_2,Jumping Spider,0.142857143,0.003757168
+mediumUrbanFarm_2,Parasitid Mites,0.333333333,0.008766725
+mediumUrbanFarm_2,Rove Beetles,1.326984127,0.034899913
+mediumUrbanFarm_2,Sheet Weaver Spider,10.47142857,0.275400392
+mediumUrbanFarm_2,Stone Centipede (1),0.142857143,0.003757168
+mediumUrbanFarm_2,Stone Centipede (2),0.30952381,0.00814053
+mediumUrbanFarm_2,Wolf Spider,3.395918367,0.089313243
+mediumUrbanFarm_2,Woodlouse Hunter Spider,0.2,0.005260035
+highUrbanFarm_2,Ant,47.10071429,0.468116839
+highUrbanFarm_2,Antlike Flower Beetle,0.125,0.001242329
+highUrbanFarm_2,Anystid Mites,0.166666667,0.001656439
+highUrbanFarm_2,Carabid (Ground) Beetle,5.996560847,0.059597634
+highUrbanFarm_2,Cricket,1.921626984,0.019098351
+highUrbanFarm_2,Parasitid Mites,5.013392857,0.049826285
+highUrbanFarm_2,Rove Beetles,7.396825397,0.073514353
+highUrbanFarm_2,Sheet Weaver Spider,16.53214286,0.164306945
+highUrbanFarm_2,Stone Centipede (2),0.166666667,0.001656439
+highUrbanFarm_2,Wolf Spider,16.03116883,0.159327946
+highUrbanFarm_2,Woodlouse Hunter Spider,0.166666667,0.001656439
+lowUrbanFarm_1,Ant,7.402142857,0.195864431
+lowUrbanFarm_1,Anystid Mites,0.142857143,0.003780072
+lowUrbanFarm_1,Carabid (Ground) Beetle,7.773214286,0.205683168
+lowUrbanFarm_1,Cricket,1.403571429,0.037139208
+lowUrbanFarm_1,Harvestman (Daddy longlegs),0.410714286,0.010867707
+lowUrbanFarm_1,Parasitid Mites,0.766666667,0.020286386
+lowUrbanFarm_1,Rove Beetles,4.30952381,0.114032172
+lowUrbanFarm_1,Sheet Weaver Spider,5.128061224,0.135691085
+lowUrbanFarm_1,Stone Centipede (2),0.2,0.005292101
+lowUrbanFarm_1,Wolf Spider,10.25542328,0.271363669
