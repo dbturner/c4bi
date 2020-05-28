@@ -391,5 +391,5 @@ for (i in 1:5) { # <>< edits to have all reports spit out at once
 
   # render Rmarkdown files
   knitr::knit_meta(class=NULL, clean = TRUE) # this fixes the error: cannot allocate vector of size
-  rmarkdown::render("analysis/userReports_caseStudy1/homeownerReports_rmd.Rmd", output_file = paste0('homeownerReport_example_', report_name, '.html')) # This line executes each site's .html report by calling the "child" .rmd file.
+  rmarkdown::render("analysis/homeownerReports_rmd.Rmd", output_file = paste0('userReports_caseStudy1/homeownerReport_example_', report_name, '.html')) # This line executes each site's .html report by calling the "child" .rmd file.
 }
