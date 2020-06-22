@@ -20,19 +20,19 @@ We recommend users of this repository first read [_our publication_](#citation) 
 
 <hr>
 
-## Citation
+### Citation
 Turner, D.B., Behm, J.E., & Helmus, M.R. 2019. Leverage ecologists' programming skills for effective public communication (submitted)
 
-## Case Study 1: Curaçao homeowners
+### Case Study 1: Curaçao homeowners
 This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the Example 1 folder, there are `.R` script, `.Rmd` script, data files for each taxon, and 5 sample reports as `HTML` documents, which can be opened in any Internet browser. We used Chrome to print these `.html` files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. See our [_our publication_](#citation) for more details.
 
-## Case Study 2: Southeastern Pennsylvania organic farmers
+### Case Study 2: Southeastern Pennsylvania organic farmers
 This case study summarizes biodiversity surveys for beneficial predatory arthropods on organic farms across an urbanization gradient in southeastern Pennsylvania. We contextualize each of 15 focal farms across categories of urbanization intensity. In this case study, we provided two reports to each farmer. The first report provided summary diversity metrics of what was found on each farm in comparison to other farms. The second report was in respones to feedback from farmers about the first report. This second report focuses on land management strategies that promote beneficial arthropod diversity. In the Example 2 folder there is a subfolder for each of the reports. In each subfolder is an `.R` script, an `.Rmd` script, data files to produce the report, and sample reports as `HTML` documents. We emailed these `HTML` reports directly to our collaborating farmers.
 
-## Template code
+### Template code
 The generalized code scripts (`.R` and `.Rmd`) in this folder present a simplified version of the code from the two case studies, still utilizing the code for bar plots and pie charts included in Example 1. The generalized example code folder includes an `.R` script, an `.Rmd` script, a data file on arthropod diversity from Curaçao, and three sample reports as `HTML` documents.
 
-## Instructions for use:
+### Instructions for use:
 1. Clone (download) the repository to folder on your computer.
 2. Choose the folder for either one of the case studies or the template.
 2. Open the `.R` script file for the case study or template.
@@ -50,7 +50,7 @@ install.packages("kableExtra")
 5. Run the `.R` script.
 6. Check to make sure that `.html` documents are generated in the `userReports` folder in your working directory. If not, then work through the steps again.
 
-## Notes
+### Notes
 This repository is a work in progress and is distributed as is. Please see the feedback below if you would like to add a feature or if you found a bug. We welcome feedback.
 
 

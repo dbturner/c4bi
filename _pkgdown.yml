@@ -1,0 +1,8 @@
+output_dir: "."
+navbar:
+  title: "c4bi"
+  right:
+    - text: "Home"
+      href: README.html
+    - text: "Research"
+      href: index.html
