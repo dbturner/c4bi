@@ -1,9 +1,1 @@
-output_dir: "."
-navbar:
-  title: "c4bi"
-  right:
-    - text: "Home"
-      href: README.html
-    - text: "Reference"
-      href: doc/reference/index.html
 theme: jekyll-theme-minimal
