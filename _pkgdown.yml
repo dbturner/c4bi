@@ -1,0 +1,7 @@
+name: "c4bi"
+output_dir: "."
+navbar:
+  title: "c4bi: Coding for broader impact"
+  right:
+    - text: "Home"
+      href: index.html
