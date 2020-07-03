@@ -1,0 +1,12 @@
+---
+title: "Second Farm Report Examples"
+output: html_document
+---
+
+Click the links below to see six examples of the second iteration of farm stakeholder reports.
+
+[Farmer Report 2 - High Urban Farm](https://dbturner.github.io/c4bi_reports/farmerReport2_example_urbanFarm_1.html)
+
+[Farmer Report 2 - Medium Urban Farm](https://dbturner.github.io/c4bi_reports/farmerReport2_example_suburbanFarm_1.html)
+
+[Farmer Report 1 - Low Urban Farm](https://dbturner.github.io/c4bi_reports/farmerReport2_example_ruralFarm_1.html)

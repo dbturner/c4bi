@@ -3,8 +3,14 @@ template:
     bootswatch: sandstone
 
 articles:
-- title: First Farm Reports
+- title: Curacao Homeowner Reports
+  contents:
+  - homeownerReport1_examples_vignette
+- title: Southeastern PA First Farm Reports
   contents:
   - farmerReports1_rScript_vignette
   - farmerReports1_rmd_vignette
   - farmerReport1_examples_vignette
+- title: Second Farm Reports
+  contents:
+  - farmerReport2_examples_vignette
