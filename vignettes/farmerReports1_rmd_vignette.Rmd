@@ -5,7 +5,7 @@ output:
     theme: sandstone
 ---
 
-```{r setup, eval = FALSE}
+```{r setup, echo = FALSE}
 # set root directory because Rmd automatically chooses its location for working directory
 # which we need to change
 knitr::opts_knit$set(root.dir = here::here())

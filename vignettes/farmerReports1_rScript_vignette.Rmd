@@ -15,7 +15,7 @@ This script will complete the following tasks in sections:
 
 ## SECTION 1: Prepare environment.          
 
-### a. Load dependent R packages.
+### a. Load R packages.
 ```{r, eval = FALSE}
 library(RColorBrewer)
 library(plyr)
@@ -27,18 +27,18 @@ library(ggplot2)
 ### b. Load data files (these data are provided on GitHub as .csv files).
 
 ```{r, eval = FALSE}
-farm_abunRich <- read.csv("data/farmReport1_abunRich.csv")
+farm_abunRich <- read.csv(here::here("data/farmReport1_abunRich.csv"))
 print(farm_abunRich) # Check to see if the dataframe is complete.
 farm_abunRich$farmName <- factor(farm_abunRich$farmName, levels = farm_abunRich$farmName) # Make names a factor for ordering of columns in subsequent plots.
 
-fam <- read.csv("data/farmReport1_famPie.csv")
+fam <- read.csv(here::here("data/farmReport1_famPie.csv"))
 print(fam) # Check to see if the dataframe is complete.
 ```
 
 
 ------------------------
 
-## SECTION 2: Populate objects with data visualizations.
+## Section 2: Populate objects with data visualizations
 
 ### Create objects or lists of some plots to be used in the reports.
 
@@ -101,7 +101,7 @@ for (i in 1:(nfarms-3)) { # We subtract by three because we don't want to create
 
   real_pie_plot <- famPies[[i]] # Create an object with the farm's pie chart that will be called in .rmd file.
 
-  render("analysis/farmerReports1_rmd.Rmd", output_file = paste0('userReports_caseStudy2/farmerReport1_example_', farm_abunRich$farmName[i], ".html"), "html_document") # This line actually executes each farm's .html report by calling the "child" .rmd file.
+  render(here::here("analysis/farmerReports1_rmd.Rmd"), output_file = paste0(here::here('vignettes/farmerReport1_example_'), farm_abunRich$farmName[i], ".html"), "html_document") # This line actually executes each farm's .html report by calling the "child" .rmd file.
   # NOTE: The .rmd should be located in the same workspace directory as this R script.
   # ANOTHER NOTE: The .html files will be located in the same workspace directory as this R script.
 }

@@ -1,0 +1,18 @@
+---
+title: "First Farmer Report Examples"
+output: html_document
+---
+
+Click the links below to see six examples of the first iteration of farm stakeholder reports.
+
+[Farmer Report 1 - High Urban Farm #1](https://dbturner.github.io/c4bi_reports/farmerReport1_example_highUrbanFarm_1.html)
+
+[Farmer Report 1 - High Urban Farm #2](https://dbturner.github.io/c4bi_reports/farmerReport1_example_highUrbanFarm_2.html)
+
+[Farmer Report 1 - Medium Urban Farm #1](https://dbturner.github.io/c4bi_reports/farmerReport1_example_mediumUrbanFarm_1.html)
+
+[Farmer Report 1 - Medium Urban Farm #2](https://dbturner.github.io/c4bi_reports/farmerReport1_example_mediumUrbanFarm_2.html)
+
+[Farmer Report 1 - Low Urban Farm #1](https://dbturner.github.io/c4bi_reports/farmerReport1_example_lowUrbanFarm_1.html)
+
+[Farmer Report 1 - Low Urban Farm #2](https://dbturner.github.io/c4bi_reports/farmerReport1_example_lowUrbanFarm_2.html)

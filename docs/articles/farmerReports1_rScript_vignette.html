@@ -91,9 +91,9 @@
 <div id="section-1-prepare-environment-" class="section level2">
 <h2 class="hasAnchor">
 <a href="#section-1-prepare-environment-" class="anchor"></a>SECTION 1: Prepare environment.</h2>
-<div id="a--load-dependent-r-packages-" class="section level3">
+<div id="a--load-r-packages-" class="section level3">
 <h3 class="hasAnchor">
-<a href="#a--load-dependent-r-packages-" class="anchor"></a>a. Load dependent R packages.</h3>
+<a href="#a--load-r-packages-" class="anchor"></a>a. Load R packages.</h3>
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">RColorBrewer</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">plyr</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">rmarkdown</span>)
@@ -103,18 +103,18 @@
 <div id="b--load-data-files-these-data-are-provided-on-github-as--csv-files-" class="section level3">
 <h3 class="hasAnchor">
 <a href="#b--load-data-files-these-data-are-provided-on-github-as--csv-files-" class="anchor"></a>b. Load data files (these data are provided on GitHub as .csv files).</h3>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="no">farm_abunRich</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/farmReport1_abunRich.csv"</span>)
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="no">farm_abunRich</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/farmReport1_abunRich.csv"</span>))
 <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="no">farm_abunRich</span>) <span class="co"># Check to see if the dataframe is complete.</span>
 <span class="no">farm_abunRich</span>$<span class="no">farmName</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">farm_abunRich</span>$<span class="no">farmName</span>, <span class="kw">levels</span> <span class="kw">=</span> <span class="no">farm_abunRich</span>$<span class="no">farmName</span>) <span class="co"># Make names a factor for ordering of columns in subsequent plots.</span>
 
-<span class="no">fam</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/farmReport1_famPie.csv"</span>)
+<span class="no">fam</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/farmReport1_famPie.csv"</span>))
 <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="no">fam</span>) <span class="co"># Check to see if the dataframe is complete.</span></pre></body></html></div>
 <hr>
 </div>
 </div>
-<div id="section-2-populate-objects-with-data-visualizations-" class="section level2">
+<div id="section-2-populate-objects-with-data-visualizations" class="section level2">
 <h2 class="hasAnchor">
-<a href="#section-2-populate-objects-with-data-visualizations-" class="anchor"></a>SECTION 2: Populate objects with data visualizations.</h2>
+<a href="#section-2-populate-objects-with-data-visualizations" class="anchor"></a>Section 2: Populate objects with data visualizations</h2>
 <div id="create-objects-or-lists-of-some-plots-to-be-used-in-the-reports-" class="section level3">
 <h3 class="hasAnchor">
 <a href="#create-objects-or-lists-of-some-plots-to-be-used-in-the-reports-" class="anchor"></a>Create objects or lists of some plots to be used in the reports.</h3>
@@ -175,7 +175,7 @@
 
   <span class="no">real_pie_plot</span> <span class="kw">&lt;-</span> <span class="no">famPies</span><span class="kw">[[</span><span class="no">i</span>]] <span class="co"># Create an object with the farm's pie chart that will be called in .rmd file.</span>
 
-  <span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>(<span class="st">"analysis/farmerReports1_rmd.Rmd"</span>, <span class="kw">output_file</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">'userReports_caseStudy2/farmerReport1_example_'</span>, <span class="no">farm_abunRich</span>$<span class="no">farmName</span>[<span class="no">i</span>], <span class="st">".html"</span>), <span class="st">"html_document"</span>) <span class="co"># This line actually executes each farm's .html report by calling the "child" .rmd file.</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"analysis/farmerReports1_rmd.Rmd"</span>), <span class="kw">output_file</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">'vignettes/farmerReport1_example_'</span>), <span class="no">farm_abunRich</span>$<span class="no">farmName</span>[<span class="no">i</span>], <span class="st">".html"</span>), <span class="st">"html_document"</span>) <span class="co"># This line actually executes each farm's .html report by calling the "child" .rmd file.</span>
   <span class="co"># NOTE: The .rmd should be located in the same workspace directory as this R script.</span>
   <span class="co"># ANOTHER NOTE: The .html files will be located in the same workspace directory as this R script.</span>
 }</pre></body></html></div>
