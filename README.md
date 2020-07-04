@@ -18,4 +18,4 @@ Something about cloning the repository or installing the package from GitHub (de
 
 <hr>
 ## Citation
-Turner, D.B., Behm, J.E., & Helmus, M.R. 2020. Coding for broader impact: Leveraging ecologists' programming skills for effective public communication (submitted)
+Turner, D.B., Behm, J.E., & Helmus, M.R. 2020. Coding for broader impact: Leveraging ecologists' programming skills for effective public communication (in prep)
