@@ -2,8 +2,16 @@ Package: c4bi
 Type: Package
 Title: Coding for broader impact
 Version: 0.1.0
-Authors@R: person("Daniel", "Turner", email = "danturner137@gmail.com",
-                  role = c("aut", "cre"))
+Authors@R: c(person("Daniel", 
+                  "Turner", 
+                  email = "danturner137@gmail.com",
+                  role = c("aut", "cre")),
+             person("Matthew",
+                    "Helmus",
+                    role = c("aut")),
+             person("Jocelyn",
+                    "Behm",
+                    role = c("aut")))
 Description: A collection of tools to create iteratively produced customizable documents using R and RMarkdown.
 License: MIT + file LICENSE
 Encoding: UTF-8

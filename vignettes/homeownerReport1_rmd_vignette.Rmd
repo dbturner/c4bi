@@ -1,0 +1,319 @@
+---
+title: "Child RMarkdown Template - Homeowner Reports"
+---
+
+<center>
+__Biodiversity Report for report_name__ 
+
+Prepared by the Integrative Ecology Lab at Temple University, Philadelphia, USA
+
+Your garden was surveyed between January and March 2017
+
+Report release: *December 2018 v1_2* 
+</center>
+
+<br>
+<br>
+```{r setup, eval = FALSE, fig.align="left"}
+# set root directory because Rmd automatically chooses its location for working directory
+# which we need to change
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+
+```{r eval = FALSE, results = "asis", fig.align="left"}
+
+# report aesthetics and formatting
+cat("
+<style>
+body{ /* Normal  */
+      font-size: 18px;
+}
+
+table,th,td{
+border: solid white;
+}
+
+caption {
+      color: black;
+      font-weight: bold;
+      font-size: 1.0em;
+    }
+</style>
+")
+```
+## Reptiles and Amphibians
+### Native Species
+
+Native species are species that occur naturally on Cura&#231;ao. There are eight native reptiles (1 snake and 7 lizards) and no native amphibians on Cura&#231;ao. In your garden, we focused on surveying five of the native lizard species: 
+<br>
+<br>
+<br>
+```{r nat_herp_collage, out.width = "650px", eval = FALSE, warning = FALSE, fig.align = "center"}
+knitr::include_graphics(here("data/photos/Native Herps Collage.JPG"))
+```
+<br>
+<P style="page-break-before: always">
+Here are the abundances of each native reptile species in your garden compared to the *average* abundance across all forest, garden, and scrub sites we surveyed. 
+<br>
+<br>
+<br>
+```{r herp_nat_abun_plots, out.width = "800px", eval = FALSE, warning = FALSE, fig.align = "center"}
+# print plots conditionally if we performed nocturnal herp surveys
+if(is.na(herps_NA)) {
+  # prep list and tables of native diurnal species 
+  herps_natList[[i]] <- rbind(herps_natList[[i]], herps_nat_means)
+  herps_nat_long[[i]] <- herps_natList[[i]] %>%
+    select("Site", "Laurent's Whiptail", "Striped Anole")
+  
+  herps_nat_long[[i]] <- melt(herps_nat_long[[i]], id = c("Site"))
+  herps_nat_long[[i]]$ord <- rep(1:4, 2)
+  
+  herps_nat_plot <- ggplot(herps_nat_long[[i]], aes(x = reorder(Site, ord), y = value)) +
+    geom_bar(stat = "identity", aes(fill = Site)) +
+    scale_fill_manual(values = fun_colors4) +
+    geom_text(aes(label=value), position = position_dodge(width = 0.9), vjust = 0.5, size = 4.8) +
+    labs(y = "Number of reptiles",
+         title = "Native reptile abundances") +
+    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+          panel.background = element_blank(), axis.line = element_line(colour = "black"),
+          axis.text.x = element_text(color = "grey20", size=12, angle=90, hjust=.5, vjust=.5,
+                                     face=c("bold","plain","plain","plain")),
+          axis.text.y = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5, face="plain"),
+          axis.title.x=element_blank(),
+          legend.position = "none",
+          strip.text.x = element_text(size = 12),
+          axis.title=element_text(size=13.6),
+          plot.title = element_text(size=18)) +
+    facet_wrap(~ variable) # This object will be called to compare native diurnal herp abundance across the focal site and site categories.
+  
+  print(herps_nat_plot)
+} else {
+  # prep list and tables of native diurnal and nocturnal species
+  herps_natList[[i]] <- rbind(herps_natList[[i]], herps_nat_means)
+  herps_nat_long[[i]] <- herps_natList[[i]] %>%
+    select("Site", "Laurent's Whiptail", "Antillean Dwarf Gecko",  "Turnip-tailed Gecko", "Striped Anole",  "Dutch Leaf-toed Gecko")
+  
+  herps_nat_long[[i]] <- melt(herps_nat_long[[i]], id = c("Site"))
+  herps_nat_long[[i]]$ord <- rep(1:4, 5)
+  
+  herps_nat_plot <- ggplot(herps_nat_long[[i]], aes(x = reorder(Site, ord), y = value)) +
+    geom_bar(stat = "identity", aes(fill = Site)) +
+    scale_fill_manual(values = fun_colors4) +
+    geom_text(aes(label=value), position = position_dodge(width = 0.9), vjust = 0.5, size = 4.8) +
+    labs(y = "Number of reptiles",
+         title = "Native reptile abundances") +
+    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+          panel.background = element_blank(), axis.line = element_line(colour = "black"),
+          axis.text.x = element_text(color = "grey20", size=12, angle=90, hjust=.5, vjust=.5, 
+                                     face=c("bold","plain","plain","plain")),
+          axis.text.y = element_text(color = "grey20", size=12, angle=0, hjust=.5, vjust=.5, face="plain"),
+          axis.title.x=element_blank(),
+          legend.position = "none",
+          strip.text.x = element_text(size = 12),
+          axis.title=element_text(size=13.6),
+          plot.title = element_text(size=18)) +
+    facet_wrap(~ variable) # This object will be called to compare native diurnal and nocturnal herp abundance across the focal site and site categories.
+  
+  print(herps_nat_plot)
+}
+```
+
+  
+```{r herp_nat_message, out.width = "800px", eval = FALSE, warning = FALSE, fig.align = "left"}
+if(is.na(herps_NA)){ # if we did not perform nocturnal surveys at a site, print out this message
+  knitr::include_graphics(here("data/photos/herps_nat_message.png"))
+}
+```
+<br>
+The three nocturnal native gecko species and *Laurent's Whiptail* had relatively equal abundance across the site types, while the diurnal *Striped Anole* was most abundant in forest sites.
+
+
+<P style="page-break-before: always">
+
+### Exotic Species
+Exotic species are species that are not native to Cura&#231;ao and were introduced to Cura&#231;ao from another location by humans. Exotic species become invasive when they start to cause ecological or economic problems. To our knowledge, there are seven exotic reptile and amphibian species currently living on Cura&#231;ao, and we surveyed six of them. The seventh exotic species, *Tokay Gecko,* was discovered in 2018. Individuals of this large predatory gecko were kept as pets, but escaped. All of the exotic species are primarily nocturnal, and at this point they have not been studied well enough to know conclusively if any can be considered invasive.
+<br>
+<br>
+```{r exo_herp_collage, out.width = "650px", eval = FALSE, warning = FALSE, fig.align = "center"}
+knitr::include_graphics(here("data/photos/Exotic Herps Collage.JPG"))
+```
+  
+<P style="page-break-before: always">
+This is the percentage of all forest, garden, and scrub sites we surveyed that had each exotic species. 
+<br>
+<br>
+```{r herp_exo_prop_plot, out.width = "850px", eval = FALSE, fig.align = "center"}
+print(herps_exo_prop_plot) # call exotic herp plot that was created in the R Script
+```
+As you can see, all six exotic species prefer garden sites and only one exotic, the *Colombian Four-eyed Frog,* was found at scrub sites.  Interestingly, the two species found only at garden sites, the *Mourning Gecko* and the *Asian House Gecko,* are two species recently introduced to Cura&#231;ao. This means they were likely introduced to a garden (probably resort garden) and have not had sufficient time yet to spread into natural forest or scrub sites.    
+
+```{r herp_exo_sp_list, out.width = "600px", eval = FALSE, results = 'asis'}
+j <- 1
+
+herp_dataList = list()
+
+if(is.na(herps_exoList[[i]][1, 5])) {
+  knitr::include_graphics(here("data/photos/herps_exo_message1.png")) # if there were no nighttime surveys performed, thenprint this message saying there were no nighttime surveys performed
+} else if (herps_exoList[[i]][1, 5] == 0) {
+  knitr::include_graphics(here("data/photos/herps_exo_message2.png")) # if we found no exotic herps, then print this message saying that none were found
+} else {
+  while (herps_exoList[[i]][j, 5] == 1){ 
+    herp_data <- herps_exoList[[i]][j, 4]
+    herp_dataList[[j]] <- herp_data
+    j <- j + 1
+  }
+  all_herpdata <- matrix(unlist(herp_dataList, use.names = FALSE))
+  as.data.frame(all_herpdata)
+  knitr::kable(all_herpdata, caption = "These are the exotic species that we found in your garden:") %>%
+    kableExtra::kable_styling(full_width = T, position = "left") # if we found exotic herps in the garden, then print out the list of species
+}
+```
+
+
+<P style="page-break-before: always">
+
+## Birds
+### Native Species
+In total, we recorded 24 native bird species in our surveys.  We only surveyed passerines (songbirds) and raptors (hawk, kestrel, caracara) and did not survey waterfowl (e.g, flamingos) or domestic fowl (e.g, peacocks, chickens). Below is the total number of native bird species we found in your garden relative to the average number of bird species found at forest, garden, and scrub sites.
+<br>
+<br>
+```{r out.width = "850px", eval = FALSE, fig.align = "center",} 
+print(birdsNat_SR_plot)
+```
+<br>
+As you can see, the number of species was relatively equal across site types.
+
+<P style="page-break-before: always">
+
+```{r nat_birdsp_List_code, eval = FALSE, message = FALSE, results = FALSE}
+# prep bird species list to print
+k <- 1
+bird_dataList = list()
+
+while(birds_natList[[i]][k, 4] == 1) {
+  bird_data <- birds_natList[[i]][k, 6]
+  bird_dataList[[k]] <- bird_data
+  k <- k + 1 # this while loop populates list with tables of each site's observed species
+}
+
+all_birdData <- matrix(unlist(bird_dataList, use.names = FALSE))
+as.data.frame(all_birdData)
+```
+
+```{r nat_birdsp_List, eval = FALSE}
+knitr::kable(all_birdData, caption = "These are the native species that we found in your garden:") %>%
+    kableExtra::kable_styling(full_width = T, position = "left") # print the table of native bird species at each 
+```
+
+<P style="page-break-before: always">
+### Exotic Species
+There are approximatly 13 exotic bird species on Cura&#231;ao, eight of which are parrots. Many of these exotics were accidentally introduced to Cura&#231;ao as pets who escaped. We focused on surveying five of these exotic species. Note, there are actually three *Amazona* exotic parrots, but they are difficult to distinguish in surveys.
+<br>
+<br>
+```{r exo_birds_collage, out.width = "500px", eval = FALSE, warning = FALSE, fig.align = "center"}
+knitr::include_graphics(here("data/photos/Exotic Birds Collage.JPG"))
+```
+
+
+<P style="page-break-before: always">
+
+This is the percentage of all forest, garden, and scrub sites we surveyed that had each exotic bird species. Most exotic bird species prefer gardens and only the Saffron Finch was found in scrub habitats.    
+
+```{r birdsExo_propPlot, out.width = "750px", eval = FALSE, fig.align = "center"}
+print(birds_exo_prop_plot)
+```
+  
+
+
+```{r birdExo_spList, out.width = "480px", eval = FALSE, fig.align = "left"}
+l <- 1
+newBird_exoList <- list()
+
+
+if (birdsExo_List[[i]][1, 5] == 0) {
+  knitr::include_graphics(here("data/photos/birds_exo_message.png")) # if we did not find any exotic birds at the site, then print a message that says none were observed
+} else {
+  while(birdsExo_List[[i]][l, 5] == 1){
+    birdExo_data <- birdsExo_List[[i]][l, 4]
+    newBird_exoList[[l]] <- birdExo_data
+    l <- l + 1 
+  }
+  all_birdExo_data <- matrix(unlist(newBird_exoList, use.names = FALSE))
+  as.data.frame(all_birdExo_data)
+  knitr::kable(all_birdExo_data, caption = "These are the exotic species that we found in your garden:") %>%
+    kableExtra::kable_styling(full_width = T, position = "left") # if exotic birds were observed, print a list of the species
+}
+```
+
+<P style="page-break-before: always">
+
+## Arthropods
+
+We surveyed the arthropods (insects and spiders) that live on the plants in your garden.  In total, we found 395 arthropod species, however, the species are not well-enough studied to know which are exotic. 
+<br>
+<br>
+```{r arths_collage, out.width = "500px", eval = FALSE, warning = FALSE, fig.align = "center"}
+knitr::include_graphics(here("data/photos/Arthropods Collage.JPG"))
+```
+
+
+<P style="page-break-before: always">
+
+Here is the total number of arthropod species we found in your garden compared to the average number of species across all forest, garden, and scrub sites we surveyed  
+<br>
+<br>
+<br>
+
+```{r arthSR, out.width = "850px", eval = FALSE, warning = FALSE, fig.align = "center"}
+print(arthSR_plot)
+```
+<br>
+As you can see, garden sites by far had the highest number of species!
+
+<P style="page-break-before: always">
+Here is the total number of individual arthropods (abundance) we found in your garden compared to the average abundance of arthropods across all garden, scrub and forest sites we surveyed 
+<br>
+<br>
+<br>
+```{r arthAB, out.width = "850px", eval = FALSE, warning = FALSE, fig.align = "center"}
+print(arthAB_plot)
+```
+<br>
+Again, garden sites had the highest abundance of arthropods across all site types.  This was due to the high number of *True Bug* species found at garden sites (see composition section below).                                                                                                     
+<P style="page-break-before: always">
+Based on the abundances of each order, we calculated the arthropod composition of each site. The plots below show the composition of arthropods in your garden compared to the average composition of arthropods in garden, forest and scrub sites we surveyed.
+  
+```{r arth_pieSite, fig.height = 5.5, out.width = "550px", eval = FALSE, warning = FALSE, fig.align = "center"}
+print(arthSite_pie)
+
+```
+```{r arth_pieType, fig.height = 3.0,out.width = "700px", eval = FALSE, warning = FALSE, fig.align = "center"}
+print(arthType_pie)
+```
+Garden sites are dominated by true bugs; roughly half of all individuals we collected in garden sites were true bugs and many of these where from species that like to live in grass. In contrast, forest sites were dominated by flies, and scrub sites had a more equal representation of orders.
+
+<P style="page-break-before: always">
+
+<br>
+<br>
+```{r ieco_logo, out.width = "250px", eval = FALSE, warning = FALSE, fig.align = "left"}
+knitr::include_graphics(here("data/photos/iEco Logo.JPG"))
+```
+<br>
+<br>
+
+__Thank you__ for allowing us to survey your garden for this project! We hope you find this report informative on how your garden contributes to the biodiversity of Cura&#231;ao.
+<br>
+<br>
+The Integrative Ecology Lab at Temple University (iEcoLab) will continue working on the biodiversity of Cura&#231;ao for years to come. For more information and news about our work please visit our lab webpage *iecolab.org*. You can also follow us on Instagram  *@integrative.ecology* and Facebook *@IntegrativeEcology*. 
+<br>
+<br>
+This report was created by iEcoLab members Dan Turner (current address: Michigan State University), Dr. Matthew Helmus and Dr. Jocelyn Behm under a creative commons license. This means that we hope you share this with whomever and use this report however you like. For any comments, questions, or to recieve a digital copy of this report, please email Jocelyn at jebehm<!-- -->@temple.edu.</style>
+<br>
+<br>
+
+<!--- <em><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Gardens of Curacao Biodiversity Project</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.iecolab.org" property="cc:attributionName" rel="cc:attributionURL">iEcoLab @ Temple University</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</em> --->
+
+<em><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+<br>Gardens of Curacao Biodiversity Project by iEcoLab @ Temple University is licensed under a Creative Commons Attribution 4.0 International License.</em>

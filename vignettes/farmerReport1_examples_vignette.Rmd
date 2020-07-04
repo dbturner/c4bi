@@ -1,5 +1,5 @@
 ---
-title: "First Farmer Report Examples"
+title: "Sample Reports - Southeastern PA Farmers (First iteration)"
 output: html_document
 ---
 

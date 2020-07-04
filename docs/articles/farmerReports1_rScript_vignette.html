@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parent R Script • c4bi</title>
+<title>Parent R Script - First Farmer Reports • c4bi</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Parent R Script">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Parent R Script - First Farmer Reports">
 <meta property="og:description" content="c4bi">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -63,7 +63,7 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Parent R Script</h1>
+      <h1 data-toc-skip>Parent R Script - First Farmer Reports</h1>
             
       
       
@@ -80,7 +80,12 @@
 <ol style="list-style-type: decimal">
 <li>Load data from farm biodiversity surveys
 <ol style="list-style-type: lower-alpha">
-<li>Data needed (two .csv files): farmReport1_abunRich.csv farmReport1_famPie.csv</li>
+<li>Data needed (two .csv files):
+<ol style="list-style-type: lower-roman">
+<li>farmReport1_abunRich.csv</li>
+<li>farmReport1_famPie.csv</li>
+</ol>
+</li>
 </ol>
 </li>
 <li>Create objects or lists of some plots to be used in the reports</li>
@@ -88,21 +93,22 @@
 </ol>
 <hr>
 </div>
-<div id="section-1-prepare-environment-" class="section level2">
+<div id="section-1-prepare-environment" class="section level2">
 <h2 class="hasAnchor">
-<a href="#section-1-prepare-environment-" class="anchor"></a>SECTION 1: Prepare environment.</h2>
-<div id="a--load-r-packages-" class="section level3">
+<a href="#section-1-prepare-environment" class="anchor"></a>Section 1: Prepare environment</h2>
+<div id="load-r-packages" class="section level3">
 <h3 class="hasAnchor">
-<a href="#a--load-r-packages-" class="anchor"></a>a. Load R packages.</h3>
+<a href="#load-r-packages" class="anchor"></a>Load R packages</h3>
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">RColorBrewer</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">plyr</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">rmarkdown</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">knitr</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">ggplot2</span>)</pre></body></html></div>
 </div>
-<div id="b--load-data-files-these-data-are-provided-on-github-as--csv-files-" class="section level3">
+<div id="load-data-files" class="section level3">
 <h3 class="hasAnchor">
-<a href="#b--load-data-files-these-data-are-provided-on-github-as--csv-files-" class="anchor"></a>b. Load data files (these data are provided on GitHub as .csv files).</h3>
+<a href="#load-data-files" class="anchor"></a>Load data files</h3>
+<p>These data are provided on the <a href="https://github.com/dbturner/c4bi/tree/master/data">GitHub repository</a> as .csv files.</p>
 <div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="no">farm_abunRich</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/farmReport1_abunRich.csv"</span>))
 <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="no">farm_abunRich</span>) <span class="co"># Check to see if the dataframe is complete.</span>
 <span class="no">farm_abunRich</span>$<span class="no">farmName</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">farm_abunRich</span>$<span class="no">farmName</span>, <span class="kw">levels</span> <span class="kw">=</span> <span class="no">farm_abunRich</span>$<span class="no">farmName</span>) <span class="co"># Make names a factor for ordering of columns in subsequent plots.</span>
@@ -112,9 +118,9 @@
 <hr>
 </div>
 </div>
-<div id="section-2-populate-objects-with-data-visualizations" class="section level2">
+<div id="section-2-populate-objects-for-data-visualizations" class="section level2">
 <h2 class="hasAnchor">
-<a href="#section-2-populate-objects-with-data-visualizations" class="anchor"></a>Section 2: Populate objects with data visualizations</h2>
+<a href="#section-2-populate-objects-for-data-visualizations" class="anchor"></a>Section 2: Populate objects for data visualizations</h2>
 <div id="create-objects-or-lists-of-some-plots-to-be-used-in-the-reports-" class="section level3">
 <h3 class="hasAnchor">
 <a href="#create-objects-or-lists-of-some-plots-to-be-used-in-the-reports-" class="anchor"></a>Create objects or lists of some plots to be used in the reports.</h3>
@@ -142,9 +148,9 @@
 <hr>
 </div>
 </div>
-<div id="section-3-iteratively-produce-reports-" class="section level2">
+<div id="section-3-iteratively-produce-reports" class="section level2">
 <h2 class="hasAnchor">
-<a href="#section-3-iteratively-produce-reports-" class="anchor"></a>SECTION 3: Iteratively produce reports.</h2>
+<a href="#section-3-iteratively-produce-reports" class="anchor"></a>Section 3: Iteratively produce reports</h2>
 <div id="run-a-for-loop-that-will-cycle-through-the-datasets-to-create-individualized-biodiversity-reports-" class="section level3">
 <h3 class="hasAnchor">
 <a href="#run-a-for-loop-that-will-cycle-through-the-datasets-to-create-individualized-biodiversity-reports-" class="anchor"></a>Run a “for loop” that will cycle through the datasets to create individualized biodiversity reports.</h3>
@@ -194,7 +200,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Daniel Turner.</p>
+  <p>Developed by Daniel Turner, Matthew Helmus, Jocelyn Behm.</p>
 </div>
 
 <div class="pkgdown">

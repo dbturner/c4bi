@@ -1,21 +1,22 @@
 ---
-title: "Parent R Script"
+title: "Parent R Script - First Farmer Reports"
 ---
 ## Description
 
 This script will complete the following tasks in sections:
 
 1. Load data from farm biodiversity surveys
-    a. Data needed (two .csv files):  farmReport1_abunRich.csv
-                                      farmReport1_famPie.csv 
+      a. Data needed (two .csv files): 
+          i. farmReport1_abunRich.csv
+          ii. farmReport1_famPie.csv 
 2. Create objects or lists of some plots to be used in the reports
 3. Run a "for loop" that will cycle through the datasets to create individualized biodiversity reports
 
 ------------------------
 
-## SECTION 1: Prepare environment.          
+## Section 1: Prepare environment          
 
-### a. Load R packages.
+### Load R packages
 ```{r, eval = FALSE}
 library(RColorBrewer)
 library(plyr)
@@ -24,7 +25,9 @@ library(knitr)
 library(ggplot2)
 ```
 
-### b. Load data files (these data are provided on GitHub as .csv files).
+### Load data files
+
+These data are provided on the [GitHub repository](https://github.com/dbturner/c4bi/tree/master/data) as .csv files.
 
 ```{r, eval = FALSE}
 farm_abunRich <- read.csv(here::here("data/farmReport1_abunRich.csv"))
@@ -38,7 +41,7 @@ print(fam) # Check to see if the dataframe is complete.
 
 ------------------------
 
-## Section 2: Populate objects with data visualizations
+## Section 2: Populate objects for data visualizations
 
 ### Create objects or lists of some plots to be used in the reports.
 
@@ -69,7 +72,7 @@ nfarms <- nrow(farm_abunRich) # Create an object with the number of farms in the
 
 --------------------------------------------------
 
-## SECTION 3: Iteratively produce reports.
+## Section 3: Iteratively produce reports
 
 ### Run a "for loop" that will cycle through the datasets to create individualized biodiversity reports.        
 
