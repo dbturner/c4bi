@@ -1,0 +1,67 @@
+---
+title: "Get started with `c4bi`"
+output: html_document
+---
+## Why code for broader impact?
+<br>
+Science is meant to be shared! `c4bi` and its accompanying [publication](#doi) provide a framework, workflow, code, and examples to faciliate the exchange of knowledge between ecologists and their public stakeholders. It's time consuming and tedious to create hundreds of plots and unique research summaries when data is collected across dozens of stakeholder sites. The template code here will help you prepare your dataset(s) to create individualized reports in `HTML` documents that can be distributed to your stakeholders via print or digital media.
+
+#### You may be interested in this code if you are:
+- An extension specialist looking to create individual pest reports across farm locations
+- A wildlife biologist surveying multiple sites and wanting to share your findings across your stakeholder sites
+- An environmental scientist seeking to send customized pollution assessments
+- OR a person with a ton of data from many places and want unique summary documents for each place
+<hr>
+
+## Tracking impact
+
+If you use this package to faciliate effective communication with your collaborators and/or stakeholders, please fill out [this quick form] so we can track the impact of this package.
+
+<hr>
+
+## Instructions for use:
+1. Clone (download) the repository to folder on your computer.
+2. Choose the folder for either one of the case studies or the template.
+2. Open the `.R` script file for the case study or template.
+3. Edit the `.R` script by setting the working directory to the folder for the respective script.
+4. Install any packages not previously installed on your device. Below are the required packages.
+
+```
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("rmarkdown")
+install.packages("reshape2")
+install.packages("tidyr")
+install.packages("kableExtra")
+```
+5. Run the `.R` script.
+6. Check to make sure that `.html` documents are generated in the `userReports` folder in your working directory. If not, then work through the steps again.
+<hr>
+
+## Articles
+### Template code
+The generalized code scripts (`.R` and `.Rmd`) in this folder present a simplified version of the code from the two case studies, still utilizing the code for bar plots and pie charts included in Example 1. The generalized example code folder includes an `.R` script, an `.Rmd` script, a data file on arthropod diversity from Curaçao, and three sample reports as `HTML` documents.
+
+
+### Case Studies
+#### Case Study 1: Curaçao homeowners
+This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the Example 1 folder, there are `.R` script, `.Rmd` script, data files for each taxon, and 5 sample reports as `HTML` documents, which can be opened in any Internet browser. We used Chrome to print these `.html` files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. See our [_our publication_](#citation) for more details.
+<hr>
+
+#### Case Study 2: Southeastern Pennsylvania organic farmers
+This case study summarizes biodiversity surveys for beneficial predatory arthropods on organic farms across an urbanization gradient in southeastern Pennsylvania. We contextualize each of 15 focal farms across categories of urbanization intensity. In this case study, we provided two reports to each farmer. The first report provided summary diversity metrics of what was found on each farm in comparison to other farms. The second report was in respones to feedback from farmers about the first report. This second report focuses on land management strategies that promote beneficial arthropod diversity. In the Example 2 folder there is a subfolder for each of the reports. In each subfolder is an `.R` script, an `.Rmd` script, data files to produce the report, and sample reports as `HTML` documents. We emailed these `HTML` reports directly to our collaborating farmers.
+
+<hr>
+
+
+## Feedback
+_This package is a work in progress and is distributed as is. Please see the feedback below if you would like to add a feature or if you found a bug. We welcome feedback._
+<br>
+_Please read and follow these simple rules before submitting a feature, bug or pull request_
+(these rules are blatantly copied from [here](https://github.com/willpearse/pez "pez GitHub page"))
+
+* If you have a new idea for how the scripts should be restructured, please open an issue (tagged 'enhancement') to discuss it first before making a pull request.
+
+* If you you've found a bug, open an issue (tagged 'bug') that contains a  [minimal, complete, and verifiable example](https://stackoverflow.com/help/mcve "How to make a great reproducible example?"). We'll try and get back to you quickly. If you are able to solve the bug on your own, please post the correction.
+
+* If you have a feature request, open an issue (tagged 'enhancement') to discuss it. We're much more likely to be able to do it if you can be clear and concise about what you want, and if you have already written some code that you would like to merge. If you are requesting a complicated analysis technique that is not available, then consider bringing one of the authors of the individual code repositories on as a collaborator.
