@@ -20,5 +20,7 @@ A ggplot rendering of the proportions across categories.
 Create a pie plot.
 }
 \examples{
+mydat$prop <- c(.2, .4, .4)
+mydat$cat <- c("a, "b", "c")
 pie(mydat, mydat$prop, mydat$cat)
 }
