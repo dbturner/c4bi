@@ -154,7 +154,7 @@
 <span class='no'>ylab</span> <span class='kw'>&lt;-</span> <span class='st'>"Y-axis label"</span>
 <span class='no'>legendLab</span> <span class='kw'>&lt;-</span> <span class='st'>"Legend Title"</span>
 <span class='no'>mydata</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>x</span>), <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>y</span>), <span class='no'>cat</span>))
-<span class='fu'>scatter</span>(<span class='no'>mydata</span>, <span class='no'>mydata</span>$<span class='no'>x</span>, <span class='no'>mydata</span>$<span class='no'>y</span>, <span class='no'>cat</span>, <span class='no'>xlab</span>, <span class='no'>ylab</span>, <span class='no'>catName</span>)</div><div class='output co'>#&gt; <span class='error'>Error in ggplot2::ggplot(data = mydata, aes(x = x, y = y)): object 'mydata' not found</span></div></pre>
+<span class='fu'>scatter</span>(<span class='no'>mydata</span>, <span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>cat</span>, <span class='no'>xlab</span>, <span class='no'>ylab</span>, <span class='no'>legendLab</span>)</div><div class='img'><img src='scatter-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

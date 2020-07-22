@@ -18,12 +18,12 @@
 #' ylab <- "Y-axis label"
 #' legendLab <- "Legend Title"
 #' mydata <- as.data.frame(cbind(as.numeric(x), as.numeric(y), cat))
-#' scatter(mydata, mydata$x, mydata$y, cat, xlab, ylab, catName)
+#' scatter(mydata, x, y, cat, xlab, ylab, legendLab)
 #' @importFrom ggplot2 aes
 
 scatter <- function(df, x, y, cat, xlab, ylab, legendLab) {
   colors <- c("seagreen4", "darkslateblue", "tan3")
-  ggplot2::ggplot(data = mydata, aes(x = x, y = y)) +
+  ggplot2::ggplot(data = df, aes(x = x, y = y)) +
     ggplot2::geom_point(aes(color = cat, shape = cat), size= 3.4) +
     ggplot2::geom_smooth(aes(color = cat), method = "lm", size = 1.4, se = FALSE, fullrange = TRUE) +
     ggplot2::labs(x = xlab,

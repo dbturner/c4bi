@@ -32,5 +32,5 @@ xlab <- "X-axis label"
 ylab <- "Y-axis label"
 legendLab <- "Legend Title"
 mydata <- as.data.frame(cbind(as.numeric(x), as.numeric(y), cat))
-scatter(mydata, mydata$x, mydata$y, cat, xlab, ylab, catName)
+scatter(mydata, x, y, cat, xlab, ylab, legendLab)
 }
