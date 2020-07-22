@@ -14,13 +14,14 @@ pie(df, prop, cat)
 \item{cat}{A column in the 'df' dataframe. Must be of class factor or character.}
 }
 \value{
-A ggplot rendering of the proportions across categories.
+A ggplot2 rendering of the proportions across categories.
 }
 \description{
 Create a pie plot.
 }
 \examples{
-mydat$prop <- c(.2, .4, .4)
-mydat$cat <- c("a"", "b", "c")
-pie(mydat, mydat$prop, mydat$cat)
+prop <- c(.2, .4, .4)
+cat <- c("a", "b", "c")
+mydata <- as.data.frame(cbind(prop, cat))
+pie(mydata, mydata$prop, mydata$cat)
 }
