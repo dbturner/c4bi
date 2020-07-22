@@ -118,7 +118,7 @@
     <p>Create a scatter plot.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>scatter</span>(<span class='no'>df</span>, <span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>cat</span>, <span class='no'>xlab</span>, <span class='no'>ylab</span>, <span class='no'>catName</span>)</pre>
+    <pre class="usage"><span class='fu'>scatter</span>(<span class='no'>df</span>, <span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>cat</span>, <span class='no'>xlab</span>, <span class='no'>ylab</span>, <span class='no'>legendLab</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -149,14 +149,12 @@
 <span class='no'>sigma</span> <span class='kw'>&lt;-</span> <span class='fl'>1</span>
 <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>((<span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span>(<span class='no'>n</span>, <span class='kw'>mean</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>sd</span> <span class='kw'>=</span> <span class='fl'>.5</span>)), <span class='fl'>1</span>)
 <span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>((<span class='no'>b0</span> + <span class='no'>b1</span>*<span class='no'>x</span> + <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span>(<span class='no'>n</span>, <span class='no'>sigma</span>)), <span class='fl'>1</span>)
-<span class='no'>cat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"a"</span>, <span class='fl'>50</span>), <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"b"</span>, <span class='fl'>50</span>))
+<span class='no'>cat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"Group_A"</span>, <span class='fl'>50</span>), <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"Group_B"</span>, <span class='fl'>50</span>))
 <span class='no'>xlab</span> <span class='kw'>&lt;-</span> <span class='st'>"X-axis label"</span>
 <span class='no'>ylab</span> <span class='kw'>&lt;-</span> <span class='st'>"Y-axis label"</span>
-<span class='no'>catName</span> <span class='kw'>&lt;-</span> <span class='st'>"Categories"</span>
-<span class='no'>mydata</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>cat</span>))
-<span class='fu'>scatter</span>(<span class='no'>mydata</span>, <span class='no'>mydata</span>$<span class='no'>x</span>, <span class='no'>mydata</span>$<span class='no'>y</span>, <span class='no'>cat</span>, <span class='no'>xlab</span>, <span class='no'>ylab</span>, <span class='no'>catName</span>)</div><div class='output co'>#&gt; &lt;ScaleContinuousPosition&gt;
-#&gt;  Range:  
-#&gt;  Limits:    0 --    1</div></pre>
+<span class='no'>legendLab</span> <span class='kw'>&lt;-</span> <span class='st'>"Legend Title"</span>
+<span class='no'>mydata</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>x</span>), <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>y</span>), <span class='no'>cat</span>))
+<span class='fu'>scatter</span>(<span class='no'>mydata</span>, <span class='no'>mydata</span>$<span class='no'>x</span>, <span class='no'>mydata</span>$<span class='no'>y</span>, <span class='no'>cat</span>, <span class='no'>xlab</span>, <span class='no'>ylab</span>, <span class='no'>catName</span>)</div><div class='output co'>#&gt; <span class='error'>Error in ggplot2::ggplot(data = mydata, aes(x = x, y = y)): object 'mydata' not found</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

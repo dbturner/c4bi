@@ -4,7 +4,7 @@
 \alias{scatter}
 \title{Create a scatter plot.}
 \usage{
-scatter(df, x, y, cat, xlab, ylab, catName)
+scatter(df, x, y, cat, xlab, ylab, legendLab)
 }
 \arguments{
 \item{df}{A dataframe.}
@@ -27,10 +27,10 @@ b1 <- 2
 sigma <- 1
 x <- round((rnorm(n, mean = 2, sd = .5)), 1)
 y <- round((b0 + b1*x + rnorm(n, sigma)), 1)
-cat <- c(rep("a", 50), rep("b", 50))
+cat <- c(rep("Group_A", 50), rep("Group_B", 50))
 xlab <- "X-axis label"
 ylab <- "Y-axis label"
-catName <- "Categories"
-mydata <- as.data.frame(cbind(x, y, cat))
+legendLab <- "Legend Title"
+mydata <- as.data.frame(cbind(as.numeric(x), as.numeric(y), cat))
 scatter(mydata, mydata$x, mydata$y, cat, xlab, ylab, catName)
 }
