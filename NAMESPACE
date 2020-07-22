@@ -2,4 +2,5 @@
 
 export(bar)
 export(pie)
+export(scatter)
 importFrom(ggplot2,aes)

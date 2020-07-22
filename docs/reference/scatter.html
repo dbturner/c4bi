@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • c4bi</title>
+<title>Create a scatter plot. — scatter • c4bi</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Create a scatter plot. — scatter" />
+<meta property="og:description" content="Create a scatter plot." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -106,54 +107,57 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Create a scatter plot.</h1>
+    
+    <div class="hidden name"><code>scatter.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Create a scatter plot.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>scatter</span>(<span class='no'>df</span>, <span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>cat</span>, <span class='no'>xlab</span>, <span class='no'>ylab</span>, <span class='no'>catName</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="bar.html">bar()</a></code> </p>
-        </td>
-        <td><p>Create a bar plot.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="pie.html">pie()</a></code> </p>
-        </td>
-        <td><p>Create a pie plot.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scatter.html">scatter()</a></code> </p>
-        </td>
-        <td><p>Create a scatter plot.</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>df</th>
+      <td><p>A dataframe.</p></td>
+    </tr>
+    <tr>
+      <th>cat</th>
+      <td><p>A column in the 'df' dataframe. Must be of class factor or character.</p></td>
+    </tr>
+    <tr>
+      <th>prop</th>
+      <td><p>A column in the 'df' dataframe. Must be of class 'numeric' and a proportion from 0-1.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A ggplot2 rendering of the proportions across categories.</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
+<span class='no'>n</span> <span class='kw'>&lt;-</span> <span class='fl'>100</span>
+<span class='no'>b0</span> <span class='kw'>&lt;-</span> <span class='fl'>33</span>
+<span class='no'>b1</span> <span class='kw'>&lt;-</span> <span class='fl'>2</span>
+<span class='no'>sigma</span> <span class='kw'>&lt;-</span> <span class='fl'>1</span>
+<span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>((<span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span>(<span class='no'>n</span>, <span class='kw'>mean</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>sd</span> <span class='kw'>=</span> <span class='fl'>.5</span>)), <span class='fl'>1</span>)
+<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>((<span class='no'>b0</span> + <span class='no'>b1</span>*<span class='no'>x</span> + <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span>(<span class='no'>n</span>, <span class='no'>sigma</span>)), <span class='fl'>1</span>)
+<span class='no'>cat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"a"</span>, <span class='fl'>50</span>), <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"b"</span>, <span class='fl'>50</span>))
+<span class='no'>xlab</span> <span class='kw'>&lt;-</span> <span class='st'>"X-axis label"</span>
+<span class='no'>ylab</span> <span class='kw'>&lt;-</span> <span class='st'>"Y-axis label"</span>
+<span class='no'>catName</span> <span class='kw'>&lt;-</span> <span class='st'>"Categories"</span>
+<span class='no'>mydata</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>cat</span>))
+<span class='fu'>scatter</span>(<span class='no'>mydata</span>, <span class='no'>mydata</span>$<span class='no'>x</span>, <span class='no'>mydata</span>$<span class='no'>y</span>, <span class='no'>cat</span>, <span class='no'>xlab</span>, <span class='no'>ylab</span>, <span class='no'>catName</span>)</div><div class='output co'>#&gt; &lt;ScaleContinuousPosition&gt;
+#&gt;  Range:  
+#&gt;  Limits:    0 --    1</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
