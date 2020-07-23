@@ -7,7 +7,7 @@
 pie(df, prop, cat)
 }
 \arguments{
-\item{df}{A dataframe.}
+\item{df}{A DESCRIPTION.}
 
 \item{prop}{A column in the 'df' dataframe. Must be of class 'numeric' and a proportion from 0-1.}
 

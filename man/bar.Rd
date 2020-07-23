@@ -7,14 +7,18 @@
 bar(df, x, y, ylab, fillLab)
 }
 \arguments{
-\item{df}{A dataframe.}
+\item{df}{DESCRIPTION.}
 
-\item{x}{A column in the 'df' dataframe. Must be of class 'numeric' and a proportion from 0-1.}
+\item{x}{DESCRIPTION.}
 
-\item{y}{A column in the 'df' dataframe. Must be of class factor or character.}
+\item{y}{DESCRIPTION.}
+
+\item{ylab}{DESCRIPTION.}
+
+\item{fillLab}{DESCRIPTION.}
 }
 \value{
-A ggplot2 rendering of the proportions across categories.
+DESCRIPTION
 }
 \description{
 Create a bar plot.

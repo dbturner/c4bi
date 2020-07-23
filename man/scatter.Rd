@@ -7,14 +7,22 @@
 scatter(df, x, y, cat, xlab, ylab, legendLab)
 }
 \arguments{
-\item{df}{A dataframe.}
+\item{df}{DESCRIPTION.}
 
-\item{cat}{A column in the 'df' dataframe. Must be of class factor or character.}
+\item{x}{DESCRIPTION}
 
-\item{prop}{A column in the 'df' dataframe. Must be of class 'numeric' and a proportion from 0-1.}
+\item{y}{DESCRIPTION}
+
+\item{cat}{DESCRIPTION.}
+
+\item{xlab}{DESCRIPTION.}
+
+\item{ylab}{DESCRIPTION.}
+
+\item{legendLab}{DESCRIPTION.}
 }
 \value{
-A ggplot2 rendering of the proportions across categories.
+A ggplot2 rendering of DESCRIPTION.
 }
 \description{
 Create a scatter plot.
@@ -32,5 +40,6 @@ xlab <- "X-axis label"
 ylab <- "Y-axis label"
 legendLab <- "Legend Title"
 mydata <- as.data.frame(cbind(as.numeric(x), as.numeric(y), cat))
+
 scatter(mydata, x, y, cat, xlab, ylab, legendLab)
 }

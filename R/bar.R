@@ -1,9 +1,11 @@
 #' Create a bar plot.
 #'
-#' @param df A dataframe.
-#' @param x A column in the 'df' dataframe. Must be of class 'numeric' and a proportion from 0-1.
-#' @param y A column in the 'df' dataframe. Must be of class factor or character.
-#' @return A ggplot2 rendering of the proportions across categories.
+#' @param df DESCRIPTION.
+#' @param x DESCRIPTION.
+#' @param y DESCRIPTION.
+#' @param ylab DESCRIPTION.
+#' @param fillLab DESCRIPTION.
+#' @return DESCRIPTION
 #' @export
 #' @examples
 #' x <- c("a", "b", "c")

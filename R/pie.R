@@ -1,6 +1,6 @@
 #' Create a pie plot.
 #'
-#' @param df A dataframe.
+#' @param df A DESCRIPTION.
 #' @param prop A column in the 'df' dataframe. Must be of class 'numeric' and a proportion from 0-1.
 #' @param cat A column in the 'df' dataframe. Must be of class factor or character.
 #' @return A ggplot2 rendering of the proportions across categories.

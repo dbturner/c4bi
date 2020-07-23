@@ -1,9 +1,13 @@
 #' Create a scatter plot.
 #'
-#' @param df A dataframe.
-#' @param prop A column in the 'df' dataframe. Must be of class 'numeric' and a proportion from 0-1.
-#' @param cat A column in the 'df' dataframe. Must be of class factor or character.
-#' @return A ggplot2 rendering of the proportions across categories.
+#' @param df DESCRIPTION.
+#' @param x DESCRIPTION
+#' @param y DESCRIPTION
+#' @param cat DESCRIPTION.
+#' @param xlab DESCRIPTION.
+#' @param ylab DESCRIPTION.
+#' @param legendLab DESCRIPTION.
+#' @return A ggplot2 rendering of DESCRIPTION.
 #' @export
 #' @examples
 #' set.seed(123)
@@ -18,6 +22,7 @@
 #' ylab <- "Y-axis label"
 #' legendLab <- "Legend Title"
 #' mydata <- as.data.frame(cbind(as.numeric(x), as.numeric(y), cat))
+#'
 #' scatter(mydata, x, y, cat, xlab, ylab, legendLab)
 #' @importFrom ggplot2 aes
 
