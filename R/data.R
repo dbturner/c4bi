@@ -1,0 +1,22 @@
+#' Curacao arthropods
+#'
+#' Some description.
+#'
+#' @format A data frame with 53940 rows and 10 variables:
+#' \describe{
+#'   \item{Site}{name of the focal property, to be used for report title generation (anonymized by letter here).}
+#'   \item{sitetype}{land-use category for the focal property.}
+#'   \item{SR}{species richness of arthropods found at the property.}
+#'   \item{Spiders}{proportion of all arthropods found at the property that were spiders (Araneae)}
+#'   \item{Beetles}{proportion of all arthropods that were beetles (Coleoptera)}
+#'   \item{Flies}{proportion of all arthropods that were true flies (Diptera)}
+#'   \item{True Bugs}{proportion of all arthropods that were true bugs (Hemiptera)}
+#'   \item{Wasps and Ants}{proportion of all arthropods that were wasps and ants (Hymenoptera)}
+#'   \item{Butterflies}{proportion of all arthropods that were butterflies (Lepidoptera)}
+#'   \item{Lacewings}{proportion of all arthropods that were lacewings (Neuroptera)}
+#'   \item{Crickets}{Proportion of all arthropods that were crickets (Orthoptera)}
+
+#' }
+#' @source \url{https://github.com/dbturner/c4bi/blob/main/data/Curacao%20arthropods.csv}
+"Curacao arthropods"
+
