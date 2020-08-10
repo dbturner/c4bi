@@ -3,14 +3,15 @@
 \docType{data}
 \name{curacao.nat.birds.list}
 \alias{curacao.nat.birds.list}
-\title{curacao.nat.bird.list}
+\title{List of Curaçao native birds}
 \format{
+R data.frame
 \describe{
-  \item{Site}{Name of the focal property (anonymized by letter here)}
-  \item{sitetype}{Land-use category for the focal property}
-  \item{Scientific name}{The number of sites where each herp species was observed in each category}
-  \item{Present}{The number of sites where each herp species was observed in each category}
-  \item{Common Name}{Common name of native bird species in Curaçao}
+  \item{Site}{name of the focal property (anonymized by letter here)}
+  \item{sitetype}{land-use category for the focal property}
+  \item{Scientific name}{number of sites where each herp species was observed in each category}
+  \item{Present}{number of sites where each herp species was observed in each category}
+  \item{Common Name}{common name of native bird species in Curaçao}
 
 }
 }
@@ -18,6 +19,6 @@
 curacao.nat.birds.list
 }
 \description{
-Some description.
+Dataframe with binary presence/absence variable for each bird species found at a Curaçao homeowner site.
 }
 \keyword{datasets}

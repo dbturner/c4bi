@@ -1,8 +1,8 @@
-#' curacao.arthropods
+#' Curaçao arthropod data
 #'
-#' Some description.
+#' Dataframe containing arthropod data from Curaçao homeowner sampling.
 #'
-#' @format A data frame with 53940 rows and 10 variables:
+#' @format R data.frame
 #' \describe{
 #'   \item{Site}{name of the focal property, to be used for report title generation (anonymized by letter here).}
 #'   \item{sitetype}{land-use category for the focal property.}
@@ -14,32 +14,32 @@
 #'   \item{Wasps and Ants}{proportion of all arthropods that were wasps and ants (Hymenoptera)}
 #'   \item{Butterflies}{proportion of all arthropods that were butterflies (Lepidoptera)}
 #'   \item{Lacewings}{proportion of all arthropods that were lacewings (Neuroptera)}
-#'   \item{Crickets}{Proportion of all arthropods that were crickets (Orthoptera)}
+#'   \item{Crickets}{proportion of all arthropods that were crickets (Orthoptera)}
 
 
 #' }
 "curacao.arthropods"
 
 
-#' curacao.exo.birds.sum
+#' Curaçao exotic birds summary data
 #'
-#' Some description.
+#' Dataframe summarizing the sites where exotic birds were observed at Curaçao homeowner sites.
 #'
-#' @format
+#' @format R data.frame
 #' \describe{
-#'   \item{species}{Common name of exotic bird species observed on properties}
-#'   \item{Site Type}{Land-use category for the focal property}
+#'   \item{species}{common name of exotic bird species observed on properties}
+#'   \item{Site Type}{land-use category for the focal property}
 #'   \item{Percentage of Sites}{The number of sites where each bird species was observed in each category}
 
 #' }
 "curacao.exo.birds.sum"
 
 
-#' curacao.exo.birds
+#' Curaçao exotic birds
 #'
-#' Some description.
+#' Dataframe containing exotic bird data from Curaçao homeowner sampling.
 #'
-#' @format
+#' @format R data.frame
 #' \describe{
 #'   \item{Site}{name of the focal property (anonymized by letter here)}
 #'   \item{sitetype}{land-use category for the focal property}
@@ -54,90 +54,90 @@
 "curacao.exo.birds"
 
 
-#' curacao.exo.herps
+#' Curaçao exotic herps data
 #'
-#' Some description.
+#' Dataframe containing exotic reptile and amphibian data from Curaçao homeowner sampling.
 #'
-#' @format
+#' @format R data.frame
 #' \describe{
 #'   \item{Site}{name of the focal property (anonymized by letter here)}
 #'   \item{sitetype}{land-use category for the focal property}
-#'   \item{Mourning Gecko}{Abundance of Mourning Gecko at focal property.}
-#'   \item{Tropical House Gecko}{Abundance of Tropical House Gecko at focal property.}
-#'   \item{Johnstone's Whistling Frog}{Abundance of Johnstone's Whistling Frog at focal property}
-#'   \item{Cuban Tree Frog}{Abundance of Cuban Tree Frog at focal property}
-#'   \item{Colombian Four-eyed Frog}{Abundance of Colombian Four-eyed Frog at focal property}
-#'   \item{Asian House Gecko}{Abundance of Asian House Gecko at focal property}
+#'   \item{Mourning Gecko}{abundance of Mourning Gecko at focal property.}
+#'   \item{Tropical House Gecko}{abundance of Tropical House Gecko at focal property.}
+#'   \item{Johnstone's Whistling Frog}{abundance of Johnstone's Whistling Frog at focal property}
+#'   \item{Cuban Tree Frog}{abundance of Cuban Tree Frog at focal property}
+#'   \item{Colombian Four-eyed Frog}{abundance of Colombian Four-eyed Frog at focal property}
+#'   \item{Asian House Gecko}{abundance of Asian House Gecko at focal property}
 #'   \item{ReportName}{name of report for references (not required)}
 #'
 #' }
 "curacao.exo.herps"
 
 
-#' curacao.exo.herps.sum
+#' Curaçao exotic herps summary data
 #'
-#' Some description.
+#' Dataframe summarizing the sites where exotic reptiles and amphibians were observed at Curaçao homeowner sites.
 #'
-#' @format
+#' @format R data.frame
 #' \describe{
-#'   \item{species}{Common name of exotic herp species observed on properties}
-#'   \item{Site Type}{Land-use category for the focal property}
-#'   \item{Percentage of Sites}{The number of sites where each herp species was observed in each category}
+#'   \item{species}{common name of exotic herp species observed on properties}
+#'   \item{Site Type}{land-use category for the focal property}
+#'   \item{Percentage of Sites}{the number of sites where each herp species was observed in each category}
 #'
 #' }
 "curacao.exo.herps.sum"
 
 
-#' curacao.nat.bird.list
+#' List of Curaçao native birds
 #'
-#' Some description.
+#' Dataframe with binary presence/absence variable for each bird species found at a Curaçao homeowner site.
 #'
-#' @format
+#' @format R data.frame
 #' \describe{
-#'   \item{Site}{Name of the focal property (anonymized by letter here)}
-#'   \item{sitetype}{Land-use category for the focal property}
-#'   \item{Scientific name}{The number of sites where each herp species was observed in each category}
-#'   \item{Present}{The number of sites where each herp species was observed in each category}
-#'   \item{Common Name}{Common name of native bird species in Curaçao}
+#'   \item{Site}{name of the focal property (anonymized by letter here)}
+#'   \item{sitetype}{land-use category for the focal property}
+#'   \item{Scientific name}{number of sites where each herp species was observed in each category}
+#'   \item{Present}{number of sites where each herp species was observed in each category}
+#'   \item{Common Name}{common name of native bird species in Curaçao}
 #'
 #' }
 "curacao.nat.birds.list"
 
 
-#' curacao.nat.bird
+#' Curaçao native bird data
 #'
-#' Some description.
+#' Dataframe containing native bird data from Curaçao homeowner sampling.
 #'
-#' @format
+#' @format R data.frame
 #' \describe{
-#'   \item{Site}{Name of the focal property (anonymized by letter here)}
-#'   \item{sitetype}{Land-use category for the focal property}
-#'   \item{SR}{Species richness of native birds found at the focal property}
-#'   \item{ReportName}{Name of report for references (not necessary)}
+#'   \item{Site}{name of the focal property (anonymized by letter here)}
+#'   \item{sitetype}{land-use category for the focal property}
+#'   \item{SR}{species richness of native birds found at the focal property}
+#'   \item{ReportName}{name of report for references (not necessary)}
 #'
 #' }
 "curacao.nat.birds"
 
 
-#' curacao.nat.herp.sum
+#' Curaçao native herp summary data
 #'
-#' Some description.
+#' Dataframe summarizing the sites where native reptiles and amphibians were observed at Curaçao homeowner sites.
 #'
-#' @format
+#' @format R data.frame
 #' \describe{
-#'   \item{sitetype}{Land-use category for the focal property}
-#'   \item{species}{Common name of native herp species on properties}
-#'   \item{mean}{Mean abundance of each native herp species on each property within a land-use category}
+#'   \item{sitetype}{land-use category for the focal property}
+#'   \item{species}{common name of native herp species on properties}
+#'   \item{mean}{mean abundance of each native herp species on each property within a land-use category}
 #'
 #' }
 "curacao.nat.herps.sum"
 
 
-#' curacao.nat.herps
+#' Curaçao native herp data
 #'
-#' Some description.
+#' Dataframe containing native bird data from Curaçao homeowner sampling.
 #'
-#' @format
+#' @format R data.frame
 #' \describe{
 #'   \item{Site}{name of the focal propety (anonymized by letter here)}
 #'   \item{sitetype}{land-use category for the focal property}
@@ -150,3 +150,58 @@
 #'
 #' }
 "curacao.nat.herps"
+
+#' Arthropod abundance and richness data
+#'
+#' Dataframe containing arthropod predator abundance and richness data from southeastern Pennsylvania farms.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{farmName}{the general name of 6 individual farms of three "urbanization categories" (high, medium, low) and the names of the three categories to plot as comparisons to category means in abundance and richness plots}
+#'   \item{meanAbun}{mean abundance of arthropod predators on each farm across all pitfall traps}
+#'   \item{meanRich}{mean richness of arthropod predator families on each farm across all pitfall traps}
+#'   \item{urbanCat}{the urbanization category of each individual farm to be print out in the .html file}
+#'
+#' }
+"abun.rich.sepa"
+
+#' Arthropod diversity data for pie chart
+#'
+#' Dataframe containing proportional abundacne of major orders of arthropod predators from total arthropod abundance on southeastern Pennsylvania farms; used to make pie charts.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{farmName}{the general name of 6 individual farms of three "urbanization categories" (high, medium, low)}
+#'   \item{family}{common name of arthropod predator family}
+#'   \item{meanAbun}{mean abundance of arthropod predators in each family across all pitfall traps}
+#'   \item{prop}{proportion of family abundance over the total number of arthropod predators across all pitfall traps at a farm}
+#'
+#' }
+"arth.div.pie.sepa"
+
+#' Plant community & arthropod richness data
+#'
+#' Dataframe containing arthropod richness and plant community data from southeastern Pennsylvania farms.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{farmName}{the general name of 15 individual farms of three "urbanization categories" (low, medium, high urbanization		  intensity) and the names of the three categories to plot as comparisons to category means in abundance and richness plots.}
+#'   \item{richness}{richness of arthropod predator families in each pitfall trap on a farm}
+#'   \item{urbanCat}{the urbanization category of each individual farm to be print out in the .html file}
+#'   \item{weedyCover}{the percent ground cover of non-crop plants in a 2-meter radius circle around the pitfall trap}
+#'
+#' }
+"interact.rich.sepa"
+
+#' Plastic mulch & arthropod richness data
+#'
+#' Dataframe containing arthropod abundance and richness data from traps based on presence/absence of plastic mulch.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{category}{factor of pitfall traps placed under plastic mulch ("Plastic) or not under plastic mulch ("No plastic")}
+#'   \item{meanAbun}{mean abundance of arthropod predators in each pitfall trap}
+#'   \item{meanRich}{mean family richness of arthropod predators in each pitfall trap}
+#'
+#' }
+"plastic.sepa"

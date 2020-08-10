@@ -3,12 +3,13 @@
 \docType{data}
 \name{curacao.nat.herps.sum}
 \alias{curacao.nat.herps.sum}
-\title{curacao.nat.herp.sum}
+\title{Curaçao native herp summary data}
 \format{
+R data.frame
 \describe{
-  \item{sitetype}{Land-use category for the focal property}
-  \item{species}{Common name of native herp species on properties}
-  \item{mean}{Mean abundance of each native herp species on each property within a land-use category}
+  \item{sitetype}{land-use category for the focal property}
+  \item{species}{common name of native herp species on properties}
+  \item{mean}{mean abundance of each native herp species on each property within a land-use category}
 
 }
 }
@@ -16,6 +17,6 @@
 curacao.nat.herps.sum
 }
 \description{
-Some description.
+Dataframe summarizing the sites where native reptiles and amphibians were observed at Curaçao homeowner sites.
 }
 \keyword{datasets}

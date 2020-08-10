@@ -3,9 +3,9 @@
 \docType{data}
 \name{curacao.arthropods}
 \alias{curacao.arthropods}
-\title{curacao.arthropods}
+\title{Curaçao arthropod data}
 \format{
-A data frame with 53940 rows and 10 variables:
+R data.frame
 \describe{
   \item{Site}{name of the focal property, to be used for report title generation (anonymized by letter here).}
   \item{sitetype}{land-use category for the focal property.}
@@ -17,13 +17,13 @@ A data frame with 53940 rows and 10 variables:
   \item{Wasps and Ants}{proportion of all arthropods that were wasps and ants (Hymenoptera)}
   \item{Butterflies}{proportion of all arthropods that were butterflies (Lepidoptera)}
   \item{Lacewings}{proportion of all arthropods that were lacewings (Neuroptera)}
-  \item{Crickets}{Proportion of all arthropods that were crickets (Orthoptera)}
+  \item{Crickets}{proportion of all arthropods that were crickets (Orthoptera)}
 }
 }
 \usage{
 curacao.arthropods
 }
 \description{
-Some description.
+Dataframe containing arthropod data from Curaçao homeowner sampling.
 }
 \keyword{datasets}

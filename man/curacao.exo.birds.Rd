@@ -3,8 +3,9 @@
 \docType{data}
 \name{curacao.exo.birds}
 \alias{curacao.exo.birds}
-\title{curacao.exo.birds}
+\title{Curaçao exotic birds}
 \format{
+R data.frame
 \describe{
   \item{Site}{name of the focal property (anonymized by letter here)}
   \item{sitetype}{land-use category for the focal property}
@@ -21,6 +22,6 @@
 curacao.exo.birds
 }
 \description{
-Some description.
+Dataframe containing exotic bird data from Curaçao homeowner sampling.
 }
 \keyword{datasets}

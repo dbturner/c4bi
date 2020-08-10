@@ -3,13 +3,14 @@
 \docType{data}
 \name{curacao.nat.birds}
 \alias{curacao.nat.birds}
-\title{curacao.nat.bird}
+\title{Curaçao native bird data}
 \format{
+R data.frame
 \describe{
-  \item{Site}{Name of the focal property (anonymized by letter here)}
-  \item{sitetype}{Land-use category for the focal property}
-  \item{SR}{Species richness of native birds found at the focal property}
-  \item{ReportName}{Name of report for references (not necessary)}
+  \item{Site}{name of the focal property (anonymized by letter here)}
+  \item{sitetype}{land-use category for the focal property}
+  \item{SR}{species richness of native birds found at the focal property}
+  \item{ReportName}{name of report for references (not necessary)}
 
 }
 }
@@ -17,6 +18,6 @@
 curacao.nat.birds
 }
 \description{
-Some description.
+Dataframe containing native bird data from Curaçao homeowner sampling.
 }
 \keyword{datasets}

@@ -3,8 +3,9 @@
 \docType{data}
 \name{curacao.nat.herps}
 \alias{curacao.nat.herps}
-\title{curacao.nat.herps}
+\title{Curaçao native herp data}
 \format{
+R data.frame
 \describe{
   \item{Site}{name of the focal propety (anonymized by letter here)}
   \item{sitetype}{land-use category for the focal property}
@@ -21,6 +22,6 @@
 curacao.nat.herps
 }
 \description{
-Some description.
+Dataframe containing native bird data from Curaçao homeowner sampling.
 }
 \keyword{datasets}

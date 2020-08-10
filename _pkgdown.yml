@@ -2,6 +2,31 @@ template:
   params:
     bootswatch: sandstone
 
+reference:
+- title: "Data documentation"
+- subtitle: "Curaçao homeowner report data"
+  desc: >
+    Dataframes used to produce the Curaçao homeowner reports
+  contents:
+  - curacao.arthropods
+  - curacao.exo.birds
+  - curacao.exo.birds.sum
+  - curacao.exo.herps
+  - curacao.exo.herps.sum
+  - curacao.nat.birds
+  - curacao.nat.birds.list
+  - curacao.nat.herps
+  - curacao.nat.herps.sum
+- subtitle: "Southeastern Pennsylvania farmer report data"
+  desc: >
+    Dataframes used to produce the first and second iterations of the Southeastern Pennsylvania farmer reports
+  contents:
+  - abun.rich.sepa
+  - arth.div.pie.sepa
+  - interact.rich.sepa
+  - plastic.sepa
+
+
 articles:
 - title: Curaçao Homeowner Reports
   contents:

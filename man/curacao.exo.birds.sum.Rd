@@ -3,11 +3,12 @@
 \docType{data}
 \name{curacao.exo.birds.sum}
 \alias{curacao.exo.birds.sum}
-\title{curacao.exo.birds.sum}
+\title{Curaçao exotic birds summary data}
 \format{
+R data.frame
 \describe{
-  \item{species}{Common name of exotic bird species observed on properties}
-  \item{Site Type}{Land-use category for the focal property}
+  \item{species}{common name of exotic bird species observed on properties}
+  \item{Site Type}{land-use category for the focal property}
   \item{Percentage of Sites}{The number of sites where each bird species was observed in each category}
 }
 }
@@ -15,6 +16,6 @@
 curacao.exo.birds.sum
 }
 \description{
-Some description.
+Dataframe summarizing the sites where exotic birds were observed at Curaçao homeowner sites.
 }
 \keyword{datasets}

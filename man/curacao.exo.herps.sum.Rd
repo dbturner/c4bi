@@ -3,12 +3,13 @@
 \docType{data}
 \name{curacao.exo.herps.sum}
 \alias{curacao.exo.herps.sum}
-\title{curacao.exo.herps.sum}
+\title{Curaçao exotic herps summary data}
 \format{
+R data.frame
 \describe{
-  \item{species}{Common name of exotic herp species observed on properties}
-  \item{Site Type}{Land-use category for the focal property}
-  \item{Percentage of Sites}{The number of sites where each herp species was observed in each category}
+  \item{species}{common name of exotic herp species observed on properties}
+  \item{Site Type}{land-use category for the focal property}
+  \item{Percentage of Sites}{the number of sites where each herp species was observed in each category}
 
 }
 }
@@ -16,6 +17,6 @@
 curacao.exo.herps.sum
 }
 \description{
-Some description.
+Dataframe summarizing the sites where exotic reptiles and amphibians were observed at Curaçao homeowner sites.
 }
 \keyword{datasets}

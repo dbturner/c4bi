@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Curaçao exotic herps data — curacao.exo.herps • c4bi</title>
+<title>Arthropod abundance and richness data — abun.rich.sepa • c4bi</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Curaçao exotic herps data — curacao.exo.herps" />
-<meta property="og:description" content="Dataframe containing exotic reptile and amphibian data from Curaçao homeowner sampling." />
+<meta property="og:title" content="Arthropod abundance and richness data — abun.rich.sepa" />
+<meta property="og:description" content="Dataframe containing arthropod predator abundance and richness data from southeastern Pennsylvania farms." />
 
 
 
@@ -109,30 +109,25 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Curaçao exotic herps data</h1>
+    <h1>Arthropod abundance and richness data</h1>
     
-    <div class="hidden name"><code>curacao.exo.herps.Rd</code></div>
+    <div class="hidden name"><code>abun.rich.sepa.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Dataframe containing exotic reptile and amphibian data from Curaçao homeowner sampling.</p>
+    <p>Dataframe containing arthropod predator abundance and richness data from southeastern Pennsylvania farms.</p>
     </div>
 
-    <pre class="usage"><span class='no'>curacao.exo.herps</span></pre>
+    <pre class="usage"><span class='no'>abun.rich.sepa</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>R data.frame</p><dl'>
-  <dt>Site</dt><dd><p>name of the focal property (anonymized by letter here)</p></dd>
-  <dt>sitetype</dt><dd><p>land-use category for the focal property</p></dd>
-  <dt>Mourning Gecko</dt><dd><p>abundance of Mourning Gecko at focal property.</p></dd>
-  <dt>Tropical House Gecko</dt><dd><p>abundance of Tropical House Gecko at focal property.</p></dd>
-  <dt>Johnstone's Whistling Frog</dt><dd><p>abundance of Johnstone's Whistling Frog at focal property</p></dd>
-  <dt>Cuban Tree Frog</dt><dd><p>abundance of Cuban Tree Frog at focal property</p></dd>
-  <dt>Colombian Four-eyed Frog</dt><dd><p>abundance of Colombian Four-eyed Frog at focal property</p></dd>
-  <dt>Asian House Gecko</dt><dd><p>abundance of Asian House Gecko at focal property</p></dd>
-  <dt>ReportName</dt><dd><p>name of report for references (not required)</p></dd>
+  <dt>farmName</dt><dd><p>the general name of 6 individual farms of three "urbanization categories" (high, medium, low) and the names of the three categories to plot as comparisons to category means in abundance and richness plots</p></dd>
+  <dt>meanAbun</dt><dd><p>mean abundance of arthropod predators on each farm across all pitfall traps</p></dd>
+  <dt>meanRich</dt><dd><p>mean richness of arthropod predator families on each farm across all pitfall traps</p></dd>
+  <dt>urbanCat</dt><dd><p>the urbanization category of each individual farm to be print out in the .html file</p></dd>
 
 
 </dl>
