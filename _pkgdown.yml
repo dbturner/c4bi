@@ -2,6 +2,13 @@ template:
   params:
     bootswatch: sandstone
 
+navbar:
+  components:
+    articles:
+      text: Reports
+      href: articles/index.html
+
+
 reference:
 - title: "Data documentation"
 - subtitle: "Curaçao homeowner report data"
@@ -29,16 +36,19 @@ reference:
 
 articles:
 - title: Curaçao Homeowner Reports
+  navbar: Curaçao Homeowner Reports
   contents:
   - homeownerReport1_rScript_vignette
   - homeownerReport1_rmd_vignette
   - homeownerReport1_examples_vignette
 - title: Southeastern PA Farmer Reports (First Iteration)
+  navbar: Southeastern PA Farmer Reports (First Iteration)
   contents:
   - farmerReports1_rScript_vignette
   - farmerReports1_rmd_vignette
   - farmerReport1_examples_vignette
 - title: Southeastern PA Farmer Reports (Second Iteration)
+  navbar: Southeastern PA Farmer Reports (Second Iteration)
   contents:
   - farmerReports2_rScript_vignette
   - farmerReports2_rmd_vignette

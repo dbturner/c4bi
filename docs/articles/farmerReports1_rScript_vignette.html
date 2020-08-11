@@ -50,7 +50,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
-  <a href="../articles/index.html">Articles</a>
+  <a href="../articles/index.html">Reports</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right"></ul>
@@ -83,10 +83,10 @@
 <ol style="list-style-type: decimal">
 <li>Load data from farm biodiversity surveys
 <ol style="list-style-type: lower-alpha">
-<li>Data needed (two .csv files):
+<li>Data needed (two .rda files):
 <ol style="list-style-type: lower-roman">
-<li>farmReport1_abunRich.csv</li>
-<li>farmReport1_famPie.csv</li>
+<li>abun.rich.sepa.rda</li>
+<li>abun.div.pie.sepa.rda</li>
 </ol>
 </li>
 </ol>
@@ -112,12 +112,12 @@
 <h3 class="hasAnchor">
 <a href="#load-data-files" class="anchor"></a>Load data files</h3>
 <p>These data are provided on the <a href="https://github.com/dbturner/c4bi/tree/master/data">GitHub repository</a> as .csv files.</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="no">farm_abunRich</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/farmReport1_abunRich.csv"</span>))
-<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="no">farm_abunRich</span>) <span class="co"># Check to see if the dataframe is complete.</span>
-<span class="no">farm_abunRich</span>$<span class="no">farmName</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">farm_abunRich</span>$<span class="no">farmName</span>, <span class="kw">levels</span> <span class="kw">=</span> <span class="no">farm_abunRich</span>$<span class="no">farmName</span>) <span class="co"># Make names a factor for ordering of columns in subsequent plots.</span>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/abun.rich.sepa.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="no">abun.rich.sepa</span>) <span class="co"># Check to see if the dataframe is complete.</span>
+<span class="no">abun.rich.sepa</span>$<span class="no">farmName</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">abun.rich.sepa</span>$<span class="no">farmName</span>, <span class="kw">levels</span> <span class="kw">=</span> <span class="no">abun.rich.sepa</span>$<span class="no">farmName</span>) <span class="co"># Make names a factor for ordering of columns in subsequent plots.</span>
 
-<span class="no">fam</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/farmReport1_famPie.csv"</span>))
-<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="no">fam</span>) <span class="co"># Check to see if the dataframe is complete.</span></pre></body></html></div>
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/arth.div.pie.sepa.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="no">arth.div.pie.sepa</span>) <span class="co"># Check to see if the dataframe is complete.</span></pre></body></html></div>
 <hr>
 </div>
 </div>
@@ -127,7 +127,7 @@
 <div id="create-objects-or-lists-of-some-plots-to-be-used-in-the-reports-" class="section level3">
 <h3 class="hasAnchor">
 <a href="#create-objects-or-lists-of-some-plots-to-be-used-in-the-reports-" class="anchor"></a>Create objects or lists of some plots to be used in the reports.</h3>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">pie</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">data</span> <span class="kw">=</span> <span class="no">fam</span>, <span class="kw">mapping</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="st">""</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">prop</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">family</span>)) +
+<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="no">pie</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">data</span> <span class="kw">=</span> <span class="no">arth.div.pie.sepa</span>, <span class="kw">mapping</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="st">""</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">prop</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">family</span>)) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="kw">width</span> <span class="kw">=</span> <span class="fl">1</span>, <span class="kw">stat</span> <span class="kw">=</span> <span class="st">"identity"</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_polar.html">coord_polar</a></span>(<span class="st">"y"</span>, <span class="kw">start</span> <span class="kw">=</span> <span class="fl">0</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span>(<span class="kw">palette</span> <span class="kw">=</span> <span class="st">"Set3"</span>) +
@@ -143,11 +143,11 @@
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">fill</span> <span class="kw">=</span> <span class="st">"Family of insect or spider"</span>) <span class="co"># These lines make an object with a pie chart of the predator families.</span>
 
 
-<span class="no">famPies</span> <span class="kw">&lt;-</span> <span class="kw pkg">plyr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/plyr/man/dlply.html">dlply</a></span>(<span class="no">fam</span>, <span class="fu"><a href="https://rdrr.io/pkg/plyr/man/quoted.html">.</a></span>(<span class="no">farmName</span>), <span class="kw">function</span>(<span class="no">x</span>) <span class="no">pie</span> <span class="kw">%+%</span> <span class="no">x</span>) <span class="co"># dlply here applies the object created above across all "farm names" and returns a list of all plots.</span>
+<span class="no">famPies</span> <span class="kw">&lt;-</span> <span class="kw pkg">plyr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/plyr/man/dlply.html">dlply</a></span>(<span class="no">arth.div.pie.sepa</span>, <span class="fu"><a href="https://rdrr.io/pkg/plyr/man/quoted.html">.</a></span>(<span class="no">farmName</span>), <span class="kw">function</span>(<span class="no">x</span>) <span class="no">pie</span> <span class="kw">%+%</span> <span class="no">x</span>) <span class="co"># dlply here applies the object created above across all "farm names" and returns a list of all plots.</span>
 
 <span class="no">famPies</span>[<span class="fl">1</span>] <span class="co"># Plot the first plot in the "famPies" list of pie charts.</span>
 
-<span class="no">nfarms</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(<span class="no">farm_abunRich</span>) <span class="co"># Create an object with the number of farms in the first data frame that will be used to index the for loop and name each .html output file.</span></pre></body></html></div>
+<span class="no">nfarms</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(<span class="no">abun.rich.sepa</span>) <span class="co"># Create an object with the number of farms in the first data frame that will be used to index the for loop and name each .html output file.</span></pre></body></html></div>
 <hr>
 </div>
 </div>
@@ -160,9 +160,9 @@
 <div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="no">i</span> <span class="kw">=</span> <span class="fl">1</span>
 
 <span class="kw">for</span> (<span class="no">i</span> <span class="kw">in</span> <span class="fl">1</span>:(<span class="no">nfarms</span>-<span class="fl">3</span>)) { <span class="co"># We subtract by three because we don't want to create .html docs for the category means.</span>
-  <span class="no">urbanCat</span> <span class="kw">&lt;-</span> <span class="no">farm_abunRich</span>$<span class="no">urbanCat</span>[<span class="no">i</span>] <span class="co"># This object will be fed to the .Rmd file to display each farm's urbanization category.</span>
+  <span class="no">urbanCat</span> <span class="kw">&lt;-</span> <span class="no">abun.rich.sepa</span>$<span class="no">urbanCat</span>[<span class="no">i</span>] <span class="co"># This object will be fed to the .Rmd file to display each farm's urbanization category.</span>
 
-  <span class="no">abun_bar_plot</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">farm_abunRich</span>[<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">i</span>, (<span class="no">nfarms</span>-<span class="fl">2</span>):<span class="no">nfarms</span>),], <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">farmName</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">meanAbun</span>)) +
+  <span class="no">abun_bar_plot</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">abun.rich.sepa</span>[<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">i</span>, (<span class="no">nfarms</span>-<span class="fl">2</span>):<span class="no">nfarms</span>),], <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">farmName</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">meanAbun</span>)) +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="kw">stat</span> <span class="kw">=</span> <span class="st">"identity"</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">fill</span> <span class="kw">=</span> <span class="no">farmName</span>)) +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">y</span> <span class="kw">=</span> <span class="st">"Average number of beneficial predators\nfound in each trap"</span>,
          <span class="kw">fill</span> <span class="kw">=</span> <span class="st">"Your farm and other categories of farms"</span>) +
@@ -172,7 +172,7 @@
           <span class="kw">axis.title.x</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span>()) +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_brewer.html">scale_fill_brewer</a></span>(<span class="kw">palette</span> <span class="kw">=</span> <span class="st">"Set2"</span>) <span class="co"># Create an object with the farm's predator abundance that will be called in the .rmd file.</span>
 
-  <span class="no">rich_bar_plot</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">farm_abunRich</span>[<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">i</span>, (<span class="no">nfarms</span>-<span class="fl">2</span>):<span class="no">nfarms</span>),], <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">farmName</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">meanRich</span>)) +
+  <span class="no">rich_bar_plot</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">abun.rich.sepa</span>[<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="no">i</span>, (<span class="no">nfarms</span>-<span class="fl">2</span>):<span class="no">nfarms</span>),], <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">farmName</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">meanRich</span>)) +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="kw">stat</span> <span class="kw">=</span> <span class="st">"identity"</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">fill</span> <span class="kw">=</span> <span class="no">farmName</span>)) +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span>(<span class="kw">y</span> <span class="kw">=</span> <span class="st">"Average number of beneficial predator\ntypes found in each trap"</span>,
          <span class="kw">fill</span> <span class="kw">=</span> <span class="st">"Your farm and other categories of farms"</span>) +
@@ -184,7 +184,7 @@
 
   <span class="no">real_pie_plot</span> <span class="kw">&lt;-</span> <span class="no">famPies</span><span class="kw">[[</span><span class="no">i</span>]] <span class="co"># Create an object with the farm's pie chart that will be called in .rmd file.</span>
 
-  <span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"analysis/farmerReports1_rmd.Rmd"</span>), <span class="kw">output_file</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">'vignettes/farmerReport1_example_'</span>), <span class="no">farm_abunRich</span>$<span class="no">farmName</span>[<span class="no">i</span>], <span class="st">".html"</span>), <span class="st">"html_document"</span>) <span class="co"># This line actually executes each farm's .html report by calling the "child" .rmd file.</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"analysis/farmerReports1_rmd.Rmd"</span>), <span class="kw">output_file</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">'vignettes/farmerReport1_example_'</span>), <span class="no">abun.rich.sepa</span>$<span class="no">farmName</span>[<span class="no">i</span>], <span class="st">".html"</span>), <span class="st">"html_document"</span>) <span class="co"># This line actually executes each farm's .html report by calling the "child" .rmd file.</span>
   <span class="co"># NOTE: The .rmd should be located in the same workspace directory as this R script.</span>
   <span class="co"># ANOTHER NOTE: The .html files will be located in the same workspace directory as this R script.</span>
 }</pre></body></html></div>
