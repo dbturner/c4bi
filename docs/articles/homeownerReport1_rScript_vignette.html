@@ -47,7 +47,7 @@
   <a href="../articles/c4bi.html">Get started</a>
 </li>
 <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="../reference/index.html">Data</a>
 </li>
 <li>
   <a href="../articles/index.html">Reports</a>
@@ -113,14 +113,14 @@
 <div id="load-data-files" class="section level3">
 <h3 class="hasAnchor">
 <a href="#load-data-files" class="anchor"></a>Load data files</h3>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="no">herps_nat</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/Curacao native herps.csv"</span>)
-<span class="no">herps_exo_prop</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/Curacao exotic herps summary stats.csv"</span>)
-<span class="no">herps_exo_sp</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/Curacao exotic herps.csv"</span>)
-<span class="no">birds_nat</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/Curacao native birds list.csv"</span>)
-<span class="no">birdsNat_sr</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/Curacao native birds.csv"</span>)
-<span class="no">birds_exo</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/Curacao exotic birds summary stats.csv"</span>)
-<span class="no">birdsExo_List</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/Curacao exotic birds.csv"</span>)
-<span class="no">arth</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="st">"data/Curacao arthropods.csv"</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/curacao.nat.herps.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/curacao.exo.herps.sum.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/curacao.exo.herps.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/curacao.nat.birds.list.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/curacao.nat.birds.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/curacao.exo.birds.sum.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/curacao.exo.birds.rda"</span>))
+<span class="fu"><a href="https://rdrr.io/r/base/load.html">load</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"data/curacao.arthropods.rda"</span>))</pre></body></html></div>
 </div>
 <div id="set-up-global-parameters" class="section level3">
 <h3 class="hasAnchor">
@@ -140,7 +140,7 @@
 <div id="native-herps" class="section level4">
 <h4 class="hasAnchor">
 <a href="#native-herps" class="anchor"></a>Native herps</h4>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="no">herps_nat_noNA</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span>(<span class="no">herps_nat</span>) <span class="co"># create dataframe of sites without NAs to calculate means more easily</span>
+<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="no">herps_nat_noNA</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span>(<span class="no">curacao.nat.herps</span>) <span class="co"># create dataframe of sites without NAs to calculate means more easily</span>
 
 <span class="no">herps_nat_means</span> <span class="kw">&lt;-</span> <span class="no">herps_nat_noNA</span> <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(<span class="no">sitetype</span>) <span class="kw">%&gt;%</span>
@@ -157,10 +157,10 @@
 <span class="no">herps_nat_means</span>$<span class="no">ReportName</span> <span class="kw">&lt;-</span> <span class="fl">NA</span> <span class="co"># create these columns to combine dataframes later</span>
 <span class="no">herps_nat_means</span>$<span class="no">Site</span><span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Forest"</span>, <span class="st">"Garden"</span>, <span class="st">"Scrub"</span>)
 
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">herps_nat</span>)[<span class="fl">3</span>:<span class="fl">7</span>] <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Dutch Leaf-toed Gecko"</span>, <span class="st">"Antillean Dwarf Gecko"</span>, <span class="st">"Striped Anole"</span>, <span class="st">"Laurent's Whiptail"</span>, <span class="st">"Turnip-tailed Gecko"</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">curacao.nat.herps</span>)[<span class="fl">3</span>:<span class="fl">7</span>] <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Dutch Leaf-toed Gecko"</span>, <span class="st">"Antillean Dwarf Gecko"</span>, <span class="st">"Striped Anole"</span>, <span class="st">"Laurent's Whiptail"</span>, <span class="st">"Turnip-tailed Gecko"</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">herps_nat_means</span>)[<span class="fl">2</span>:<span class="fl">6</span>] <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Dutch Leaf-toed Gecko"</span>, <span class="st">"Antillean Dwarf Gecko"</span>, <span class="st">"Striped Anole"</span>, <span class="st">"Laurent's Whiptail"</span>, <span class="st">"Turnip-tailed Gecko"</span>)
 
-<span class="no">herps_natList</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/split.html">split</a></span>(<span class="no">herps_nat</span>, <span class="kw">f</span> <span class="kw">=</span> <span class="no">herps_nat</span>$<span class="no">Site</span>) <span class="co"># create a list that separates the native herp observations by site so they can be listed in each site's unique report</span>
+<span class="no">herps_natList</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/split.html">split</a></span>(<span class="no">curacao.nat.herps</span>, <span class="kw">f</span> <span class="kw">=</span> <span class="no">curacao.nat.herps</span>$<span class="no">Site</span>) <span class="co"># create a list that separates the native herp observations by site so they can be listed in each site's unique report</span>
 
 <span class="kw">for</span>(<span class="no">i</span> <span class="kw">in</span> <span class="fl">1</span>:<span class="fl">31</span>){
   <span class="no">herps_natList</span><span class="kw">[[</span><span class="no">i</span>]]$<span class="no">Site</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Your garden"</span>)
@@ -172,10 +172,10 @@
 <h4 class="hasAnchor">
 <a href="#exotic-herps" class="anchor"></a>Exotic herps</h4>
 <div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="co"># wrangle exotic herp proportion data</span>
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">herps_exo_prop</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"species"</span>, <span class="st">"Site Type"</span>, <span class="st">"Percentage of sites"</span>) <span class="co"># change column names</span>
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">curacao.exo.herps.sum</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"species"</span>, <span class="st">"Site Type"</span>, <span class="st">"Percentage of sites"</span>) <span class="co"># change column names</span>
 
-<span class="no">herps_exo_prop</span>$<span class="no">`Percentage of sites`</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="no">herps_exo_prop</span>$<span class="no">`Percentage of sites`</span>, <span class="no">puk</span>)
-<span class="no">herps_exo_prop</span>$<span class="no">species</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">herps_exo_prop</span>$<span class="no">species</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Mourning Gecko"</span>,
+<span class="no">curacao.exo.herps.sum</span>$<span class="no">`Percentage of sites`</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="no">curacao.exo.herps.sum</span>$<span class="no">`Percentage of sites`</span>, <span class="no">puk</span>)
+<span class="no">curacao.exo.herps.sum</span>$<span class="no">species</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">curacao.exo.herps.sum</span>$<span class="no">species</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Mourning Gecko"</span>,
                                                           <span class="st">"Asian House Gecko"</span>,
                                                           <span class="st">"Tropical House Gecko"</span>,
                                                           <span class="st">"Colombian Four-eyed Frog"</span>,
@@ -183,7 +183,7 @@
                                                           <span class="st">"Cuban Tree Frog"</span>))
 
 <span class="co"># create plot</span>
-<span class="no">herps_exo_prop_plot</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">data</span> <span class="kw">=</span> <span class="no">herps_exo_prop</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">`Site Type`</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">`Percentage of sites`</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">`Site Type`</span>)) +
+<span class="no">herps_exo_prop_plot</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">data</span> <span class="kw">=</span> <span class="no">curacao.exo.herps.sum</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">`Site Type`</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">`Percentage of sites`</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">`Site Type`</span>)) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="kw">stat</span><span class="kw">=</span><span class="st">"identity"</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">label</span> <span class="kw">=</span> <span class="no">`Percentage of sites`</span>), <span class="kw">position</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span>(<span class="kw">width</span> <span class="kw">=</span> <span class="fl">0.9</span>), <span class="kw">vjust</span> <span class="kw">=</span> <span class="fl">.5</span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">3.9</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span>(<span class="kw">values</span> <span class="kw">=</span> <span class="no">fun_colors3</span>) +
@@ -202,9 +202,9 @@
 
 <span class="co"># wrangle exotic herp species list</span>
 
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">herps_exo_sp</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"Mourning Gecko"</span>, <span class="st">"Tropical House Gecko"</span>, <span class="st">"Johnstone's Whistling Frog"</span>, <span class="st">"Cuban Treefrog"</span>, <span class="st">"Colombian Four-eyed Frog"</span>, <span class="st">"Asian House Gecko"</span>, <span class="st">"ReportName"</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">curacao.exo.herps</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"Mourning Gecko"</span>, <span class="st">"Tropical House Gecko"</span>, <span class="st">"Johnstone's Whistling Frog"</span>, <span class="st">"Cuban Treefrog"</span>, <span class="st">"Colombian Four-eyed Frog"</span>, <span class="st">"Asian House Gecko"</span>, <span class="st">"ReportName"</span>)
 
-<span class="no">herps_exo_spMelt</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/melt.html">melt</a></span>(<span class="no">herps_exo_sp</span>, <span class="kw">id</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"ReportName"</span>))
+<span class="no">herps_exo_spMelt</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/melt.html">melt</a></span>(<span class="no">curacao.exo.herps</span>, <span class="kw">id</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"ReportName"</span>))
 
 <span class="no">herps_exo_spMelt</span>$<span class="no">variable</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span>(<span class="no">herps_exo_spMelt</span>$<span class="no">variable</span>)
 
@@ -218,26 +218,26 @@
 <h4 class="hasAnchor">
 <a href="#native-birds" class="anchor"></a>Native birds</h4>
 <div class="sourceCode" id="cb6"><html><body><pre class="r"><span class="co"># tidy data for species list</span>
-<span class="no">birds_nat</span>$<span class="no">Scientific.name</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">"("</span>, <span class="no">birds_nat</span>$<span class="no">Scientific.name</span>, <span class="st">")"</span>)
-<span class="no">birds_nat</span>$<span class="no">Common.Name</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span>(<span class="no">birds_nat</span>$<span class="no">Common.Name</span>)
-<span class="no">birds_nat</span>$<span class="no">bird.Name</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="no">birds_nat</span>$<span class="no">Common.Name</span>, <span class="no">birds_nat</span>$<span class="no">Scientific.name</span>)
+<span class="no">curacao.nat.birds.list</span>$<span class="no">Scientific.name</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">"("</span>, <span class="no">curacao.nat.birds.list</span>$<span class="no">Scientific.name</span>, <span class="st">")"</span>)
+<span class="no">curacao.nat.birds.list</span>$<span class="no">Common.Name</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span>(<span class="no">curacao.nat.birds.list</span>$<span class="no">Common.Name</span>)
+<span class="no">curacao.nat.birds.list</span>$<span class="no">bird.Name</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="no">curacao.nat.birds.list</span>$<span class="no">Common.Name</span>, <span class="no">curacao.nat.birds.list</span>$<span class="no">Scientific.name</span>)
 
 <span class="co"># wrangle data for Rmd file for species list</span>
-<span class="no">birds_nat</span> <span class="kw">&lt;-</span> <span class="no">birds_nat</span>[<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="no">birds_nat</span>$<span class="no">Site</span>, -<span class="no">birds_nat</span>$<span class="no">Present</span>),]
+<span class="no">curacao.nat.birds.list</span> <span class="kw">&lt;-</span> <span class="no">curacao.nat.birds.list</span>[<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="no">curacao.nat.birds.list</span>$<span class="no">Site</span>, -<span class="no">curacao.nat.birds.list</span>$<span class="no">Present</span>),]
 
-<span class="no">birds_natList</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/split.html">split</a></span>(<span class="no">birds_nat</span>, <span class="kw">f</span> <span class="kw">=</span> <span class="no">birds_nat</span>$<span class="no">Site</span>)
+<span class="no">birds_natList</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/split.html">split</a></span>(<span class="no">curacao.nat.birds.list</span>, <span class="kw">f</span> <span class="kw">=</span> <span class="no">curacao.nat.birds</span>$<span class="no">Site</span>)
 
 <span class="no">birds_natList</span><span class="kw">[[</span><span class="fl">1</span>]]
 
 <span class="co"># wrangle native bird species richness data</span>
-<span class="no">birdsNat_sr_sum</span> <span class="kw">&lt;-</span> <span class="no">birdsNat_sr</span> <span class="kw">%&gt;%</span>
+<span class="no">birdsNat_sr_sum</span> <span class="kw">&lt;-</span> <span class="no">curacao.nat.birds</span> <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(<span class="no">sitetype</span>) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span>(<span class="kw">SR</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span>(<span class="no">SR</span>), <span class="no">puk</span>))
 
 <span class="no">birdsNat_sr_sum</span>$<span class="no">Site</span> <span class="kw">&lt;-</span> <span class="fl">NA</span>
 <span class="no">birdsNat_sr_sum</span>$<span class="no">ReportName</span> <span class="kw">&lt;-</span> <span class="fl">NA</span>
 
-<span class="no">birdsNat_srTotal</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(<span class="no">birdsNat_sr</span>, <span class="no">birdsNat_sr_sum</span>)
+<span class="no">birdsNat_srTotal</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(<span class="no">curacao.nat.birds</span>, <span class="no">birdsNat_sr_sum</span>)
 
 <span class="no">birdsNat_srTotal</span>[,<span class="fl">1</span>] <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Your garden"</span>) <span class="co"># assign all sites the name "Your garden" for plotting and visualization purposes</span>
 <span class="no">birdsNat_srTotal</span>[<span class="fl">32</span>:<span class="fl">34</span>, <span class="fl">1</span>] <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Forest"</span>, <span class="st">"Garden"</span>, <span class="st">"Scrub"</span>) <span class="co"># change summary means to more aesthetically pleasing names (this step could have been done in factorization line several rows above)</span>
@@ -262,17 +262,17 @@
 <div class="sourceCode" id="cb7"><html><body><pre class="r"><span class="co"># Exotic birds</span>
 
 <span class="co"># wrangle exotic birds data</span>
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">birds_exo</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"species"</span>, <span class="st">"Site Type"</span>, <span class="st">"Percentage of sites"</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">curacao.exo.birds.sum</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"species"</span>, <span class="st">"Site Type"</span>, <span class="st">"Percentage of sites"</span>)
 
-<span class="no">birds_exo</span>$<span class="no">`Percentage of sites`</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="no">birds_exo</span>$<span class="no">`Percentage of sites`</span>, <span class="no">puk</span>)
-<span class="no">birds_exo</span>$<span class="no">species</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">birds_exo</span>$<span class="no">species</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Exotic Parrots"</span>,
+<span class="no">curacao.exo.birds.sum</span>$<span class="no">`Percentage of sites`</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="no">curacao.exo.birds.sum</span>$<span class="no">`Percentage of sites`</span>, <span class="no">puk</span>)
+<span class="no">curacao.exo.birds.sum</span>$<span class="no">species</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">curacao.exo.birds.sum</span>$<span class="no">species</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Exotic Parrots"</span>,
                                                 <span class="st">"Chestnut-fronted Macaw"</span>,
                                                 <span class="st">"Rock Pigeon"</span>,
                                                 <span class="st">"Saffron Finch"</span>,
                                                 <span class="st">"House Sparrow"</span>))
 
 <span class="co"># plot exotic bird proportions</span>
-<span class="no">birds_exo_prop_plot</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">data</span> <span class="kw">=</span> <span class="no">birds_exo</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span><span class="kw">=</span><span class="no">`Site Type`</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">`Percentage of sites`</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">`Site Type`</span>)) +
+<span class="no">birds_exo_prop_plot</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="kw">data</span> <span class="kw">=</span> <span class="no">curacao.exo.birds.sum</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span><span class="kw">=</span><span class="no">`Site Type`</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">`Percentage of sites`</span>, <span class="kw">fill</span> <span class="kw">=</span> <span class="no">`Site Type`</span>)) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span>(<span class="kw">stat</span> <span class="kw">=</span> <span class="st">"identity"</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">label</span> <span class="kw">=</span> <span class="no">`Percentage of sites`</span>), <span class="kw">position</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/position_dodge.html">position_dodge</a></span>(<span class="kw">width</span> <span class="kw">=</span> <span class="fl">0.9</span>), <span class="kw">vjust</span> <span class="kw">=</span> <span class="fl">.5</span>, <span class="kw">size</span> <span class="kw">=</span> <span class="fl">3.9</span>) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span>(~ <span class="no">species</span>) +
@@ -291,20 +291,20 @@
 
 <span class="co"># exotic birds list</span>
 
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">birdsExo_List</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"Exotic Parrots"</span>, <span class="st">"Cheshnut-fronted Macaw"</span>, <span class="st">"Rock Pigeon"</span>, <span class="st">"House Sparrow"</span>, <span class="st">"Saffron Finch"</span>, <span class="st">"ReportName"</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">curacao.exo.birds</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"Exotic Parrots"</span>, <span class="st">"Cheshnut-fronted Macaw"</span>, <span class="st">"Rock Pigeon"</span>, <span class="st">"House Sparrow"</span>, <span class="st">"Saffron Finch"</span>, <span class="st">"ReportName"</span>)
 
-<span class="no">birdsExo_List</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/melt.html">melt</a></span>(<span class="no">birdsExo_List</span>, <span class="kw">id</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"ReportName"</span>))
+<span class="no">curacao.exo.birds</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/melt.html">melt</a></span>(<span class="no">curacao.exo.birds</span>, <span class="kw">id</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"ReportName"</span>))
 
-<span class="no">birdsExo_List</span> <span class="kw">&lt;-</span> <span class="no">birdsExo_List</span>[<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="no">birdsExo_List</span>$<span class="no">Site</span>, -<span class="no">birdsExo_List</span>$<span class="no">value</span>),]
+<span class="no">curacao.exo.birds</span> <span class="kw">&lt;-</span> <span class="no">curacao.exo.birds</span>[<span class="fu"><a href="https://rdrr.io/r/base/order.html">order</a></span>(<span class="no">curacao.exo.birds</span>$<span class="no">Site</span>, -<span class="no">curacao.exo.birds</span>$<span class="no">value</span>),]
 
-<span class="no">birdsExo_List</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/split.html">split</a></span>(<span class="no">birdsExo_List</span>, <span class="kw">f</span> <span class="kw">=</span> <span class="no">birdsExo_List</span>$<span class="no">Site</span>)</pre></body></html></div>
+<span class="no">curacao.exo.birds</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/split.html">split</a></span>(<span class="no">curacao.exo.birds</span>, <span class="kw">f</span> <span class="kw">=</span> <span class="no">curacao.exo.birds</span>$<span class="no">Site</span>)</pre></body></html></div>
 <div class="sourceCode" id="cb8"><html><body><pre class="r"><span class="co"># Arthropods -----------</span>
 
 <span class="co"># wrangle arthropod data</span>
-<span class="no">arthDiv</span> <span class="kw">&lt;-</span> <span class="no">arth</span> <span class="kw">%&gt;%</span>
+<span class="no">arthDiv</span> <span class="kw">&lt;-</span> <span class="no">curacao.arthropods</span> <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">Site</span>:<span class="no">AB</span>, <span class="no">ReportName</span>)
 
-<span class="no">arthSum</span> <span class="kw">&lt;-</span> <span class="no">arth</span> <span class="kw">%&gt;%</span>
+<span class="no">arthSum</span> <span class="kw">&lt;-</span> <span class="no">curacao.arthropods</span> <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span>(<span class="no">sitetype</span>) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span>(<span class="kw">SR</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span>(<span class="no">SR</span>), <span class="no">puk</span>), <span class="kw">AB</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span>(<span class="no">AB</span>), <span class="no">puk</span>))
 
@@ -345,15 +345,15 @@
         <span class="kw">legend.position</span> <span class="kw">=</span> <span class="st">"none"</span>)
 
 <span class="co"># prep plot for an individual garden</span>
-<span class="no">compmeans</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html">aggregate</a></span>(<span class="no">arth</span>[,<span class="fl">5</span>:<span class="fl">12</span>], <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="no">arth</span>$<span class="no">sitetype</span>), <span class="no">mean</span>)
+<span class="no">compmeans</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html">aggregate</a></span>(<span class="no">curacao.arthropods</span>[,<span class="fl">5</span>:<span class="fl">12</span>], <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span>(<span class="no">curacao.arthropods</span>$<span class="no">sitetype</span>), <span class="no">mean</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">compmeans</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Group 1"</span>, <span class="st">"Spiders"</span>, <span class="st">"Beetles"</span>, <span class="st">"Flies"</span>, <span class="st">"True Bugs"</span>, <span class="st">"Wasps and Ants"</span>, <span class="st">"Butterflies"</span>, <span class="st">"Lacewings"</span>, <span class="st">"Crickets"</span>)
 <span class="no">compmeans1</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/melt.html">melt</a></span>(<span class="no">compmeans</span>, <span class="kw">id</span> <span class="kw">=</span> <span class="st">"Group 1"</span>)
 <span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">compmeans1</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site Type"</span>, <span class="st">"Order"</span>, <span class="st">"Proportion"</span>)
 <span class="no">compmeans1</span>$<span class="no">Order</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(<span class="no">compmeans1</span>$<span class="no">Order</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Beetles"</span>, <span class="st">"True Bugs"</span>,<span class="st">"Butterflies"</span>,<span class="st">"Crickets"</span>,<span class="st">"Lacewings"</span>, <span class="st">"Flies"</span>,  <span class="st">"Wasps and Ants"</span>,<span class="st">"Spiders"</span>))
 
 
-<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">arth</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"SR"</span>, <span class="st">"AB"</span>, <span class="st">"Spiders"</span>, <span class="st">"Beetles"</span>, <span class="st">"Flies"</span>, <span class="st">"True Bugs"</span>, <span class="st">"Wasps and Ants"</span>, <span class="st">"Butterflies"</span>, <span class="st">"Lacewings"</span>, <span class="st">"Crickets"</span>, <span class="st">"ReportName"</span>)
-<span class="no">arthMelt</span> <span class="kw">&lt;-</span> <span class="no">arth</span> <span class="kw">%&gt;%</span>
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span>(<span class="no">curacao.arthropods</span>) <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Site"</span>, <span class="st">"sitetype"</span>, <span class="st">"SR"</span>, <span class="st">"AB"</span>, <span class="st">"Spiders"</span>, <span class="st">"Beetles"</span>, <span class="st">"Flies"</span>, <span class="st">"True Bugs"</span>, <span class="st">"Wasps and Ants"</span>, <span class="st">"Butterflies"</span>, <span class="st">"Lacewings"</span>, <span class="st">"Crickets"</span>, <span class="st">"ReportName"</span>)
+<span class="no">arthMelt</span> <span class="kw">&lt;-</span> <span class="no">curacao.arthropods</span> <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">Site</span>, <span class="no">Spiders</span>:<span class="no">Crickets</span>)
 
 <span class="no">arthMelt</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/melt.html">melt</a></span>(<span class="no">arthMelt</span>, <span class="kw">id</span> <span class="kw">=</span> <span class="st">"Site"</span>)
@@ -401,7 +401,7 @@
 <div id="section-3-run-a-for-loop-that-will-cycle-through-the-datasets-to-create-individualized-biodiversity-reports" class="section level1">
 <h1 class="hasAnchor">
 <a href="#section-3-run-a-for-loop-that-will-cycle-through-the-datasets-to-create-individualized-biodiversity-reports" class="anchor"></a>Section 3: Run a “for loop” that will cycle through the datasets to create individualized biodiversity reports</h1>
-<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="no">report_names</span> <span class="kw">&lt;-</span> <span class="no">arth</span>$<span class="no">ReportName</span> <span class="co"># create vector that will determine report names and customizable text in the report</span>
+<div class="sourceCode" id="cb9"><html><body><pre class="r"><span class="no">report_names</span> <span class="kw">&lt;-</span> <span class="no">curacao.arthropods</span>$<span class="no">ReportName</span> <span class="co"># create vector that will determine report names and customizable text in the report</span>
 <span class="no">i</span><span class="kw">=</span><span class="fl">1</span> <span class="co"># start loop at the first site</span>
 
 <span class="kw">for</span> (<span class="no">i</span> <span class="kw">in</span> <span class="fl">1</span>:<span class="fl">5</span>) { <span class="co"># &lt;&gt;&lt; edits to have all reports spit out at once</span>
@@ -410,7 +410,7 @@
   <span class="no">report_name</span> <span class="kw">&lt;-</span> <span class="no">report_names</span>[<span class="no">i</span>]
 
   <span class="co"># Native herp plots</span>
-  <span class="no">herps_NA</span> <span class="kw">&lt;-</span> <span class="no">herps_nat</span>[<span class="no">i</span>, <span class="fl">3</span>] <span class="co"># create a vector for the if else statement in Rmd to evaluate gardens without nighttime surveys differently</span>
+  <span class="no">herps_NA</span> <span class="kw">&lt;-</span> <span class="no">curacao.nat.herps</span>[<span class="no">i</span>, <span class="fl">3</span>] <span class="co"># create a vector for the if else statement in Rmd to evaluate gardens without nighttime surveys differently</span>
 
 
   <span class="co"># Native bird species richness plot</span>
@@ -482,7 +482,7 @@
 
   <span class="co"># render Rmarkdown files</span>
   <span class="kw pkg">knitr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/knit_meta.html">knit_meta</a></span>(<span class="kw">class</span><span class="kw">=</span><span class="kw">NULL</span>, <span class="kw">clean</span> <span class="kw">=</span> <span class="fl">TRUE</span>) <span class="co"># this fixes the error: cannot allocate vector of size</span>
-  <span class="kw pkg">rmarkdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>(<span class="st">"analysis/homeownerReports_rmd.Rmd"</span>, <span class="kw">output_file</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">'userReports_caseStudy1/homeownerReport_example_'</span>, <span class="no">report_name</span>, <span class="st">'.html'</span>)) <span class="co"># This line executes each site's .html report by calling the "child" .rmd file.</span>
+  <span class="kw pkg">rmarkdown</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/rmarkdown/man/render.html">render</a></span>(<span class="kw pkg">here</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/here/man/here.html">here</a></span>(<span class="st">"analysis/homeownerReports_rmd.Rmd"</span>), <span class="kw">output_file</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">'userReports_caseStudy1/homeownerReport_example_'</span>, <span class="no">report_name</span>, <span class="st">'.html'</span>)) <span class="co"># This line executes each site's .html report by calling the "child" .rmd file.</span>
 }</pre></body></html></div>
 </div>
   </div>

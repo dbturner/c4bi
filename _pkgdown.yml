@@ -7,6 +7,9 @@ navbar:
     articles:
       text: Reports
       href: articles/index.html
+    reference:
+      text: Data
+      href: reference/index.html
 
 
 reference:
@@ -32,24 +35,3 @@ reference:
   - arth.div.pie.sepa
   - interact.rich.sepa
   - plastic.sepa
-
-
-articles:
-- title: Curaçao Homeowner Reports
-  navbar: Curaçao Homeowner Reports
-  contents:
-  - homeownerReport1_rScript_vignette
-  - homeownerReport1_rmd_vignette
-  - homeownerReport1_examples_vignette
-- title: Southeastern PA Farmer Reports (First Iteration)
-  navbar: Southeastern PA Farmer Reports (First Iteration)
-  contents:
-  - farmerReports1_rScript_vignette
-  - farmerReports1_rmd_vignette
-  - farmerReport1_examples_vignette
-- title: Southeastern PA Farmer Reports (Second Iteration)
-  navbar: Southeastern PA Farmer Reports (Second Iteration)
-  contents:
-  - farmerReports2_rScript_vignette
-  - farmerReports2_rmd_vignette
-  - farmerReport2_examples_vignette
