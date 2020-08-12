@@ -19,7 +19,7 @@ If you use this package to faciliate effective communication with your collabora
 
 <hr>
 
-## Instructions for use (not sure if this is still applicable - we'll see about where we're at with functions later in July)
+## Instructions for use
 1. Clone (download) the repository to folder on your computer.
 2. Choose the folder for either one of the case studies or the template.
 2. Open the `.R` script file for the case study or template.
