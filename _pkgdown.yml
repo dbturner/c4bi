@@ -5,15 +5,19 @@ template:
 navbar:
   components:
     articles:
-      text: Reports
+      text: Template + Case Studies
       href: articles/index.html
     reference:
       text: Data
       href: reference/index.html
 
-
 reference:
 - title: "Data documentation"
+- subtitle: "Template data"
+  desc: >
+    Dataframe used for the template reports
+  contents:
+  - town
 - subtitle: "Curaçao homeowner report data"
   desc: >
     Dataframes used to produce the Curaçao homeowner reports

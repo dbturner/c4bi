@@ -1,3 +1,20 @@
+#' Template data
+#'
+#' Dataframe containing sample data from a fictitious survey of birds and trees from three towns
+#' In this dataset, three parks, all named affectionately after insect groups, in each town were surveyed for ten days.
+#'
+#' @format R data.frame
+#' \describe{
+#' \item{town}{name of town}
+#' \item{park}{name of park within town}
+#' \item{day}{day of sampling}
+#' \item{num_trees}{number of trees sampled in the park}
+#' \item{num_birds}{number of birds counted in the park on that day}
+
+#' }
+"town"
+
+
 #' Curaçao arthropod data
 #'
 #' Dataframe containing arthropod data from Curaçao homeowner sampling.

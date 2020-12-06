@@ -17,6 +17,6 @@ We present two case studies using this method. The first case study is on a proj
 We recommend users of this package first read [_our publication_](#citation) to understand the conceptual framework behind the project.
 <hr>
 
-<hr>
+
 ## Citation
 Turner, D.B., Behm, J.E., & Helmus, M.R. 2020. Coding for broader impact: Leveraging ecologists' programming skills for effective public communication (in prep)

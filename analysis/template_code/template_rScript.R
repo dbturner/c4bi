@@ -13,6 +13,8 @@ library(ggplot2)
 library(rmarkdown)
 
 # Load data
+set.seed(123)
+
 park_A <- cbind(rep("North Town", 10), rep("Beetle", 10), 1:10, rep(24, 10), rnbinom(10, 25, .75))
 park_B <- cbind(rep("North Town", 10), rep("Butterfly", 10), 1:10, rep(10, 10), rnbinom(10, 5, .8))
 park_C <- cbind(rep("East Town", 10), rep("Grasshopper", 10), 1:10, rep(18, 10), rnbinom(10, 12, .77))
@@ -41,6 +43,8 @@ names(park)[5] <- "num_birds"
 park$num_birds <- as.numeric(as.character(park$num_birds))
 park$num_trees <- as.numeric(as.character(park$num_trees))
 park$town <- as.character(park$town)
+
+town <- park
 
 ggplot(park, aes(x = num_trees, y = num_birds)) +
   geom_point(aes(color = town)) +
@@ -138,7 +142,7 @@ for (i in 1:samp) { # The 'for loop' should be run as many times as there are fa
     theme(axis.text = element_text(size = 13.5),
           axis.title = element_text(size = 13.5))
 
-  render("analysis/template_reports/template_rmd.Rmd", output_file = paste0('example_', report_name[i], ".html"), "html_document") # This line executes each farm's .html report by calling the "child" .rmd file.
+  render("analysis/template_reports/template_rmd.Rmd", output_file = paste0('template_report_', report_name[i], ".html"), "html_document") # This line executes each farm's .html report by calling the "child" .rmd file.
   # NOTE: The .rmd should be located in the same workspace directory as this R script.
   # ANOTHER NOTE: The .html files will be located in the same workspace directory as this R script.
 }

@@ -1,20 +1,32 @@
 ---
-title: "Reports"
+title: "Template + Case Studies"
 ---
 
-### Case Study 1: Curacao Homeowner Reports
-- [Iteration R Script - Homeowner Reports](https://dbturner.github.io/c4bi/articles/homeownerReport1_rScript_vignette.html)
-- [Report RMarkdown Template - Homeowner Reports](https://dbturner.github.io/c4bi/articles/homeownerReport1_rmd_vignette.html)
-- [Sample Reports - Curaçao Homeowners](https://dbturner.github.io/c4bi/articles/homeownerReport1_examples_vignette.html)
+### **Template Code**
+Use these R Script and Rmd Markdown template scripts for your own _Coding for Broader Impact_ projects. They can be downloaded (cloned) with the repository or downloaded individually at the links here:  
 
+  * [Iteration R Script - Template](link here)  
+  * [Report RMarkdown - Template](link here)  
+  * [Sample Reports - Template](https://dbturner.github.io/c4bi/articles/template_examples_vignette.html)  
+  
+  
+### **Case Studies**
+_Case Study #1: Curaçao Homeowner Reports_  
 
-### Case Study 2: Southeastern PA Farmer Reports (First Iteration)
+  * [Iteration R Script - Homeowner Reports](https://dbturner.github.io/c4bi/articles/homeownerReport1_rScript_vignette.html)  
+  * [Report RMarkdown - Homeowner Reports](https://dbturner.github.io/c4bi/articles/homeownerReport1_rmd_vignette.html)  
+  * [Sample Reports - Curaçao Homeowners](https://dbturner.github.io/c4bi/articles/homeownerReport1_examples_vignette.html)
 
-- [Iteration R Script - First Farmer Reports](https://dbturner.github.io/c4bi/articles/farmerReports1_rScript_vignette.html)
-- [Report RMarkdown Template - First Farmer Reports](https://dbturner.github.io/c4bi/articles/farmerReports1_rmd_vignette.html)
-- [Sample Reports - Southeastern PA Farmers (First iteration)](https://dbturner.github.io/c4bi/articles/farmerReport1_examples_vignette.html)
+  
+_Case Study #2: Pennsylvania (USA) Farmer Reports - First Iteration_  
 
-### Case Study 2: Southeastern PA Farmer Reports (Second Iteration)
-- [Iteration R Script - Second Farmer Reports](https://dbturner.github.io/c4bi/articles/farmerReports2_rScript_vignette.html)
-- [Report RMarkdown Template - Second Farmer Reports](https://dbturner.github.io/c4bi/articles/farmerReports2_rmd_vignette.html)
-- [Sample Reports - Southeastern PA Farmers (Second iteration)](https://dbturner.github.io/c4bi/articles/farmerReport2_examples_vignette.html)
+  * [Iteration R Script - First Farmer Reports](https://dbturner.github.io/c4bi/articles/farmerReports1_rScript_vignette.html)  
+  * [Report RMarkdown - First Farmer Reports](https://dbturner.github.io/c4bi/articles/farmerReports1_rmd_vignette.html)  
+  * [Sample Reports - Southeastern PA Farmers (First iteration)](https://dbturner.github.io/c4bi/articles/farmerReport1_examples_vignette.html)  
+  
+
+_Case Study #2: Pennsylvania (USA) Farmer Reports - Second Iteration_  
+  
+  * [Iteration R Script - Second Farmer Reports](https://dbturner.github.io/c4bi/articles/farmerReports2_rScript_vignette.html)  
+  * [Report RMarkdown - Second Farmer Reports](https://dbturner.github.io/c4bi/articles/farmerReports2_rmd_vignette.html)  
+  * [Sample Reports - Southeastern PA Farmers (Second iteration)](https://dbturner.github.io/c4bi/articles/farmerReport2_examples_vignette.html)  

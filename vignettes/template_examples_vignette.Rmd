@@ -1,0 +1,10 @@
+---
+title: "Template Reports"
+output: html_document
+---
+
+Click the links below to see six examples of homeowner stakeholder reports.
+
+  * [Template Report - North Town](https://dbturner.github.io/c4bi_reports/example_North_Town.html)
+  * [Template Report - West Town](https://dbturner.github.io/c4bi_reports/example_West_Town.html)
+  * [Template Report - East Town](https://dbturner.github.io/c4bi_reports/homeownerReport_East_Town.html)
