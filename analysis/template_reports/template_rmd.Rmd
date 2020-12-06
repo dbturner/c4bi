@@ -1,0 +1,48 @@
+---
+output: 
+  html_document:
+      theme:
+        sandstone
+---
+
+# `r report`'s Bird and Tree Report
+### This title is individualized by running through a vector to print each name.
+  
+#### Here we would put some information about who surveyed, how they surveyed, and when they surveyed. 
+- This brief introduction should refresh the stakeholder's memory about the project's purpose and relevance.
+  
+### If we had pictures from these fictitious surveys in this dataset, then we could could use the `knitr` package to print them like this:
+  
+```{r picture, out.width = "800px", eval = FALSE, fig.align = "center"}
+knitr::include_graphics("path_to_picutre_file"))
+```
+
+<hr>  
+
+## Next, you can include graphs that tell a clear story about the findings:
+
+### Here is a plot that shows `r report`'s bird counts compared to the average across towns.  
+```{r bird, echo = FALSE, fig.align = "center"}
+plot(bird_plot)
+```
+  
+After printing the graph, you can give a short explanation, if necessary. Additional plots can be included as requested by the stakeholder or if they help clarify the overall "story" of the report.
+
+### Here is a plot that shows `r report`'s tree counts compared to the average across towns. 
+```{r tree, ech  = FALSE, fig.align = "center"}
+plot(tree_plot)
+```
+
+### Here is a plot that shows how bird observations correlates with the number of trees in a park.
+```{r bird_tree relationship, echo = FALSE, fig.align = "center", message = FALSE}
+plot(birds_by_trees)
+```
+Each point represents a the number of birds observed each day by the number of trees in a park. We've added a trendline to show the **_positive_** relationship between the number of trees in a park and the number of birds observed in the park.   
+  
+  
+<hr>  
+
+#### Here we may give a brief summary and additional information to learn more.
+  
+  
+#### Finally, we will link to a feedback form or provide instructions with contact information for how to provide feedback as well as any other unanswered stakeholder questions.
