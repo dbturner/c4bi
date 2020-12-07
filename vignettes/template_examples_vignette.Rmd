@@ -7,4 +7,4 @@ Click the links below to see the three examples of reports made from the [town](
 
   * [Template Report - North Town](https://dbturner.github.io/c4bi_reports/example_North_Town.html)
   * [Template Report - West Town](https://dbturner.github.io/c4bi_reports/example_West_Town.html)
-  * [Template Report - East Town](https://dbturner.github.io/c4bi_reports/homeownerReport_East_Town.html)
+  * [Template Report - East Town](https://dbturner.github.io/c4bi_reports/example_East_Town.html)
