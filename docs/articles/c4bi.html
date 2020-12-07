@@ -85,9 +85,9 @@
 <h4 class="hasAnchor">
 <a href="#you-may-be-interested-in-this-code-if-you-are" class="anchor"></a>You may be interested in this code if you are:</h4>
 <ul>
-<li>An extension specialist looking to create individual pest reports across farm locations</li>
-<li>A wildlife biologist surveying multiple sites and wanting to share your findings across your stakeholder sites</li>
-<li>An environmental scientist seeking to send customized pollution assessments</li>
+<li>an extension specialist looking to create individual pest reports across farm locations</li>
+<li>a wildlife biologist surveying multiple sites and wanting to share your findings across your stakeholder sites</li>
+<li>an environmental scientist seeking to send customized pollution assessments</li>
 <li>OR a person with a ton of data from many places and want unique summary documents for each place
 <hr>
 </li>
@@ -104,10 +104,10 @@
 <h2 class="hasAnchor">
 <a href="#instructions-for-use" class="anchor"></a>Instructions for use</h2>
 <ol style="list-style-type: decimal">
-<li>Clone (download) the repository to folder on your computer.</li>
-<li>Choose the folder for either one of the case studies or the template.</li>
-<li>Open the <code>.R</code> script file for the case study or template.</li>
-<li>Edit the <code>.R</code> script by setting the working directory to the folder for the respective script.</li>
+<li>Clone (download) the repository to a local folder on your computer.</li>
+<li>Choose the repository folder for either the template or one of the case studies. These folders are located within the ‘report_code’ folder.</li>
+<li>Open the <code>.R</code> Script file for the template or case study.</li>
+<li>Edit the <code>.R</code> Script by setting the working directory to the folder for the respective script (e.g., ‘template’ if you are working on the ‘template_rScript.R’ file).</li>
 <li>Install any packages not previously installed on your device. Below are the required packages.</li>
 </ol>
 <pre><code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("dplyr")
@@ -115,30 +115,40 @@ install.packages("ggplot2")
 install.packages("rmarkdown")
 install.packages("reshape2")
 install.packages("tidyr")
-install.packages("kableExtra")</a></code></pre>
+install.packages("kableExtra")
+install.packages("here")</a></code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li>Run the <code>.R</code> script.</li>
-<li>Check to make sure that <code>.html</code> documents are generated in the <code>userReports</code> folder in your working directory. If not, then work through the steps again.
-<hr>
+<li>Run the <code>.R</code> Script.</li>
+<li>Check to make sure that <code>.html</code> documents are generated in the <code>reports</code> folder in your working directory. If not, then work through the steps again.</li>
+<li>Edit the <code>.R</code> Script as needed for your project.</li>
+<li>Open the <code>.Rmd</code> file within the same folder for the <code>.R</code> script you are working with.</li>
+<li>Edit the <code>.Rmd</code> as needed for your project.<br>
+</li>
+<li>Print out new reports for your project to the folder with the folder for the respective script.<br>
+</li>
+<li>Once you get a handle on this approach, feel free to change paths with the <code>render()</code> function to whatever location works best for you.<br><hr>
 </li>
 </ol>
+<div id="template-code" class="section level3">
+<h3 class="hasAnchor">
+<a href="#template-code" class="anchor"></a>Template Code</h3>
+<p>We provided a template <code>.R</code> and <code>.Rmd</code> pair of files in the <code>report_code/template</code> folder with 3 sample reports. This template code uses a simulated, heuristic dataset of bird and tree counts across three parks in three towns. Birds were sampled in each park for 10 days. We plot these data in individualized plots across the three towns to following the <em>Coding for Broader Impact</em> framework, which encourages highlighting each site in the context of the entire study for helpful comparisons. The data for the template code is available by cloning/downloading the repository.</p>
 </div>
-<div id="data" class="section level2">
-<h2 class="hasAnchor">
-<a href="#data" class="anchor"></a>Data</h2>
 <div id="case-studies" class="section level3">
 <h3 class="hasAnchor">
 <a href="#case-studies" class="anchor"></a>Case Studies</h3>
+<p>A quick reference of the <code>.R</code>, <code>.Rmd</code>, and <code>.html</code> files described below can be found in the <a href="https://dbturner.github.io/c4bi/articles/index.html">Template + Case Studies</a> tab.</p>
+<p>A documentation for all <code>.rda</code> files in this package can be found in the <a href="https://dbturner.github.io/c4bi/reference/index.html">Data</a> tab.</p>
 <div id="case-study-1-curaçao-homeowners" class="section level4">
 <h4 class="hasAnchor">
 <a href="#case-study-1-cura%C3%A7ao-homeowners" class="anchor"></a>Case Study 1: Curaçao homeowners</h4>
-This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the Case Study 1 Reports, you will find an <code>.R</code> script, an <code>.Rmd</code> script, data files for each taxon, and 5 sample reports as <code>.html</code> documents, which can be opened in any Internet browser. We used Chrome to print these <code>.html</code> files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. See our <a href="#citation"><em>our publication</em></a> for more details.
+This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the <code>/report_code/homeowner_reports</code> folder, you will find an <code>.R</code> script, an <code>.Rmd</code> script, and 5 sample reports as <code>.html</code> documents, which can be opened in any Internet browser. We used Chrome to print these <code>.html</code> files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. The data files used with the <code>.R</code> and <code>.Rmd</code> are located as <code>.rda</code> files in the <code>data</code> folder and in raw <code>.csv</code> form in the <code>data_raw</code> folder. By cloning the repository, you will already be able to load the <code>.rda</code> files in the respective <code>.R</code> and <code>.Rmd</code> files.
 <hr>
 </div>
 <div id="case-study-2-southeastern-pennsylvania-organic-farmers" class="section level4">
 <h4 class="hasAnchor">
 <a href="#case-study-2-southeastern-pennsylvania-organic-farmers" class="anchor"></a>Case Study 2: Southeastern Pennsylvania organic farmers</h4>
-<p>This case study summarizes biodiversity surveys for beneficial predatory arthropods on organic farms across an urbanization gradient in southeastern Pennsylvania. We contextualize each of 15 focal farms across categories of urbanization intensity. In this case study, we provided two reports to each farmer. The first report provided summary diversity metrics of what was found on each farm in comparison to other farms. The second report was in respones to feedback from farmers about the first report. This second report focuses on land management strategies that promote beneficial arthropod diversity. In the Reports tab, there are links to vignettes for each iteration’s <code>.R</code> script, <code>.Rmd</code> script, data files to produce the report, and sample reports as <code>.html</code> documents. We emailed these <code>.html</code> reports directly to our collaborating farmers.</p>
+<p>This case study summarizes biodiversity surveys for beneficial predatory arthropods on organic farms across an urbanization gradient in southeastern Pennsylvania. We contextualize each of 15 focal farms across categories of urbanization intensity. In this case study, we provided two reports to each farmer. The first report provided summary diversity metrics of what was found on each farm in comparison to other farms. The second report was in respones to feedback from farmers about the first report. In the <code>/report_code/farmer_reports_iter1</code> folder, you will find an <code>.R</code> script, an <code>.Rmd</code> script, and 6 sample reports as <code>.html</code> documents for this first round of reports. This second report focuses on land management strategies that promote beneficial arthropod diversity. In the <code>/report_code/farmer_reports_iter2</code> folder, you will find an <code>.R</code> script, an <code>.Rmd</code> script, and 3 sample reports as <code>.html</code> documents for the second round of reports.</p>
 <hr>
 </div>
 </div>
@@ -146,7 +156,7 @@ This case study summarizes biodiversity surveys for reptiles, amphibians, birds,
 <div id="feedback" class="section level2">
 <h2 class="hasAnchor">
 <a href="#feedback" class="anchor"></a>Feedback</h2>
-<p><em>This package is a work in progress and is distributed as is. Please see the feedback below if you would like to add a feature or if you found a bug. We welcome feedback.</em> <br><br><em>Please read and follow these simple rules before submitting a feature, bug or pull request</em> (these rules are blatantly copied from <a href="https://github.com/willpearse/pez" title="pez GitHub page">here</a>)</p>
+<p><em>This package is a work in progress and distributed as is. Please see the feedback below if you would like to add a feature or if you found a bug. We welcome feedback.</em> <br><br><em>Please read and follow these simple rules before submitting a feature, bug or pull request.</em> (these rules are blatantly copied from <a href="https://github.com/willpearse/pez" title="pez GitHub page">here</a>)</p>
 <ul>
 <li><p>If you have a new idea for how the scripts should be restructured, please open an issue (tagged ‘enhancement’) to discuss it first before making a pull request.</p></li>
 <li><p>If you you’ve found a bug, open an issue (tagged ‘bug’) that contains a <a href="https://stackoverflow.com/help/mcve" title="How to make a great reproducible example?">minimal, complete, and verifiable example</a>. We’ll try and get back to you quickly. If you are able to solve the bug on your own, please post the correction.</p></li>

@@ -7,9 +7,9 @@ output: html_document
 Science is meant to be shared! `c4bi` and its accompanying [publication](#doi) provide a framework, workflow, code, and examples to faciliate the exchange of knowledge between ecologists and their public stakeholders. It's time consuming and tedious to create hundreds of plots and unique research summaries when data is collected across dozens of stakeholder sites. The template code here will help you more readily prepare your dataset(s) to create individualized reports in `.html` documents that can be distributed to your stakeholders via print or digital media.
 
 #### You may be interested in this code if you are:
-- An extension specialist looking to create individual pest reports across farm locations
-- A wildlife biologist surveying multiple sites and wanting to share your findings across your stakeholder sites
-- An environmental scientist seeking to send customized pollution assessments
+- an extension specialist looking to create individual pest reports across farm locations
+- a wildlife biologist surveying multiple sites and wanting to share your findings across your stakeholder sites
+- an environmental scientist seeking to send customized pollution assessments
 - OR a person with a ton of data from many places and want unique summary documents for each place
 <hr>
 
@@ -20,10 +20,10 @@ If you use this package to faciliate effective communication with your collabora
 <hr>
 
 ## Instructions for use
-1. Clone (download) the repository to folder on your computer.
-2. Choose the folder for either one of the case studies or the template.
-2. Open the `.R` script file for the case study or template.
-3. Edit the `.R` script by setting the working directory to the folder for the respective script.
+1. Clone (download) the repository to a local folder on your computer.
+2. Choose the repository folder for either the template or one of the case studies. These folders are located within the 'report_code' folder.
+2. Open the `.R` Script file for the template or case study.
+3. Edit the `.R` Script by setting the working directory to the folder for the respective script (e.g., 'template' if you are working on the 'template_rScript.R' file).
 4. Install any packages not previously installed on your device. Below are the required packages.
 
 ```
@@ -33,30 +33,43 @@ install.packages("rmarkdown")
 install.packages("reshape2")
 install.packages("tidyr")
 install.packages("kableExtra")
+install.packages("here")
 ```
-5. Run the `.R` script.
-6. Check to make sure that `.html` documents are generated in the `userReports` folder in your working directory. If not, then work through the steps again.
+5. Run the `.R` Script.
+6. Check to make sure that `.html` documents are generated in the `reports` folder in your working directory. If not, then work through the steps again.
+7. Edit the `.R` Script as needed for your project.
+8. Open the `.Rmd` file within the same folder for the `.R` script you are working with.
+9. Edit the `.Rmd` as needed for your project.  
+10. Print out new reports for your project to the folder with the folder for the respective script.  
+11. Once you get a handle on this approach, feel free to change paths with the `render()` function to whatever location works best for you.  
 <hr>
 
-## Data
+### Template Code
+
+We provided a template `.R` and `.Rmd` pair of files in the `report_code/template` folder with 3 sample reports. This template code uses a simulated, heuristic dataset of bird and tree counts across three parks in three towns. Birds were sampled in each park for 10 days. We plot these data in individualized plots across the three towns to following the _Coding for Broader Impact_ framework, which encourages highlighting each site in the context of the entire study for helpful comparisons. The data for the template code is available by cloning/downloading the repository.
 
 
 ### Case Studies
+
+A quick reference of the `.R`, `.Rmd`, and `.html` files described below can be found in the [Template + Case Studies](https://dbturner.github.io/c4bi/articles/index.html) tab.  
+
+A documentation for all `.rda` files in this package can be found in the [Data](https://dbturner.github.io/c4bi/reference/index.html) tab.
+
 #### Case Study 1: Curaçao homeowners
-This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the Case Study 1 Reports, you will find an `.R` script, an `.Rmd` script, data files for each taxon, and 5 sample reports as `.html` documents, which can be opened in any Internet browser. We used Chrome to print these `.html` files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. See our [_our publication_](#citation) for more details.
+This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the `/report_code/homeowner_reports` folder, you will find an `.R` script, an `.Rmd` script, and 5 sample reports as `.html` documents, which can be opened in any Internet browser. We used Chrome to print these `.html` files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. The data files used with the `.R` and `.Rmd` are located as `.rda` files in the `data` folder and in raw `.csv` form in the `data_raw` folder. By cloning the repository, you will already be able to load the `.rda` files in the respective `.R` and `.Rmd` files.
 <hr>
 
 #### Case Study 2: Southeastern Pennsylvania organic farmers
-This case study summarizes biodiversity surveys for beneficial predatory arthropods on organic farms across an urbanization gradient in southeastern Pennsylvania. We contextualize each of 15 focal farms across categories of urbanization intensity. In this case study, we provided two reports to each farmer. The first report provided summary diversity metrics of what was found on each farm in comparison to other farms. The second report was in respones to feedback from farmers about the first report. This second report focuses on land management strategies that promote beneficial arthropod diversity. In the Reports tab, there are links to vignettes for each iteration's `.R` script, `.Rmd` script, data files to produce the report, and sample reports as `.html` documents. We emailed these `.html` reports directly to our collaborating farmers.
+This case study summarizes biodiversity surveys for beneficial predatory arthropods on organic farms across an urbanization gradient in southeastern Pennsylvania. We contextualize each of 15 focal farms across categories of urbanization intensity. In this case study, we provided two reports to each farmer. The first report provided summary diversity metrics of what was found on each farm in comparison to other farms. The second report was in respones to feedback from farmers about the first report. In the `/report_code/farmer_reports_iter1` folder, you will find an `.R` script, an `.Rmd` script, and 6 sample reports as `.html` documents for this first round of reports. This second report focuses on land management strategies that promote beneficial arthropod diversity. In the `/report_code/farmer_reports_iter2` folder, you will find an `.R` script, an `.Rmd` script, and 3 sample reports as `.html` documents for the second round of reports.
 
 <hr>
 
 
 ## Feedback
-_This package is a work in progress and is distributed as is. Please see the feedback below if you would like to add a feature or if you found a bug. We welcome feedback._
+_This package is a work in progress and distributed as is. Please see the feedback below if you would like to add a feature or if you found a bug. We welcome feedback._
 <br>
 <br>
-_Please read and follow these simple rules before submitting a feature, bug or pull request_
+_Please read and follow these simple rules before submitting a feature, bug or pull request._
 (these rules are blatantly copied from [here](https://github.com/willpearse/pez "pez GitHub page"))
 
 * If you have a new idea for how the scripts should be restructured, please open an issue (tagged 'enhancement') to discuss it first before making a pull request.

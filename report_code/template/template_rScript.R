@@ -13,6 +13,8 @@ library(ggplot2)
 library(rmarkdown)
 library(here)
 
+# Set working directory if .Rproj file not opened
+
 # Load data
 load(here::here("data/town.rda"))
 
@@ -108,7 +110,7 @@ for (i in 1:samp) { # The 'for loop' should be run as many times as there are fa
     theme(axis.text = element_text(size = 13.5),
           axis.title = element_text(size = 13.5))
 
-  render(here("analysis/template_code/template_rmd.Rmd"), output_file = paste0('template_reports/template_report_', file_name[i], ".html"), "html_document") # This line executes each farm's .html report by calling the "child" .rmd file.
+  render(here("report_code/template/template_rmd.Rmd"), output_file = paste0('report_output/template_report_', file_name[i], ".html"), "html_document") # This line executes each farm's .html report by calling the "child" .rmd file.
   # NOTE: The .rmd should be located in the same workspace directory as this R script.
   # ANOTHER NOTE: The .html files will be located in the same workspace directory as this R script.
 }
