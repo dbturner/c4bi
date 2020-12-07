@@ -7,8 +7,8 @@ This script will complete the following tasks in sections:
 
 1. Load data from farm biodiversity surveys
     a. Data needed (two .csv files): 
-        i. farmReport2_interactRich.csv
-        ii. farmReport2_plastic.csv
+        i. interact.rich.sepa.rda
+        ii. plastic.sepa.rda
 2. Create objects or lists of some plots to be used in the reports
 3. Run a "for loop" that will cycle through the datasets to create individualized biodiversity reports
 
@@ -24,11 +24,11 @@ library(here)
 ### Load data files
 These data are provided on the [GitHub repository](https://github.com/dbturner/c4bi/tree/master/data) as .csv files.
 ```{r, eval = FALSE}
-interactRich <- read.csv("data/farmReport2_interactRich.csv")
-print(interactRich) # Check to see if the data look complete.
+load(here::here("data/interact.rich.sepa.rda"))
+print(interact.rich.sepa) # Check to see if the data look complete.
 
-plastic <- read.csv("data/farmReport2_plastic.csv")
-print(plastic) # Check to see if the dataframe is complete.
+load(here::here("data/plastic.sepa.rda"))
+print(plastic.sepa) # Check to see if the dataframe is complete.
 ```
 
 ## Section 2: Populate objects for data visualizations
@@ -42,7 +42,7 @@ farmNames <- c("lowUrbanFarm_1", "lowUrbanFarm_2", "lowUrbanFarm_3", "lowUrbanFa
 colors <- c("burlywood4", "darkslategray4") # color palette 1
 moreColors <- c("seagreen4", "darkslateblue", "tan3") # color palette 2
 
-weedy_interactions <- ggplot(data = interactRich, aes(x = weedyCover, y = richness)) +
+weedy_interactions <- ggplot(data = interact.rich.sepa, aes(x = weedyCover, y = richness)) +
   geom_point(aes(color = urbanCat, shape = urbanCat), size= 3.4) +
   geom_smooth(aes(color = urbanCat), method = "lm", size = 1.4, se = FALSE, fullrange = TRUE) +
   labs(x = "% weed cover", y = "Average beneficial predator\nrichness per trap", color = "Urban Intensity", shape = "Urban Intensity") +
@@ -54,7 +54,7 @@ weedy_interactions <- ggplot(data = interactRich, aes(x = weedyCover, y = richne
   scale_shape_discrete(breaks = c("High", "Medium", "Low")) +
   scale_color_manual(values = moreColors, breaks = c("High", "Medium", "Low")) # This object will be called to show the interaction between urbanization category and local plant community diversity.
 
-abundance_plastic <- ggplot(data = plastic, aes(x = category, y = meanAbun)) +
+abundance_plastic <- ggplot(data = plastic.sepa, aes(x = category, y = meanAbun)) +
   geom_bar(aes(fill = category), stat = "identity") +
   theme_classic() +
   scale_fill_manual(values = colors) +
@@ -63,7 +63,7 @@ abundance_plastic <- ggplot(data = plastic, aes(x = category, y = meanAbun)) +
         text = element_text(size = 13)) +
   labs(y = "Average abundance of beneficial\npredators per trap") # This object will be called to show the relationship between plastic mulch presence and predatory arthropod abundance.
 
-richness_plastic <- ggplot(plastic, aes(x = category, y = meanRich)) +
+richness_plastic <- ggplot(plastic.sepa, aes(x = category, y = meanRich)) +
   geom_bar(aes(fill = category), stat = "identity") +
   theme_classic() +
   scale_fill_manual(values = colors) +

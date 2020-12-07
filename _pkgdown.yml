@@ -2,19 +2,40 @@ template:
   params:
     bootswatch: sandstone
 
-articles:
-- title: Curaçao Homeowner Reports
+navbar:
+  components:
+    articles:
+      text: Template + Case Studies
+      href: articles/index.html
+    reference:
+      text: Data
+      href: reference/index.html
+
+reference:
+- title: "Data documentation"
+- subtitle: "Template data"
+  desc: >
+    Dataframe used for the template reports
   contents:
-  - homeownerReport1_rScript_vignette
-  - homeownerReport1_rmd_vignette
-  - homeownerReport1_examples_vignette
-- title: Southeastern PA Farmer Reports (First Iteration)
+  - town
+- subtitle: "Curaçao homeowner report data"
+  desc: >
+    Dataframes used to produce the Curaçao homeowner reports
   contents:
-  - farmerReports1_rScript_vignette
-  - farmerReports1_rmd_vignette
-  - farmerReport1_examples_vignette
-- title: Southeastern PA Farmer Reports (Second Iteration)
+  - curacao.arthropods
+  - curacao.exo.birds
+  - curacao.exo.birds.sum
+  - curacao.exo.herps
+  - curacao.exo.herps.sum
+  - curacao.nat.birds
+  - curacao.nat.birds.list
+  - curacao.nat.herps
+  - curacao.nat.herps.sum
+- subtitle: "Southeastern Pennsylvania farmer report data"
+  desc: >
+    Dataframes used to produce the first and second iterations of the Southeastern Pennsylvania farmer reports
   contents:
-  - farmerReports2_rScript_vignette
-  - farmerReports2_rmd_vignette
-  - farmerReport2_examples_vignette
+  - abun.rich.sepa
+  - arth.div.pie.sepa
+  - interact.rich.sepa
+  - plastic.sepa

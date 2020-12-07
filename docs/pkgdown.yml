@@ -12,5 +12,7 @@ articles:
   homeownerReport1_examples_vignette: homeownerReport1_examples_vignette.html
   homeownerReport1_rScript_vignette: homeownerReport1_rScript_vignette.html
   homeownerReport1_rmd_vignette: homeownerReport1_rmd_vignette.html
-last_built: 2020-07-22T03:15Z
+  index: index.html
+  template_examples_vignette: template_examples_vignette.html
+last_built: 2020-12-06T23:26Z
 

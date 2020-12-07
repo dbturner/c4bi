@@ -19,7 +19,7 @@ If you use this package to faciliate effective communication with your collabora
 
 <hr>
 
-## Instructions for use (not sure if this is still applicable - we'll see about where we're at with functions later in July)
+## Instructions for use
 1. Clone (download) the repository to folder on your computer.
 2. Choose the folder for either one of the case studies or the template.
 2. Open the `.R` script file for the case study or template.
@@ -38,18 +38,16 @@ install.packages("kableExtra")
 6. Check to make sure that `.html` documents are generated in the `userReports` folder in your working directory. If not, then work through the steps again.
 <hr>
 
-## Articles
-### Template code
-This vignette (or group of vignettes) should demonstrate what we can do with the functions that can produce individualized reports. FUNCTIONS DEMONSTRATED IN THIS VIGNETTE ARE NOT MADE YET!!!
+## Data
 
 
 ### Case Studies
 #### Case Study 1: Curaçao homeowners
-This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the Case Study 1 Articles, there are an `.R` script, an `.Rmd` script, data files for each taxon, and 5 sample reports as `.html` documents, which can be opened in any Internet browser. We used Chrome to print these `.html` files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. See our [_our publication_](#citation) for more details.
+This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the Case Study 1 Reports, you will find an `.R` script, an `.Rmd` script, data files for each taxon, and 5 sample reports as `.html` documents, which can be opened in any Internet browser. We used Chrome to print these `.html` files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. See our [_our publication_](#citation) for more details.
 <hr>
 
 #### Case Study 2: Southeastern Pennsylvania organic farmers
-This case study summarizes biodiversity surveys for beneficial predatory arthropods on organic farms across an urbanization gradient in southeastern Pennsylvania. We contextualize each of 15 focal farms across categories of urbanization intensity. In this case study, we provided two reports to each farmer. The first report provided summary diversity metrics of what was found on each farm in comparison to other farms. The second report was in respones to feedback from farmers about the first report. This second report focuses on land management strategies that promote beneficial arthropod diversity. In the Articles tab, there are links to vignettes for each iteration's `.R` script, `.Rmd` script, data files to produce the report, and sample reports as `.html` documents. We emailed these `.html` reports directly to our collaborating farmers.
+This case study summarizes biodiversity surveys for beneficial predatory arthropods on organic farms across an urbanization gradient in southeastern Pennsylvania. We contextualize each of 15 focal farms across categories of urbanization intensity. In this case study, we provided two reports to each farmer. The first report provided summary diversity metrics of what was found on each farm in comparison to other farms. The second report was in respones to feedback from farmers about the first report. This second report focuses on land management strategies that promote beneficial arthropod diversity. In the Reports tab, there are links to vignettes for each iteration's `.R` script, `.Rmd` script, data files to produce the report, and sample reports as `.html` documents. We emailed these `.html` reports directly to our collaborating farmers.
 
 <hr>
 
