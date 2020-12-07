@@ -35,7 +35,7 @@ After printing the graph, you can give a short explanation, if necessary. Additi
 <br>
 
 ### Here is a plot that shows `r report`'s tree counts compared to the average across towns. 
-```{r tree, ech  = FALSE, fig.align = "center"}
+```{r tree, echo  = FALSE, fig.align = "center"}
 plot(tree_plot)
 ```
 
