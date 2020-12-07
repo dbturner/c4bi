@@ -51,9 +51,8 @@ We provided a template `.R` and `.Rmd` pair of files in the `report_code/templat
 
 ### Case Studies
 
-A quick reference of the `.R`, `.Rmd`, and `.html` files described below can be found in the [Template + Case Studies](https://dbturner.github.io/c4bi/articles/index.html) tab.  
-
-A documentation for all `.rda` files in this package can be found in the [Data](https://dbturner.github.io/c4bi/reference/index.html) tab.
+  * A quick reference of the `.R`, `.Rmd`, and `.html` files described below can be found in the [Template + Case Studies](https://dbturner.github.io/c4bi/articles/index.html) tab.  
+  * A documentation for all `.rda` files in this package can be found in the [Data](https://dbturner.github.io/c4bi/reference/index.html) tab.
 
 #### Case Study 1: Curaçao homeowners
 This case study summarizes biodiversity surveys for reptiles, amphibians, birds, and arthropods at homes and undeveloped natural sites across the Caribbean island of Curaçao. We contextualize each of 31 focal sites by comparing diversity on the focal site to diversity across sites in a variety of land use categories. In the `/report_code/homeowner_reports` folder, you will find an `.R` script, an `.Rmd` script, and 5 sample reports as `.html` documents, which can be opened in any Internet browser. We used Chrome to print these `.html` files to pdfs, which we then assembled with other documents and then created bound paper reports that we distributed to home owners. The data files used with the `.R` and `.Rmd` are located as `.rda` files in the `data` folder and in raw `.csv` form in the `data_raw` folder. By cloning the repository, you will already be able to load the `.rda` files in the respective `.R` and `.Rmd` files.
