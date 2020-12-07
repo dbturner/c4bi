@@ -1,9 +1,9 @@
 ## `c4bi`: Coding for broader impact
 ### Leveraging ecologists' programming skills for effective public communication
 #### [Daniel B. Turner](https://dbturner.github.io/)<sup>1,</sup><sup>2,</sup><sup>3</sup>, Jocelyn E. Behm<sup>1</sup>, and Matthew R. Helmus<sup>1</sup>
-<sup>1</sup>[Integrative Ecology Lab, Center for Biodiversity, Department of Biology, Temple University, Philadelphia, PA 19122 USA](https://www.iecolab.org "iEcoLab Homepage");
-<sup>2</sup>Department of Entomology, Michigan State University, East Lansing, MI, 48824, USA;
-<sup>3</sup>Ecology, Evolutionary Biology, and Behavior Program, Michigan State University, East Lansing, MI, 48824, USA
+<sup>1</sup>[Integrative Ecology Lab](https://www.iecolab.org "iEcoLab Homepage"), Center for Biodiversity, Department of Biology, Temple University, Philadelphia, PA 19122 USA;
+<sup>2</sup>[Department of Entomology](https://www.canr.msu.edu/ent/), Michigan State University, East Lansing, MI, 48824, USA;
+<sup>3</sup>[Ecology, Evolution, and Behavior Program](https://eeb.msu.edu/), Michigan State University, East Lansing, MI, 48824, USA
 
 <hr>
 This package provides template code and case study code and data to create stakeholder reports for ecological research projects.  Stakeholder reports are individualized summaries of a research project that are given to stakeholders (e.g., homeowners, farmers, land managers) to increase effective communication between researchers and the stakeholders property is sampled.  

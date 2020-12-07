@@ -1,21 +1,24 @@
 ---
+title: Template Code
 output: 
   html_document:
       theme:
         sandstone
 ---
-
+<hr>  
 # `r report`'s Bird and Tree Report
 ### This title is individualized by running through a vector to print each name.
-  
+
+<hr>  
 #### Here we would put some information about who surveyed, how they surveyed, and when they surveyed. 
-- This brief introduction should refresh the stakeholder's memory about the project's purpose and relevance.
+  - This brief introduction should refresh the stakeholder's memory about the project's purpose and relevance.
   
-### If we had pictures from these fictitious surveys in this dataset, then we could could use the `knitr` package to print them like this:
+#### If we had pictures from these fictitious surveys in this dataset, then we could could use the `knitr` package to print them.
   
-```{r picture, out.width = "800px", eval = FALSE, fig.align = "center"}
+```{r picture, out.width = "800px", echo = FALSE, eval = FALSE, fig.align = "center"}
 knitr::include_graphics("path_to_picutre_file"))
 ```
+  - We advise using the `knitr` package when printing pictures since if/else statements can be given if you wish to print certain pictures for certain stakeholders.
 
 <hr>  
 
@@ -28,10 +31,16 @@ plot(bird_plot)
   
 After printing the graph, you can give a short explanation, if necessary. Additional plots can be included as requested by the stakeholder or if they help clarify the overall "story" of the report.
 
+<br>
+<br>
+
 ### Here is a plot that shows `r report`'s tree counts compared to the average across towns. 
 ```{r tree, ech  = FALSE, fig.align = "center"}
 plot(tree_plot)
 ```
+
+<br>
+<br>
 
 ### Here is a plot that shows how bird observations correlates with the number of trees in a park.
 ```{r bird_tree relationship, echo = FALSE, fig.align = "center", message = FALSE}
