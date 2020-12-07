@@ -1,0 +1,18 @@
+---
+title: "Farmer Questions"
+output: html_document
+---
+
+Following Step 1 the _Coding for Broader Impact_ framework, we initially provided each farmer with a [link to a webpage with detailed field methods](https://www.iecolab.org/projects/farm-biodiversity/) and the following information in our inital email:
+
+"1. Place a pitfall trap in the ground: to do this, we place a plastic drinking cup in a small hole [4 inches wide and 8 inches deep], fill the cup with soapy water, cover the trap with a dessert-sized plastic plate, and leave the trap in place for 48 hours. These traps collect arthropods that walk on the ground, and although the traps do kill the arthropods, it does not decrease the population size of beneficial insects.  
+2. Test the strength of predation using prey:  to do this we place dead (frozen) housefly pupae on the ground under a protective mesh cover (to prevent birds from eating them) for 48 hours and then determine how many pupae were eaten during that time frame. Farms with a higher number of predators should have a higher number of fly pupae eaten.  Please note that because the housefly pupae are dead, there is no chance for further propagation.  
+Both types of surveys are conducted at the same time. In total, we place 20 pitfall traps and 20 predation strength surveys at each farm. These surveys take 48 hours to complete, but they will not disturb your farming operations. The results of the study will be provided to all farms that participate. Surveys will be conducted from 19 June to 7 July, but each farm will only be visited for about three days in that time frame."
+
+After arriving to the farms, we asked the farmers  the following questions that were relevant to their needs and comfort:
+1. Where were the most appopriate locations on the farm to sample?
+2. What times of day were least intrusive to sample? 
+3. Would you like to see how we are going to place our sampling techniques?
+4. Are you comfortable with holes cut in plastic mulch? (if plastic mulch was present)
+5. What types and abundances of pests do they deal with?
+

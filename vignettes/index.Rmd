@@ -16,6 +16,7 @@ _Case Study #1: Curaçao Homeowner Reports_
   * [Iteration R Script - Homeowner Reports](https://dbturner.github.io/c4bi/articles/homeownerReport1_rScript_vignette.html)  
   * [Report RMarkdown - Homeowner Reports](https://dbturner.github.io/c4bi/articles/homeownerReport1_rmd_vignette.html)  
   * [Sample Reports - Curaçao Homeowners](https://dbturner.github.io/c4bi/articles/homeownerReport1_examples_vignette.html)
+  * [Farmer Questions (see paper)](https://dbturner.github.io/c4bi/articles/farmer_questions_vignette.html)
 
   
 _Case Study #2: Pennsylvania (USA) Farmer Reports - First Iteration_  
