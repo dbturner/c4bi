@@ -47,7 +47,7 @@ Native species are species that occur naturally on Cura&#231;ao. There are eight
 <br>
 <br>
 ```{r nat_herp_collage, out.width = "650px", echo = FALSE, warning = FALSE, fig.align = "center"}
-knitr::include_graphics(here("data/photos/Native Herps Collage.JPG"))
+knitr::include_graphics(here("data-raw/photos/Native Herps Collage.JPG"))
 ```
 <br>
 <P style="page-break-before: always">
@@ -119,7 +119,7 @@ if(is.na(herps_NA)) {
   
 ```{r herp_nat_message, out.width = "800px", echo = FALSE, warning = FALSE, fig.align = "left"}
 if(is.na(herps_NA)){ # if we did not perform nocturnal surveys at a site, print out this message
-  knitr::include_graphics(here("data/photos/herps_nat_message.png"))
+  knitr::include_graphics(here("data-raw/photos/herps_nat_message.png"))
 }
 ```
 <br>
@@ -133,7 +133,7 @@ Exotic species are species that are not native to Cura&#231;ao and were introduc
 <br>
 <br>
 ```{r exo_herp_collage, out.width = "650px", echo = FALSE, warning = FALSE, fig.align = "center"}
-knitr::include_graphics(here("data/photos/Exotic Herps Collage.JPG"))
+knitr::include_graphics(here("data-raw/photos/Exotic Herps Collage.JPG"))
 ```
   
 <P style="page-break-before: always">
@@ -151,9 +151,9 @@ j <- 1
 herp_dataList = list()
 
 if(is.na(herps_exoList[[i]][1, 5])) {
-  knitr::include_graphics(here("data/photos/herps_exo_message1.png")) # if there were no nighttime surveys performed, thenprint this message saying there were no nighttime surveys performed
+  knitr::include_graphics(here("data-raw/photos/herps_exo_message1.png")) # if there were no nighttime surveys performed, thenprint this message saying there were no nighttime surveys performed
 } else if (herps_exoList[[i]][1, 5] == 0) {
-  knitr::include_graphics(here("data/photos/herps_exo_message2.png")) # if we found no exotic herps, then print this message saying that none were found
+  knitr::include_graphics(here("data-raw/photos/herps_exo_message2.png")) # if we found no exotic herps, then print this message saying that none were found
 } else {
   while (herps_exoList[[i]][j, 5] == 1){ 
     herp_data <- herps_exoList[[i]][j, 4]
@@ -208,7 +208,7 @@ There are approximatly 13 exotic bird species on Cura&#231;ao, eight of which ar
 <br>
 <br>
 ```{r exo_birds_collage, out.width = "500px", echo = FALSE, warning = FALSE, fig.align = "center"}
-knitr::include_graphics(here("data/photos/Exotic Birds Collage.JPG"))
+knitr::include_graphics(here("data-raw/photos/Exotic Birds Collage.JPG"))
 ```
 
 
@@ -222,13 +222,13 @@ print(birds_exo_prop_plot)
   
 
 
-```{r birdExo_spList, out.width = "480px", echo = FALSE, fig.align = "left", eval = TRUE}
+```{r birdExo_spList, out.width = "480px", echo = FALSE, fig.align = "left", eval = FALSE}
 l <- 1
 newBird_exoList <- list()
 
 
 if (birdsExo_List[[i]][1, 5] == 0) {
-  knitr::include_graphics(here("data/photos/birds_exo_message.png")) # if we did not find any exotic birds at the site, then print a message that says none were observed
+  knitr::include_graphics(here("data-raw/photos/birds_exo_message.png")) # if we did not find any exotic birds at the site, then print a message that says none were observed
 } else {
   while(birdsExo_List[[i]][l, 5] == 1){
     birdExo_data <- birdsExo_List[[i]][l, 4]
@@ -250,7 +250,7 @@ We surveyed the arthropods (insects and spiders) that live on the plants in your
 <br>
 <br>
 ```{r arths_collage, out.width = "500px", echo = FALSE, warning = FALSE, fig.align = "center"}
-knitr::include_graphics(here("data/photos/Arthropods Collage.JPG"))
+knitr::include_graphics(here("data-raw/photos/Arthropods Collage.JPG"))
 ```
 
 
@@ -294,7 +294,7 @@ Garden sites are dominated by true bugs; roughly half of all individuals we coll
 <br>
 <br>
 ```{r ieco_logo, out.width = "250px", echo = FALSE, warning = FALSE, fig.align = "left"}
-knitr::include_graphics(here("data/photos/iEco Logo.JPG"))
+knitr::include_graphics(here("data-raw/photos/iEco Logo.JPG"))
 ```
 <br>
 <br>

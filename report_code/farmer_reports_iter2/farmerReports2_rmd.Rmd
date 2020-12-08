@@ -29,7 +29,7 @@ knitr::opts_knit$set(root.dir = here::here())
 ***********************************************************************************
 
 ### The **richness (number of types)** of arthropods found on farms compared with the area of weedy plant coverage, separated by Urban Intensity category:
-```{r, fig.height = 4.5, fig.width = 6.5, fig.align = 'center', warning = FALSE, echo = FALSE}
+```{r, fig.height = 4.5, fig.width = 6.5, fig.align = 'center', warning = FALSE, echo = FALSE, message = FALSE}
 weedy_interactions # Print the local plant community and landscape urbanization interaction plot.
 ```
 
@@ -44,7 +44,7 @@ We believe these patterns are due to the presence of different weed species on u
 ***********************************************************************************
 
 ### The average **abundance** of beneficial arthropod predators in the presence and absence of plastic mulch across all farms:
-```{r, fig.height = 4.5, fig.width = 5, fig.align = 'center', echo = FALSE}
+```{r, fig.height = 4.5, fig.width = 5, fig.align = 'center', echo = FALSE, message = FALSE}
 abundance_plastic # Print the plot demonstrating the relationship between arthropod predator abundance and the presence of plastic mulch.
 ```
 
@@ -54,7 +54,7 @@ Here, we see that the  presence of plastic mulch around the crops that we survey
 ***********************************************************************************
 
 ### The average **richness (number of types)** of beneficial arthropod predators in the presence and absence of plastic mulch across all farms:
-```{r, fig.height = 4.5, fig.width = 5, fig.align = 'center', echo = FALSE}
+```{r, fig.height = 4.5, fig.width = 5, fig.align = 'center', echo = FALSE, message = FALSE}
 richness_plastic # Print the plot demonstrating the relationship between arthropod predator richness and the presence of plastic mulch.
 ```
 
