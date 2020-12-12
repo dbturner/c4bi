@@ -26,7 +26,18 @@ knitr::include_graphics("path_to_picutre_file"))
 
 ### Here is a plot that shows `r report`'s bird counts compared to the average across towns.  
 ```{r bird, echo = FALSE, fig.align = "center"}
-plot(bird_plot)
+ggplot(bird_sum[c(i, length(bird_sum$town)),], aes(x = town, y = round(as.numeric(mean_birds), digits = 0))) +
+    geom_bar(stat = "identity", aes(fill = town)) +
+    labs(y = "Average number of birds") +
+    theme_classic() +
+    theme(axis.ticks.x = element_blank(),
+          axis.text.x = element_blank(),
+          axis.title.x = element_blank(),
+          legend.title = element_blank(),
+          axis.text.y = element_text(color = "grey20", size = 12, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+          axis.title = element_text(size = 13.6),
+          legend.text = element_text(size = 13)) +
+    scale_fill_brewer(palette = "Dark2")
 ```
   
 After printing the graph, you can give a short explanation, if necessary. Additional plots can be included as requested by the stakeholder or if they help clarify the overall "story" of the report.
@@ -36,7 +47,18 @@ After printing the graph, you can give a short explanation, if necessary. Additi
 
 ### Here is a plot that shows `r report`'s tree counts compared to the average across towns. 
 ```{r tree, echo  = FALSE, fig.align = "center"}
-plot(tree_plot)
+ggplot(tree_sum[c(i, length(tree_sum$town)),], aes(x = town, y = round(as.numeric(mean_trees), digits = 0))) +
+    geom_bar(stat = "identity", aes(fill = town)) +
+    labs(y = "Average number of trees") +
+    theme_classic() +
+    theme(axis.ticks.x = element_blank(),
+          axis.text.x = element_blank(),
+          axis.title.x = element_blank(),
+          legend.title = element_blank(),
+          axis.text.y = element_text(color = "grey20", size = 12, angle = 0, hjust = .5, vjust = .5, face = "plain"),
+          axis.title = element_text(size = 13.6),
+          legend.text = element_text(size = 13)) +
+    scale_fill_brewer(palette = "Dark2")
 ```
 
 <br>
@@ -44,7 +66,14 @@ plot(tree_plot)
 
 ### Here is a plot that shows how bird observations correlates with the number of trees in a park.
 ```{r bird_tree relationship, echo = FALSE, fig.align = "center", message = FALSE}
-plot(birds_by_trees)
+ggplot(data = town, aes(x = num_trees, y = num_birds)) +
+    geom_point() +
+    geom_smooth(method = "lm", se = FALSE, color = "blue4") +
+    labs(x = "Number of trees",
+         y = "Number of birds") +
+    theme_classic() +
+    theme(axis.text = element_text(size = 13.5),
+          axis.title = element_text(size = 13.5))
 ```
 Each point represents a the number of birds observed each day by the number of trees in a park. We've added a trendline to show the **_positive_** relationship between the number of trees in a park and the number of birds observed in the park.   
   
