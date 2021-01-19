@@ -1,0 +1,415 @@
+---
+title: "tidy tick data"
+output: 
+  html_document:
+      theme:
+        sandstone
+---
+
+# Install/load packages
+```{r load_libraries}
+library(tidyverse)
+library(readr)
+library(here)
+```
+
+# Load our data
+```{r load_data}
+ticks_mammals <- read.csv(here::here("data/tick_biodiversity_data - mammals.csv"))
+ticks_pathogens <- read.csv(here::here("data/tick_biodiversity_data - pathogens.csv"))
+ticks_sites <- read.csv(here::here("data/tick_biodiversity_data - sites.csv"))
+ticks_ticks <- read.csv(here::here("data/tick_biodiversity_data - ticks.csv"))
+
+#View(ticks_mammals)
+#View(ticks_pathogens)
+#View(ticks_sites)
+#View(ticks_ticks)
+```
+
+# Tidy each tick data set (use ticks_sites as guide!)
+```{r tidy_sites}
+
+tidy_tick_sites <- ticks_sites
+
+
+## For the site data, West Fairmount had a space in the cell and we decided
+## rename two other sites, so they are recoded here to preserve the original data
+
+tidy_tick_sites$Site <- recode(ticks_sites$Site, 
+                       `West Fairmount ` = "West Fairmount",
+                       `Waterloo Mills East` = "Waterloo Mills - Public",
+                       `Waterloo Mills West` = "Waterloo Mills - Private"
+                       )
+
+
+unique(tidy_tick_sites$Site) ## check to make sure there aren't repeats, as this is how you can catch issues like West Fairmount above
+
+
+```
+
+```{r tidy_mammals}
+#View(ticks_mammals)
+
+tidy_mammals <- ticks_mammals %>%
+  filter(!Species == "Human") %>%
+  rename("Site" = StudyArea) %>% ## keep columns consistent with the original site data
+  mutate(Site = recode(Site, ## also keep all site names consistent & spelled correctly!
+                       `Gordon Natural` = "Gordon Natural Area",
+                       `Harmony Hill` = "Harmony Hills",
+                       `Waterloo Mill E` = "Waterloo Mills - Public",
+                       `Waterloo Mill W` = "Waterloo Mills - Private",
+                       `West Fairmont` = "West Fairmount")) %>%
+  complete(Site, Species, fill = list(Detections = 0)) ## "complete" the data so there are zeroes when a species was NOT present at that site
+
+
+```
+
+```{r tidy_pathogens}
+
+tidy_pathogens <- ticks_pathogens %>%
+  rename("site_code" = Site.Name, ## again just keep everything consistent 
+         "total_nymphs_site" = Nymphs) %>%
+  ## now recalculate the disease prevalence to account for confections inflating numbers
+  mutate(Borrelia_new = (Borrelia - 
+                           (Borrelia_Babesia + Borrelia_Anaplasma +
+                              Borrelia_Anaplasma_Babesia)),
+         Anaplasma_new = (Anaplasma - 
+                           (Borrelia_Anaplasma +
+                              Borrelia_Anaplasma_Babesia)),
+         Babesia_new = (Babesia - 
+                           (Borrelia_Babesia +
+                              Borrelia_Anaplasma_Babesia)),
+         infected = (Borrelia_new + Anaplasma_new + Babesia_new),
+         coinfected = (Borrelia_Babesia + Borrelia_Anaplasma +
+                              Borrelia_Anaplasma_Babesia),
+         not_infected = (total_nymphs_site - 
+                           (infected + coinfected))) %>%
+  filter(!site_code == "Total") ## get rid of the totals, we do not need them
+
+```
+
+```{r tidy_ticks}
+
+tidy_ticks <- ticks_ticks %>%
+  ## make all column names tidy since the original csv had double headings
+  rename("site_code" = X,
+         "Session" = X.1,
+         "BL_Adult" = Black.legged.Ticks,
+         "BL_Nymph" = X.2,
+         "BL_Larva" = X.3,
+         "BD_Adult" = Brown.Dog.Ticks,
+         "BD_Nymph" = X.4,
+         "BD_Larva" = X.5,
+         "AD_Adult" = American.Dog.Ticks,
+         "AD_Nymph" = X.6,
+         "AD_Larva" = X.7,
+         "LH_Adult" = Longhorned.tick,
+         "LH_Nymph" = X.8,
+         "LH_Larva" = X.9,
+         "LS_Adult" = Lone.star.tick,
+         "LS_Nymph" = X.10,
+         "LS_Larva" = X.11
+         ) %>%
+  slice(-1, -33) %>% ## slice gets rid of row 1 (repeated column names) and row 33 (totals)
+  ## we need a long data frame to work with so we can group_by()
+  pivot_longer(c(BL_Adult, BL_Nymph, BL_Larva, BD_Adult, BD_Nymph, BD_Larva,
+                 AD_Adult, AD_Nymph, AD_Larva, LH_Adult, LH_Nymph, LH_Larva,
+                 LS_Adult, LS_Nymph, LS_Larva),
+               names_to = "Group",
+               values_to = "Count") %>% 
+  separate(Group, c("Species", "Life_Stage"), sep = "_") %>%
+  mutate(site_code = recode(site_code, 
+                       `FPW ` = "FPW")) %>% ## get rid of the space in the cell
+  mutate_all(., ~replace(., is.na(.), 0)) ## replace any NA with a zero
+
+tidy_ticks$Count[tidy_ticks$Count==""] <- "0" ## if there is a blank, replace it with a zero so we can do math with it 
+  
+```
+
+```{r join_with_site_key}
+## Now join all of our "sub" data frames with the site info so we have site code, site name, and county in every data frame
+
+## Note that you can get rid of "Ticks" and "Cameras" columns since we do not use them
+
+tidy_mammals <- left_join(tidy_mammals, tidy_tick_sites) %>%
+  select(-c(Ticks, Cameras))
+
+
+tidy_pathogens <- left_join(tidy_pathogens, tidy_tick_sites) %>%
+  select(-c(Ticks, Cameras)) #only NA is for total which makes sense!
+
+tidy_ticks <- left_join(tidy_ticks, tidy_tick_sites) %>%
+  select(-c(Ticks, Cameras))
+
+```
+
+```{r plot_specific_tidying}
+## Now go through and tidy all data so it is in the proper format for all of our desired plots, figures, tables, etc. 
+
+#Section 1: Ticks--------------------------------------------------------------
+## First put the real tick common names instead of the abbreviations
+tidy_ticks$Species <- recode(tidy_ticks$Species, 
+                             BL = "Black Legged Tick",
+                             BD = "Brown Dog Tick",
+                             AD = "American Dog Tick",
+                             LH = "Longhorned Tick",
+                             LS = "Lone Star Tick"
+                             )
+
+## sum up the number of each tick species at each site
+ticks_caught <- tidy_ticks %>%
+  mutate(Count = as.numeric(Count)) %>% ## as.numeric so we can do math
+  group_by(Site, Species, County, Ownership) %>%
+  summarize(ticks_site = sum(Count)) %>%
+  ungroup()
+
+## do an ifelse() so we can assign presence/absence in addition to abundance numbers
+x <- ticks_caught$ticks_site
+presence <- ifelse(x > 0, "Yes", "No") ## if > 0 --> "Yes" means it was present at a site!
+
+ticks_caught_table <- ticks_caught %>%
+ # select(-c(site_code, Session, Life_Stage, Count, ticks_site)) %>%
+  add_column(presence) %>% ## add in the values from the ifelse() above
+  distinct(Site, Species, Ownership, County, presence) %>% ## we only need each site/species once, so use a distinct() to do this 
+  pivot_wider(names_from = "Species",
+              values_from = "presence") 
+
+## Now summarize the tick abundance at the county level; i use summarize (instead of mutate) to make it cleaner for plotting
+ticks_caught_county <- ticks_caught %>%
+  group_by(County, Species) %>%
+  summarize(ticks_county = mean(ticks_site),
+            sd_ticks_county = sd(ticks_site))
+
+
+
+#Section 2: Pathogens----------------------------------------------------------
+## add county level information to the pathogens data frame by summing up the site 
+## level info for each county
+tidy_pathogens <- tidy_pathogens %>%
+  group_by(County) %>%
+  mutate(nymphs_county = sum(total_nymphs_site),
+         Borrelia_Babesia_county = sum(Borrelia_Babesia),
+         Borrelia_Anaplasma_county = sum(Borrelia_Anaplasma),
+         Borrelia_Anaplasma_Babesia_county = sum(Borrelia_Anaplasma_Babesia),
+         Borrelia_new_county = sum(Borrelia_new),
+         Anaplasma_new_county = sum(Anaplasma_new),
+         Babesia_new_county = sum(Babesia_new),
+         not_infected_county = sum(not_infected))
+
+
+tidy_pathogens_long <- tidy_pathogens %>%
+  select(-c(Borrelia, Anaplasma, Babesia)) %>%
+  ## get the pathogens data in long form 
+  pivot_longer(c(Borrelia_new, Anaplasma_new, Babesia_new,
+                 Borrelia_Babesia, Borrelia_Anaplasma, Borrelia_Anaplasma_Babesia, not_infected),
+               names_to = "Disease",
+               values_to = "Number_infected_site_disease") %>%
+  group_by(Site, total_nymphs_site, Disease, Ownership) %>%
+  ## get the disease prevalence 
+  summarize(prop_inf = (Number_infected_site_disease/total_nymphs_site)) %>%
+  ## only need one row of each disease at each site, so use distinct
+  distinct(Site, total_nymphs_site, Disease, prop_inf, Ownership) %>%
+  ## rename the columns so borrelia --> Lyme disease
+  mutate(Disease = recode(Disease, 
+                       Borrelia_new = "Lyme disease",
+                       Anaplasma_new = "Anaplasma",
+                       Babesia_new = "Babesia",
+                       Borrelia_Babesia = "Lyme disease & Babesia (coinfected)",
+                       Borrelia_Anaplasma = "Lyme disease & Anaplasma (coinfected)",
+                       Borrelia_Anaplasma_Babesia = "Lyme disease, Anaplasma & Babesia (coninfected)",
+                       not_infected = "Not infected"))
+
+## now do the same process as above, but this time we want it at the county level, so group
+## and summarize accordingly
+tidy_pathogens_county <- tidy_pathogens %>%  
+  pivot_longer(c(Borrelia_Babesia_county,
+         Borrelia_Anaplasma_county,
+         Borrelia_Anaplasma_Babesia_county,
+         Borrelia_new_county,
+         Anaplasma_new_county,
+         Babesia_new_county,
+         not_infected_county),
+         names_to = "Disease_county",
+         values_to = "Number_infected_county_disease") %>%
+  group_by(County, Disease_county, nymphs_county) %>%
+  summarize(prop_inf_county = (Number_infected_county_disease/nymphs_county)) %>%
+  distinct(County, Disease_county, prop_inf_county, nymphs_county) %>%
+  mutate(Disease = recode(Disease_county, 
+                       Borrelia_new_county = "Lyme disease",
+                       Anaplasma_new_county = "Anaplasma",
+                       Babesia_new_county = "Babesia",
+                       Borrelia_Babesia_county = "Lyme disease & Babesia (coinfected)",
+                       Borrelia_Anaplasma_county = "Lyme disease & Anaplasma (coinfected)",
+                       Borrelia_Anaplasma_Babesia_county = "Lyme disease, Anaplasma & Babesia (coninfected)",
+                       not_infected_county = "Not infected"))
+
+## do an ifelse() for presence/absence from the abundance data
+x <- tidy_pathogens_long$prop_inf
+presence <- ifelse(x > 0, "Yes", "No")
+
+pathogens_table_1 <- tidy_pathogens_long %>%
+  ## for the table we don't care about numbers, so get rid of proportion infected
+  select(-c(prop_inf)) %>%
+  ## add in presence/absence from the ifelse()
+  add_column(presence) %>%
+  ## pivot wider for our table format
+  pivot_wider(names_from = "Disease",
+              values_from = "presence") %>%
+  ## for each disease, make sure it says "present" if it was true for that coinfection!
+  ## putting the else condition as the disease name leaves the original Y/N entry
+  mutate(Anaplasma = ifelse(
+    `Lyme disease & Anaplasma (coinfected)` == "Yes" |
+      `Lyme disease, Anaplasma & Babesia (coninfected)` == "Yes",
+    "Yes", Anaplasma),
+    Babesia = ifelse(
+      `Lyme disease, Anaplasma & Babesia (coninfected)` == "Yes"|
+        `Lyme disease & Babesia (coinfected)` == "Yes", 
+      "Yes", Babesia),
+    `Lyme disease` = ifelse(
+      `Lyme disease & Anaplasma (coinfected)` == "Yes" |
+        `Lyme disease, Anaplasma & Babesia (coninfected)` == "Yes"|
+        `Lyme disease & Babesia (coinfected)` == "Yes", 
+      "Yes", `Lyme disease`)) %>%
+  select(-c(`Lyme disease & Anaplasma (coinfected)`,
+          `Lyme disease, Anaplasma & Babesia (coninfected)`,
+           `Lyme disease & Babesia (coinfected)`))
+
+
+#Section 3: Mammals------------------------------------------------------------
+
+## species richness --> calculate number of unique species at each site
+tidy_mammals_species_richness <- tidy_mammals %>%
+  ## for the purposes of species richness, we don't want the species that were NOT 
+  ## detected, so we get rid of the zeroes we added above
+  filter(Detections > 0) %>%
+  group_by(Site, site_code, Ownership, County) %>%
+  summarize(species_richness = length(unique(Species))) %>% 
+  ## now do the county level by taking an averages of all of the sites in each county
+  group_by(County) %>% 
+  mutate(county_avg_rich = mean(species_richness))
+
+## for cleaner plotting, just keep ONE entry for each county instead of repeating them
+## for the length of every site within the county
+tidy_mammals_species_richness_county <- tidy_mammals_species_richness %>%
+  distinct(County, county_avg_rich)
+
+## for photos we want the sum of all detections of each species at each site
+tidy_mammals_photos <- tidy_mammals %>%
+  group_by(Site, site_code, Ownership, County, Species) %>%
+  summarize(species_photos = sum(Detections)) %>%
+  group_by(County, Species) %>%
+  mutate(county_avg_photo = mean(species_photos))
+
+## now get it into a format for a table using an ifelse() for presence again
+## first summarize the number of detections
+tidy_mammals_each_site <- tidy_mammals %>%
+  group_by(Site, site_code, Ownership, County, Species) %>%
+  summarize(species_photos = sum(Detections))
+ 
+x <- tidy_mammals_each_site$species_photos
+presence <- ifelse(x > 0, "Present at your site", "Not seen at your site")
+
+tidy_mammals_each_site <- tidy_mammals_each_site %>%
+  select(-species_photos) %>%
+  add_column(presence) %>%
+  pivot_wider(names_from = "presence",
+              values_from = "Species")
+
+## to eliminate zeroes after each entry and before each comma when we make the table
+## (i.e. "bird , dog ,"); convert the lists to strings
+tidy_mammals_each_site$`Not seen at your site` <- sapply(tidy_mammals_each_site$`Not seen at your site`, toString)
+
+tidy_mammals_each_site$`Present at your site` <- sapply(tidy_mammals_each_site$`Present at your site`, toString)
+
+
+```
+
+## Save the data
+It is set to eval = FALSE, so set to true or run by hand if you need to save changes!
+```{r save data, eval=FALSE}
+
+filez <- # make file names
+  list(
+    tidy_mammals = "tidy_mammals.rda",
+    tidy_pathogens = "tidy_pathogens.rda",
+    tidy_ticks = "tidy_ticks.rda",
+    tidy_tick_sites = "tidy_tick_sites.rda",
+    
+    ticks_caught_table = "ticks_caught_table.rda",
+    ticks_caught = "ticks_caught.rda",
+    ticks_caught_county = "ticks_caught_county.rda",
+    
+    tidy_pathogens_long = "tidy_pathogens_long.rda",
+    tidy_pathogens_county = "tidy_pathogens_county.rda",
+    pathogens_table_1 = "pathogens_table_1.rda",
+    
+    tidy_mammals_species_richness = "tidy_mammals_species_richness.rda",
+    tidy_mammals_species_richness_county = "tidy_mammals_species_richness_county.rda", 
+    tidy_mammals_photos = "tidy_mammals_photos.rda",
+    ticks_caught_ls_county = "ticks_caught_ls_county.rda",
+    tidy_mammals_each_site = "tidy_mammals_each_site.rda"
+    
+    
+    
+  )
+
+folderz <- # make folder names
+  list(
+    dataraw = paste0(here(),'/data-raw/')
+  )
+
+# GENERAL----------------------------------------------------------------------
+# tidy_mammals
+save(tidy_mammals, file = paste0(folderz$dataraw, filez$tidy_mammals))
+usethis::use_data(tidy_mammals, overwrite = TRUE)
+# tidy_pathogens
+save(tidy_pathogens, file = paste0(folderz$dataraw, filez$tidy_pathogens))
+usethis::use_data(tidy_pathogens, overwrite = TRUE)
+# tidy_ticks
+save(tidy_ticks, file = paste0(folderz$dataraw, filez$tidy_ticks))
+usethis::use_data(tidy_ticks, overwrite = TRUE)
+# ticks_sites
+save(tidy_tick_sites, file = paste0(folderz$dataraw, filez$tidy_tick_sites))
+usethis::use_data(tidy_tick_sites, overwrite = TRUE)
+
+
+# SECTION 1: TICKS-------------------------------------------------------------
+# ticks_caught_table
+save(ticks_caught_table, file = paste0(folderz$dataraw, filez$ticks_caught_table))
+usethis::use_data(ticks_caught_table, overwrite = TRUE)
+# ticks_caught
+save(ticks_caught, file = paste0(folderz$dataraw, filez$ticks_caught))
+usethis::use_data(ticks_caught, overwrite = TRUE)
+# ticks_caught_county
+save(ticks_caught_county, file = paste0(folderz$dataraw, filez$ticks_caught_county))
+usethis::use_data(ticks_caught_county, overwrite = TRUE)
+
+
+#SECTION 2: PATHOGENS----------------------------------------------------------
+# tidy_pathogens_long
+save(tidy_pathogens_long, file = paste0(folderz$dataraw, filez$tidy_pathogens_long))
+usethis::use_data(tidy_pathogens_long, overwrite = TRUE)
+# tidy_pathogens_county
+save(tidy_pathogens_county, file = paste0(folderz$dataraw, filez$tidy_pathogens_county))
+usethis::use_data(tidy_pathogens_county, overwrite = TRUE)
+# tidy_pathogens_county
+save(pathogens_table_1, file = paste0(folderz$dataraw, filez$pathogens_table_1))
+usethis::use_data(pathogens_table_1, overwrite = TRUE)
+
+
+#SECTION 3: MAMMALS------------------------------------------------------------
+# tidy_mammals_species_richness
+save(tidy_mammals_species_richness, file = paste0(folderz$dataraw, filez$tidy_mammals_species_richness))
+usethis::use_data(tidy_mammals_species_richness, overwrite = TRUE)
+# tidy_mammals_species_richness
+save(tidy_mammals_species_richness_county, file = paste0(folderz$dataraw, filez$tidy_mammals_species_richness_county))
+usethis::use_data(tidy_mammals_species_richness_county, overwrite = TRUE)
+# ticks_sites
+save(tidy_mammals_photos, file = paste0(folderz$dataraw, filez$tidy_mammals_photos))
+usethis::use_data(tidy_mammals_photos, overwrite = TRUE)
+# tidy_mammals_each_site
+save(tidy_mammals_each_site, file = paste0(folderz$dataraw, filez$tidy_mammals_each_site))
+usethis::use_data(tidy_mammals_each_site, overwrite = TRUE)
+
+```
+
