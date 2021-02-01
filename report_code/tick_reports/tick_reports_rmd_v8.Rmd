@@ -1,0 +1,294 @@
+---
+output: 
+  html_document:
+    theme: sandstone
+urlcolor: green
+linkcolor: green
+---
+
+<center> 
+# __Tick, Pathogen, and Wildlife biodiversity report for `r i`__ 
+</center>
+
+```{r setup, echo = FALSE}
+# set root directory because Rmd automatically chooses its location for working directory
+# which we need to change
+knitr::opts_knit$set(root.dir = here::here())
+photo_own <- (i %in% tidy_mammals_photos$Ownership) ## this will be used later to decide whether to evaluate code chunks or not
+```
+
+```{r echo = FALSE, results = "asis"}
+
+# report aesthetics and formatting
+cat("
+<style>
+body{ /* Normal  */
+      font-size: 18px;
+}
+
+table,th,td{
+border: solid white;
+}
+
+caption {
+      color: black;
+      font-weight: bold;
+      font-size: 1.0em;
+    }
+</style>
+")
+
+```
+
+# Project overview
+We sampled 16 forested properties across Philadelphia, Delaware, and Chester counties in southeastern Pennsylvania from May to November 2019. We collected ticks at all 16 of these properties, and deployed trail cameras to photograph wildlife at 10 properties. We sampled __`r numSites`__ of your properties. We sampled ticks at the following properties: __`r listTickSites`__.
+```{r message, fig.align = "center", echo = FALSE, warning = FALSE, results='asis'}
+## since we did not do camera trapping at each site, use an ifelse() to decide what gets printed in this section
+
+## using cat() within an Rmd chunk allows you to print whatever you want like normal text, including using headers (#) and formatting (**x**)
+
+
+if(i %in% tidy_mammals_photos$Ownership) { ## ends at line 60
+  
+  cat(
+   noquote(paste("We used trail cameras to photograph wildlife at the following properties: **", toString(listCamSites), ".", "**\n\n", sep = ""
+         )
+         )
+      )
+  
+  
+}else{ ## ends at line 64
+  
+  cat("") ## if no cameras, print nothing about cameras!
+  
+} ## starts at line 60
+
+```
+
+In this report you'll find the following information: (i) tick species identification, (ii) tick-borne diseases, (iii) wildlife photographed
+<br>
+
+********************************************************************************
+
+# Tick species overview
+Over the course of our study, we found five tick species across the 16 properties that we surveyed. Here are photos of what the five species look like at different life stages:
+```{r tickspecies, out.width = "400px", echo = FALSE, warning = FALSE, fig.align = "center"}
+## print the collage of tick species
+knitr::include_graphics(here("data-raw/photos/tickspecies.jpg"))
+```
+
+\pagebreak
+
+Here is a summary of the different hosts the tick species feed on in their preferred habitat, geographic range, and the diseases they carry:
+```{r tick_species_table, echo = FALSE, message = FALSE, warning = FALSE}
+## make your table describing the tick species studied
+
+tick_species <- data.frame("Tick species" = c("Black-legged ticks (_Ixodes scapularis_)",
+                                      "American dog ticks (_Dermacentor variabilis_)",
+                                      "Brown dog ticks (_Rhipicephalus sanguineus_)",
+                                      "Lone star ticks (_Amblyomma americanum_)",
+                                      "Asian longhorned ticks (_Haemaphysalis longicornis_)"),
+                           "Hosts" = c("Any vertebrate, often associated with deer and mice",
+                                       "Vertebrate hosts from mice to large animals",
+                                       "Prefer to feed on dogs, but will feed on other mammals",
+                                       "Vertebrate hosts from mice to large animals (aggressively seek hosts)",
+                                       "Livestock are preferred hosts, but also feeds on pets, wildlife, and humans"),
+                           "Habitat" = c("Deciduous forest",
+                                         "Areas with low tree cover, near paths",
+                                         "In and around human settlements",
+                                         "Woodlands and dense undergrowth",
+                                         "Unclear in the US"),
+                           "Geographic range" = c("Most common tick in the eastern US",
+                                         "East Coast to Rocky Mountains, and California",
+                                         "Worldwide, but most common in warm southern US",
+                                         "Common in Southern US, and are spreading North",
+                                         "Native to Asian countries including China, Japan, and Korea; however, they have recently been discovered in the United States"),
+                           "Diseases transmitted" = c("Lyme disease, Babesiosis, Anaplasmosis, Bartonellosis, Borrelia miyamotoi, and Powassan virus",
+                                         "Tularemia, Ehrlichiosis, and Rocky Mountain Spotted Fever",
+                                         "Rocky Mountain Spotted Fever",
+                                         "Tularemia, Ehrlichiosis, Rocky Mountain Spotted Fever, and Southern tick-associated rash illness (STARI). Bite may also cause an allergy to red meat.",
+                                         "Transmit several diseases to humans in Asia, but it is unknown if they do so in the United States."))
+
+## now print this df in a nice table format 
+tick_species %>%
+  ## rename to replace the . with actual spaces
+  rename("Tick species" = Tick.species,
+         "Geographic range" = Geographic.range,
+         "Diseases transmitted" = Diseases.transmitted) %>%
+  kableExtra::kable() %>%
+          kable_paper('striped',
+                      full_width = F) %>%
+          column_spec(1, bold = T, border_right = T) %>%
+          column_spec(2, border_right = T) %>%
+          column_spec(3, border_right = T) %>%
+          column_spec(4, border_right = T) %>%
+          column_spec(5, border_right = T) %>%
+  kable_styling(font_size = 14)
+
+```
+
+<br>
+
+# Ticks found on your properties
+```{r tick_table, echo = FALSE, results = "asis"}
+## print the tick table made in the Rscript, but use an ifelse to determine what size to make the font
+
+tick_table %>%
+  ## when the data has 5 or more sites (and therefore rows), make the font smaller so it will still fit on one page
+  kable_styling(font_size = ifelse(
+    length(subset(ticks_caught_table, Ownership == i)$Site) >= 5 ,
+    14, 16))
+
+```
+
+\pagebreak
+
+__These bar plots show the total abundance of ticks of each species found on your property.__ We have also included additional bars to show how your sites compare to the average number of ticks found on properties that we sampled in Philadelphia, Delaware, and Chester counties.
+
+```{r, fig.align = 'center', echo = FALSE, warning = FALSE, fig.width = 10}
+tick_abundance_plot # Print the tick abundance bar plot object that was created in the respective for loop from the R script.
+```
+
+<br>
+
+********************************************************************************
+
+# Tick-borne diseases
+We tested black-legged ticks for three common tick-borne diseases: Lyme disease, Anaplasmosis, and Babesiosis. We only tested nymph ticks as this is the life stage which most commonly infects humans. 
+```{r disease_info_table, echo = FALSE}
+## make your data frame of disease information
+diseases <- data.frame("Disease" = c("Lyme disease",
+                                     "Anaplasmosis",
+                                     "Babesiosis"),
+                       "Description" = c("Most common tick-borne disease in the United States; bacterial infection",
+                                     "Infection of the white blood cells, triggering an immune response",
+                                     "Infection of the red blood cells, causing them to rupture"),
+                       "Symptoms" = c("Many individuals experience no symptoms. May cause a bullseye rash around the tick bite, accompanied by flu-like symptoms. If untreated, infection can spread to the joints, heart, and nervous system.",
+                                     "Flu-like symptoms",
+                                     "Flu-like symptoms, blood clots, and low blood  pressure"),
+                       "Transmission Time"= c("18-24 hours",
+                                     "10 hours",
+                                     "36-48 hours"))
+
+## now make it a nice kable format table
+diseases %>%
+  rename("Transmission time" = Transmission.Time) %>%
+  kableExtra::kable()  %>%
+          kable_paper('striped',
+                      full_width = F) %>%
+          column_spec(1, bold = T, border_right = T) %>%
+          column_spec(2, border_right = T) %>%
+          column_spec(3, border_right = T) %>%
+          column_spec(4, border_right = T) %>%
+  kable_styling(font_size = 14)
+```
+
+\pagebreak
+
+# Diseases found
+ __At each of your properties, nymphs tested positive for agents of the following tick-borne diseases:__
+```{r detected_disease_table, echo = FALSE}
+pathogens_table ## print the table stating which pathogens were present at each site
+```
+
+<br>
+
+These pie charts show the proportions of ticks tested in each county which were uninfected, infected with a single disease, or coinfected with multiple diseases:
+```{r, fig.align = 'center', echo = FALSE, warning = FALSE, fig.height = 3, fig.width = 10}
+county_pathogens #and the county averages of pathogens (as pie charts) below it
+```
+
+<br>
+
+Please visit the [__Pennsylvania Tick Research Lab__](https://www.ticklab.org) for more information on tick species and pathogens. 
+
+********************************************************************************
+
+\pagebreak
+
+# Wildlife biodiversity
+We used trail cameras to survey wildlife at 10 sites in Philadelphia, Delaware, and Chester counties. This information will later be used to analyze relationships between tick-borne diseases and tick hosts, but these photos also provide a record of biodiversity at your property. Over the course of the study, we photographed 16 species across the 10 sites. While we targeted medium- to large-sized mammals, we also photographed some birds and small mammals.
+
+<br>
+
+```{r wildlife, fig.align = "center", echo = FALSE, warning = FALSE, results='asis', fig.width = 10}
+
+## since there were not cameras used at every site, we need to do an ifelse() for the entire wildlife section
+
+if(i %in% tidy_mammals_photos$Ownership) { ## if the owner is listed as an owner in the camera data\\ ends at line 242
+  
+  cat("__The bar graphs below show the total number of species photographed at your property relative to the average number of species photographed at sites in each county.__\n")
+  print(wild_species_richness) ## print the species richness plot
+  cat("\n\n")
+  
+      cat("<br>Across sites, the most commonly photographed species were white-tailed deer and eastern gray squirrels. However, the activity of each species varied strongly by site. The number of photos of a species can serve as a proxy for how active or abundant that species is, relative to other species and locations.\n")
+  cat("\n")
+  
+  cat("\n\n\\pagebreak\n")
+  
+  cat(" __These are the species that we found at each of your sites, as well as any species we did not detect on your property.__\n")
+  cat(wildlife_table) ## print the table showing which species were present/absent at each site
+  cat("\n")
+  
+  
+  cat("<br>__Below, you can see the number of photos of each species taken at your properties compared to the average number of photos per species in each county.__ Note that the order of the legend follows the order of the colors in each bar segment from _right to left_.\n")
+  print(wild_photo_abundance)
+  cat("\n\n")
+  
+  cat("\n\n\\pagebreak\n")
+  
+  cat("__Below, you can find a selection of photos from each of your sites.__ We have included the files for these photos along with your report. Please feel free to use them in any way you like.\n")
+  
+}else{ ## ends at line 246
+  
+  cat("***We did not use trail cameras at your properties, so we do not know the wildlife community.***\n") ## if owner not in camera data, print this simple message
+  
+} ## starts at line 242
+
+
+```
+
+```{r photos, fig.align = "center", echo = FALSE, warning = FALSE, eval = photo_own, results='asis', out.width = "600px"}
+## eval = photo.own means evaluate this chunk if the owner had cameras 
+## print out the cameras from their site
+
+knitr::include_graphics(here(paste("data-raw/photos/",i,".jpg", sep = "")))
+
+## each photo is named the same way with the FULL owner name, so the paste() will decide which set to print based on the i it is given!
+
+```
+
+********************************************************************************
+
+\pagebreak
+
+# Further Information
+<br>
+__Thank you__ for allowing us to survey your properties for this project! We hope you find this report informative on how your properties contribute to the biodiversity of southeastern Pennsylvania.
+<br>
+<br>
+The Integrative Ecology Lab at Temple University (iEcoLab) will continue working on the biodiversity of Pennsylvania for years to come. For more information and news about our work please visit our [__lab webpage__](https://www.iecolab.org). You can also follow us on [__Instagram__](https://www.instagram.com/integrative.ecology/)  *@integrative.ecology* and [__Facebook__](https://www.facebook.com/IntegrativeEcology/) *@IntegrativeEcology*. 
+<br>
+<br>
+This report was created by iEcoLab members Payton Phillips, Dan Turner (current address: Michigan State University), Victoria Ramirez, Dr. Matthew Helmus and Dr. Jocelyn Behm under a creative commons license. This means that we hope you share this with whomever and use this report however you like. 
+<br>
+<br>
+We really value your input and interest in this research. If we didn’t address any of your pressing questions or if you have general comments about the report,  please email Payton at payton.phillips<!-- -->@temple.edu.</style>
+<br>
+```{r ieco_logo, out.width = "800px", echo = FALSE, warning = FALSE, fig.align = "left", out.extra='style="float:left; padding:10px"'}
+## print the ieco logo
+knitr::include_graphics(here("data-raw/photos/iecolab_logo_v2_1_banner_v1_0.PNG"))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,313 @@
+StudyArea,Location,Species,Detections,TrapNights
+D,Camera 2,Bird,1,32.79
+D,Camera 3,Bird,11,46.219
+D,Camera 4,Bird,13,40.845
+D,Camera 5,Bird,3,46.154
+D,Center,Bird,14,16.783
+E,Camera 2,Bird,4,41.872
+E,Camera 4,Bird,1,34.965
+E,Camera 6,Bird,2,54
+F,Camera 3,Bird,1,21.901
+F,Center,Bird,6,43.713
+G,Camera 2,Bird,36,47.615
+G,Camera 3,Bird,1,17.143
+G,Camera 4,Bird,3,26.216
+G,Camera 6,Bird,9,54
+I,Camera 3,Bird,37,57.322
+I,Camera 5,Bird,1,46
+L,Camera 2,Bird,4,41.849
+L,Camera 4,Bird,1,32.983
+L,Center,Bird,1,21.478
+M,Camera 3,Bird,10,35.07
+M,Camera 5,Bird,4,34.806
+M,Camera 6,Bird,4,54
+M,Center,Bird,10,25.901
+N,Camera 2,Bird,1,25.794
+N,Camera 3,Bird,6,53.111
+N,Camera 4,Bird,2,34.969
+N,Camera 5,Bird,3,34.806
+O,Camera 2,Bird,16,44.73
+O,Camera 3,Bird,4,37.257
+O,Camera 4,Bird,3,40.849
+O,Camera 5,Bird,1,46
+O,Center,Bird,42,12.031
+P,Camera 2,Bird,3,40.899
+P,Camera 4,Bird,56,21.191
+P,Camera 5,Bird,5,40.703
+P,Camera 6,Bird,9,46
+M,Center,Coyote,1,25.901
+D,Camera 5,Dog,1,46.154
+E,Camera 4,Dog,1,34.965
+E,Camera 6,Dog,2,54
+E,Center,Dog,1,17.143
+F,Camera 5,Dog,1,54
+G,Camera 2,Dog,1,47.615
+G,Camera 3,Dog,1,17.143
+G,Camera 5,Dog,4,34.984
+G,Center,Dog,3,17.938
+I,Camera 2,Dog,1,28.21
+I,Camera 3,Dog,28,57.322
+I,Camera 4,Dog,22,40.777
+I,Center,Dog,2,14.775
+N,Camera 2,Dog,1,25.794
+N,Camera 4,Dog,1,34.969
+O,Camera 5,Dog,1,46
+P,Camera 3,Dog,1,34.101
+P,Camera 4,Dog,1,21.191
+P,Camera 5,Dog,1,40.703
+P,Camera 6,Dog,1,46
+D,Camera 2,Domestic cat,1,32.79
+D,Camera 5,Domestic cat,2,46.154
+D,Center,Domestic cat,4,16.783
+E,Camera 6,Domestic cat,1,54
+I,Camera 2,Domestic cat,1,28.21
+I,Camera 3,Domestic cat,11,57.322
+I,Camera 5,Domestic cat,21,46
+O,Camera 2,Domestic cat,1,44.73
+D,Camera 3,Eastern Chipmunk,3,46.219
+D,Camera 4,Eastern Chipmunk,22,40.845
+D,Center,Eastern Chipmunk,5,16.783
+G,Camera 2,Eastern Chipmunk,15,47.615
+G,Camera 5,Eastern Chipmunk,1,34.984
+G,Camera 6,Eastern Chipmunk,2,54
+I,Camera 3,Eastern Chipmunk,23,57.322
+L,Camera 2,Eastern Chipmunk,1,41.849
+M,Camera 3,Eastern Chipmunk,2,35.07
+N,Camera 3,Eastern Chipmunk,19,53.111
+N,Camera 5,Eastern Chipmunk,4,34.806
+O,Camera 2,Eastern Chipmunk,5,44.73
+O,Center,Eastern Chipmunk,5,12.031
+P,Camera 4,Eastern Chipmunk,18,21.191
+P,Camera 5,Eastern Chipmunk,121,40.703
+D,Camera 3,Eastern Gray Squirrel,51,46.219
+D,Camera 4,Eastern Gray Squirrel,118,40.845
+D,Camera 5,Eastern Gray Squirrel,60,46.154
+D,Center,Eastern Gray Squirrel,4,16.783
+E,Camera 2,Eastern Gray Squirrel,15,41.872
+E,Camera 4,Eastern Gray Squirrel,93,34.965
+E,Camera 6,Eastern Gray Squirrel,34,54
+F,Camera 3,Eastern Gray Squirrel,4,21.901
+F,Camera 4,Eastern Gray Squirrel,5,34.974
+F,Center,Eastern Gray Squirrel,3,43.713
+G,Camera 2,Eastern Gray Squirrel,25,47.615
+G,Camera 3,Eastern Gray Squirrel,1,17.143
+G,Camera 5,Eastern Gray Squirrel,6,34.984
+G,Camera 6,Eastern Gray Squirrel,132,54
+G,Center,Eastern Gray Squirrel,2,17.938
+I,Camera 2,Eastern Gray Squirrel,3,28.21
+I,Camera 3,Eastern Gray Squirrel,79,57.322
+I,Camera 4,Eastern Gray Squirrel,26,40.777
+I,Camera 5,Eastern Gray Squirrel,134,46
+I,Center,Eastern Gray Squirrel,12,14.775
+L,Camera 2,Eastern Gray Squirrel,12,41.849
+L,Camera 3,Eastern Gray Squirrel,2,24.013
+L,Camera 4,Eastern Gray Squirrel,1,32.983
+L,Center,Eastern Gray Squirrel,2,21.478
+M,Camera 3,Eastern Gray Squirrel,1,35.07
+M,Camera 4,Eastern Gray Squirrel,2,17.919
+M,Camera 6,Eastern Gray Squirrel,1,54
+M,Center,Eastern Gray Squirrel,3,25.901
+N,Camera 2,Eastern Gray Squirrel,7,25.794
+N,Camera 3,Eastern Gray Squirrel,8,53.111
+N,Camera 5,Eastern Gray Squirrel,79,34.806
+O,Camera 2,Eastern Gray Squirrel,10,44.73
+O,Camera 4,Eastern Gray Squirrel,14,40.849
+O,Camera 5,Eastern Gray Squirrel,39,46
+O,Center,Eastern Gray Squirrel,1,12.031
+P,Camera 2,Eastern Gray Squirrel,9,40.899
+P,Camera 4,Eastern Gray Squirrel,22,21.191
+P,Camera 5,Eastern Gray Squirrel,96,40.703
+P,Camera 6,Eastern Gray Squirrel,29,46
+D,Center,Groundhog,9,16.783
+I,Camera 2,Groundhog,1,28.21
+L,Center,Groundhog,2,21.478
+M,Center,Groundhog,2,25.901
+N,Camera 2,Groundhog,2,25.794
+O,Camera 2,Groundhog,1,44.73
+D,Camera 2,Human,1,32.79
+D,Camera 3,Human,1,46.219
+D,Camera 5,Human,1,46.154
+D,Center,Human,1,16.783
+E,Camera 2,Human,4,41.872
+E,Camera 3,Human,12,38.859
+E,Camera 4,Human,1,34.965
+G,Camera 3,Human,4,17.143
+G,Camera 5,Human,8,34.984
+G,Center,Human,116,17.938
+I,Camera 3,Human,1,57.322
+I,Camera 4,Human,2,40.777
+I,Center,Human,1,14.775
+L,Camera 5,Human,1,54
+N,Camera 4,Human,1,34.969
+O,Camera 5,Human,1,46
+P,Camera 2,Human,1,40.899
+P,Camera 3,Human,1,34.101
+P,Camera 4,Human,1,21.191
+P,Camera 5,Human,2,40.703
+P,Center,Human,3,11.554
+G,Camera 5,Mouse,3,34.984
+I,Camera 3,Mouse,1,57.322
+D,Camera 3,Opossum,1,46.219
+D,Camera 4,Opossum,2,40.845
+D,Camera 5,Opossum,1,46.154
+D,Center,Opossum,1,16.783
+E,Camera 2,Opossum,2,41.872
+E,Camera 4,Opossum,3,34.965
+G,Camera 6,Opossum,1,54
+I,Camera 3,Opossum,1,57.322
+I,Camera 5,Opossum,1,46
+L,Camera 2,Opossum,3,41.849
+L,Camera 3,Opossum,2,24.013
+L,Camera 4,Opossum,1,32.983
+L,Center,Opossum,6,21.478
+N,Camera 5,Opossum,4,34.806
+P,Camera 6,Opossum,1,46
+D,Camera 5,Rabbit,1,46.154
+G,Camera 6,Rabbit,12,54
+G,Center,Rabbit,2,17.938
+M,Camera 3,Rabbit,2,35.07
+M,Camera 5,Rabbit,2,34.806
+M,Center,Rabbit,12,25.901
+P,Camera 6,Rabbit,1,46
+D,Camera 2,Raccoon,19,32.79
+D,Camera 3,Raccoon,42,46.219
+D,Camera 4,Raccoon,12,40.845
+D,Camera 5,Raccoon,12,46.154
+D,Center,Raccoon,3,16.783
+E,Camera 3,Raccoon,3,38.859
+E,Camera 4,Raccoon,16,34.965
+E,Camera 6,Raccoon,23,54
+F,Camera 2,Raccoon,1,19.071
+F,Camera 3,Raccoon,7,21.901
+F,Camera 4,Raccoon,2,34.974
+F,Camera 5,Raccoon,4,54
+F,Center,Raccoon,15,43.713
+G,Camera 2,Raccoon,24,47.615
+G,Camera 4,Raccoon,1,26.216
+G,Camera 5,Raccoon,17,34.984
+G,Camera 6,Raccoon,29,54
+G,Center,Raccoon,1,17.938
+I,Camera 2,Raccoon,29,28.21
+I,Camera 3,Raccoon,12,57.322
+I,Camera 4,Raccoon,26,40.777
+I,Camera 5,Raccoon,167,46
+I,Center,Raccoon,3,14.775
+L,Camera 2,Raccoon,2,41.849
+L,Camera 3,Raccoon,2,24.013
+L,Camera 4,Raccoon,5,32.983
+L,Camera 5,Raccoon,3,54
+M,Camera 3,Raccoon,5,35.07
+M,Camera 4,Raccoon,2,17.919
+M,Camera 5,Raccoon,1,34.806
+M,Camera 6,Raccoon,6,54
+M,Center,Raccoon,4,25.901
+N,Camera 3,Raccoon,14,53.111
+N,Camera 4,Raccoon,6,34.969
+N,Camera 5,Raccoon,17,34.806
+O,Camera 2,Raccoon,12,44.73
+O,Camera 3,Raccoon,4,37.257
+O,Camera 4,Raccoon,3,40.849
+O,Camera 5,Raccoon,14,46
+O,Center,Raccoon,7,12.031
+P,Camera 2,Raccoon,3,40.899
+P,Camera 4,Raccoon,5,21.191
+P,Camera 5,Raccoon,52,40.703
+P,Camera 6,Raccoon,11,46
+D,Center,Raptor,1,16.783
+P,Camera 5,Raptor,1,40.703
+D,Camera 2,Red fox,60,32.79
+D,Camera 3,Red fox,53,46.219
+D,Camera 4,Red fox,4,40.845
+D,Camera 5,Red fox,14,46.154
+D,Center,Red fox,176,16.783
+E,Camera 2,Red fox,4,41.872
+E,Camera 3,Red fox,7,38.859
+E,Camera 4,Red fox,12,34.965
+E,Camera 6,Red fox,5,54
+E,Center,Red fox,2,17.143
+F,Camera 3,Red fox,1,21.901
+F,Camera 5,Red fox,1,54
+F,Center,Red fox,4,43.713
+G,Camera 3,Red fox,4,17.143
+G,Camera 5,Red fox,2,34.984
+G,Camera 6,Red fox,7,54
+I,Camera 2,Red fox,1,28.21
+I,Camera 3,Red fox,16,57.322
+I,Camera 4,Red fox,11,40.777
+I,Camera 5,Red fox,17,46
+L,Camera 2,Red fox,1,41.849
+L,Camera 5,Red fox,5,54
+M,Camera 4,Red fox,5,17.919
+M,Camera 5,Red fox,5,34.806
+M,Camera 6,Red fox,2,54
+M,Center,Red fox,5,25.901
+N,Camera 2,Red fox,1,25.794
+N,Camera 3,Red fox,3,53.111
+N,Camera 4,Red fox,3,34.969
+N,Camera 5,Red fox,12,34.806
+O,Camera 2,Red fox,24,44.73
+O,Camera 3,Red fox,5,37.257
+O,Camera 4,Red fox,8,40.849
+O,Camera 5,Red fox,16,46
+O,Center,Red fox,1,12.031
+P,Camera 2,Red fox,10,40.899
+P,Camera 3,Red fox,4,34.101
+P,Camera 4,Red fox,12,21.191
+P,Camera 5,Red fox,21,40.703
+P,Camera 6,Red fox,3,46
+L,Camera 2,Skunk,1,41.849
+N,Camera 3,Skunk,2,53.111
+E,Camera 6,Southern Flying squirrel,12,54
+N,Camera 5,Southern Flying squirrel,11,34.806
+D,Camera 2,White-tailed deer,8,32.79
+D,Camera 3,White-tailed deer,19,46.219
+D,Camera 4,White-tailed deer,34,40.845
+D,Camera 5,White-tailed deer,50,46.154
+D,Center,White-tailed deer,4,16.783
+E,Camera 2,White-tailed deer,13,41.872
+E,Camera 3,White-tailed deer,11,38.859
+E,Camera 4,White-tailed deer,31,34.965
+E,Camera 6,White-tailed deer,64,54
+E,Center,White-tailed deer,8,17.143
+F,Camera 2,White-tailed deer,13,19.071
+F,Camera 3,White-tailed deer,10,21.901
+F,Camera 4,White-tailed deer,3,34.974
+F,Camera 5,White-tailed deer,78,54
+F,Center,White-tailed deer,36,43.713
+G,Camera 2,White-tailed deer,22,47.615
+G,Camera 3,White-tailed deer,18,17.143
+G,Camera 4,White-tailed deer,7,26.216
+G,Camera 5,White-tailed deer,53,34.984
+G,Camera 6,White-tailed deer,20,54
+G,Center,White-tailed deer,14,17.938
+I,Camera 2,White-tailed deer,8,28.21
+I,Camera 3,White-tailed deer,7,57.322
+I,Camera 4,White-tailed deer,6,40.777
+I,Camera 5,White-tailed deer,4,46
+I,Center,White-tailed deer,11,14.775
+L,Camera 2,White-tailed deer,19,41.849
+L,Camera 4,White-tailed deer,36,32.983
+L,Camera 5,White-tailed deer,137,54
+L,Center,White-tailed deer,6,21.478
+M,Camera 2,White-tailed deer,9,25.943
+M,Camera 3,White-tailed deer,1,35.07
+M,Camera 4,White-tailed deer,11,17.919
+M,Camera 5,White-tailed deer,17,34.806
+M,Camera 6,White-tailed deer,70,54
+M,Center,White-tailed deer,26,25.901
+N,Camera 2,White-tailed deer,12,25.794
+N,Camera 3,White-tailed deer,18,53.111
+N,Camera 4,White-tailed deer,26,34.969
+N,Camera 5,White-tailed deer,16,34.806
+N,Center,White-tailed deer,3,1.754
+O,Camera 2,White-tailed deer,5,44.73
+O,Camera 3,White-tailed deer,11,37.257
+O,Camera 4,White-tailed deer,2,40.849
+O,Camera 5,White-tailed deer,12,46
+O,Center,White-tailed deer,1,12.031
+P,Camera 2,White-tailed deer,7,40.899
+P,Camera 3,White-tailed deer,11,34.101
+P,Camera 4,White-tailed deer,5,21.191
+P,Camera 5,White-tailed deer,42,40.703
+P,Camera 6,White-tailed deer,20,46
+P,Center,White-tailed deer,1,11.554

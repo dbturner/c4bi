@@ -19,15 +19,24 @@ _Case Study #1: Curaçao Homeowner Reports_
 
 
   
-_Case Study #2: Pennsylvania (USA) Farmer Reports - First Iteration_  
+_Case Study #2: Southeastern Pennsylvania (USA) Farmer Reports - First Iteration_  
 
   * [Iteration R Script - First Farmer Reports](https://github.com/dbturner/c4bi/blob/main/report_code/farmer_reports_iter1/farmerReports1_rScript.R)  
   * [Report RMarkdown - First Farmer Reports](https://github.com/dbturner/c4bi/blob/main/report_code/farmer_reports_iter1/farmerReports1_rmd.Rmd)  
   * [Sample Reports - Southeastern PA Farmers (First iteration)](https://dbturner.github.io/c4bi/articles/farmerReport1_examples_vignette.html)  
   * [Farmer Questions (see paper)](https://dbturner.github.io/c4bi/articles/farmer_questions_vignette.html)
 
-_Case Study #2: Pennsylvania (USA) Farmer Reports - Second Iteration_  
+_Case Study #2: Southeastern Pennsylvania Farmer Reports - Second Iteration_  
   
-  * [Iteration R Script - Second Farmer Reports](https://github.com/dbturner/c4bi/blob/main/report_code/farmer_reports_iter2/farmerReports2_rScript.R)  
+  * [Iteration R Script - Second Farmer Reports](https://github.com/dbturner/c4bi/blob/main/report_code/tick_reports/tickReports_Rscript.R)  
   * [Report RMarkdown - Second Farmer Reports](https://github.com/dbturner/c4bi/blob/main/report_code/farmer_reports_iter2/farmerReports2_rmd.Rmd)  
   * [Sample Reports - Southeastern PA Farmers (Second iteration)](https://dbturner.github.io/c4bi/articles/farmerReport2_examples_vignette.html)  
+
+_Case Study #3 : Southeastern Pennsylvania Property Manager (Tick) Reports_
+
+  * [Iteration R Script - Tick Reports](https://github.com/dbturner/c4bi/blob/main/report_code/tick_reports/tickReports_Rscript.R)  
+  * [Report RMarkdown - Tick Reports](https://github.com/dbturner/c4bi/blob/main/report_code/tick_reports/tickReports_rmd.Rmd)  
+  * [Sample Reports - Tick Reports](https://dbturner.github.io/c4bi/articles/tickReport1_examples_vignette.html)
+  
+  
+

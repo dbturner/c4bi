@@ -1,0 +1,17 @@
+Site,site_code,Ownership,Ticks,Cameras,County
+P,P,4,Y,Y,Philadelphia
+O,O,4,Y,Y,Philadelphia
+D,D,4,Y,Y,Philadelphia
+L,L,1,Y,Y,Chester
+G,G,3,Y,Y,Delaware
+F,F,2,Y,Y,Chester
+E,E,6,Y,Y,Chester
+I,I,4,Y,Y,Philadelphia
+M,M,1,Y,Y,Chester
+N,N,1,Y,Y,Chester
+C,C,5,Y,N,Delaware
+B,B,5,Y,N,Delaware
+A,A,4,Y,N,Philadelphia
+K,K,1,Y,N,Chester
+H,H,1,Y,N,Chester
+J,J,5,Y,N,Delaware

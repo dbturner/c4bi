@@ -222,3 +222,177 @@
 #'
 #' }
 "plastic.sepa"
+
+#' Tick-borne disease presence/absence and tick nymph abundance data
+#'
+#' Dataframe containing nymph tick abundances and presence/absence of tick-borne diseases.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{Site}{site name}
+#'   \item{total_nymphs_site}{tick nymphs tested for disease at that site}
+#'   \item{Ownership}{property manager of that site}
+#'   \item{Anaplasma}{presence/absence of Anaplasma in a tick nymph from that site}
+#'   \item{Babesia}{presence/absence of Babesia in a tick nymph from that site}
+#'   \item{Lyme disease}{presence/absence of Lyme disease in a tick nymph that site}
+#'   \item{Not infected}{Uninfected tick nymph found at that site}
+#'
+#' }
+"pathogens.table"
+
+
+#' Tick abundances by site data
+#'
+#' Dataframe containing tick abundances aggregated across life stages by site.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{Site}{site name}
+#'   \item{Species}{tick species common name}
+#'   \item{County}{site county}
+#'   \item{Ownership}{property manager of that site}
+#'   \item{ticks_site}{number of ticks found at that site}
+#'
+#' }
+"ticks.caught"
+
+
+#' Tick abundances by county data
+#'
+#' Dataframe containing ticks aggregated across all life stages by county.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{County}{site county}
+#'   \item{Species}{tick species' common name}
+#'   \item{ticks county}{mean tick abundance}
+#'   \item{sd_ticks_county}{standard deviation of tick abundance}
+#'
+#' }
+"ticks.caught.county"
+
+
+#' Tick presence/absence data
+#'
+#' Dataframe containing the presence/absence data of tick species for each site.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{Site}{site name}
+#'   \item{County}{site county}
+#'   \item{Ownership}{property manager of that site}
+#'   \item{American Dog Tick}{presence/absence of American Dog Tick at that site}
+#'   \item{Black Legged Tick}{presence/absence of Black Legged Tick at that site}
+#'   \item{Brown Dog Tick}{presence/absence of Brown Dog Tick at that site}
+#'   \item{Lone Star Tick}{presence/absence of Lone Star Tick at that site}
+#'   \item{Longhorned Tick}{presence/absence of Longhorned Tick at that site}
+#'
+#' }
+"ticks.caught.table"
+
+
+#' Mammals and birds presence/absence
+#'
+#' Dataframe containing names of animals found at each site.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{Site}{site name}
+#'   \item{site_code}{site code (two-three letter unique identifier when not anonymized)}
+#'   \item{Ownership}{property manager of that site}
+#'   \item{County}{site county}
+#'   \item{Present at your site}{character string of animals present}
+#'
+#' }
+"mammals.each.site"
+
+#' Mammals and birds observation count data
+#'
+#' Dataframe containing the number of photo observations of animals species at each site.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{Site}{site name}
+#'   \item{site_code}{site code (two-three letter unique identifier when not anonymized)}
+#'   \item{Ownership}{property manager of that site}
+#'   \item{County}{site county}
+#'   \item{species}{animal species}
+#'   \item{species_photos}{number of species' photographed observations}
+#'
+#' }
+"mammals.photos"
+
+#' Mammals and birds richness by site data
+#'
+#' Dataframe containing mammal and bird species richness by site.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{Site}{site name}
+#'   \item{site_code}{site code (two-three letter unique identifier when not anonymized)}
+#'   \item{Ownership}{property manager of that site}
+#'   \item{County}{site county}
+#'   \item{species_richness}{species richness at each site}
+#'   \item{county_avg_rich}{average species richness in site's county}
+#'
+#' }
+"mammals.species.richness"
+
+#' Mammals and birds richness by county data
+#'
+#' Dataframe containing mammal and bird species richness by county.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{County}{county name}
+#'   \item{county_avg_rich}{average species richness in each county}
+#'
+#' }
+"mammals.species.richness.county"
+
+
+#' Tick-borne disease prevalence by county data
+#'
+#' Dataframe containing tick-borne disease prevalence in tick nymphs.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{County}{county name}
+#'   \item{Disease county}{tick-borne disease combination indicator ('new' does _not_ mean new to that county)}
+#'   \item{nymphs_county}{total tick nymphs tested for disease in that county}
+#'   \item{prop_inf_county}{proportion of county's nymphs found with that combination of tick-borne disease}
+#'   \item{Disease}{disease name to present in figure}
+#' }
+"pathogens.county"
+
+#' Tick-borne disease prevalence by site data
+#'
+#' Dataframe containing arthropod abundance and richness data from traps based on presence/absence of plastic mulch.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{Site}{site name}
+#'   \item{total_nymphs_site}{tick nymphs tested for disease at that site}
+#'   \item{Disease}{disease name to present in figure}
+#'   \item{Ownership}{property manager of that site}
+#'   \item{prop_inf}{proportion of the site's nymphs found with that combination of tick-borne disease}
+#'
+#' }
+"pathogens"
+
+#' Tick and camera data availability by site
+#'
+#' Dataframe containing arthropod abundance and richness data from traps based on presence/absence of plastic mulch.
+#'
+#' @format R data.frame
+#' \describe{
+#'   \item{Site}{site name}
+#'   \item{site_code}{site code (two-three letter unique identifier when not anonymized)}
+#'   \item{Ownership}{property manager of that site}
+#'   \item{Ticks}{presenece/absence of tick data that site}
+#'   \item{Cameras}{presence/absence of camera trap pictures}
+#'   \item{County}{county name}
+#' }
+"tick.sites"
+
+

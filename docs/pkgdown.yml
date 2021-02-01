@@ -1,6 +1,20 @@
 pandoc: 2.3.1
 pkgdown: 1.5.1
 pkgdown_sha: ~
-articles: []
-last_built: 2020-12-12T23:34Z
+articles:
+  c4bi: c4bi.html
+  farmerReport1_examples_vignette: farmerReport1_examples_vignette.html
+  farmerReport2_examples_vignette: farmerReport2_examples_vignette.html
+  farmerReports1_rScript_vignette: farmerReports1_rScript_vignette.html
+  farmerReports1_rmd_vignette: farmerReports1_rmd_vignette.html
+  farmerReports2_rScript_vignette: farmerReports2_rScript_vignette.html
+  farmerReports2_rmd_vignette: farmerReports2_rmd_vignette.html
+  farmer_questions_vignette: farmer_questions_vignette.html
+  homeownerReport1_examples_vignette: homeownerReport1_examples_vignette.html
+  homeownerReport1_rScript_vignette: homeownerReport1_rScript_vignette.html
+  homeownerReport1_rmd_vignette: homeownerReport1_rmd_vignette.html
+  index: index.html
+  template_examples_vignette: template_examples_vignette.html
+  tickReport1_examples_vignette: tickReport1_examples_vignette.html
+last_built: 2021-02-01T20:23Z
 

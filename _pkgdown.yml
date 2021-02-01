@@ -15,12 +15,12 @@ reference:
 - title: "Data documentation"
 - subtitle: "Template data"
   desc: >
-    Dataframe used for the template reports
+    Data used for the template reports
   contents:
   - town
 - subtitle: "Curaçao homeowner report data"
   desc: >
-    Dataframes used to produce the Curaçao homeowner reports
+    Data to produce the Curaçao homeowner reports
   contents:
   - curacao.arthropods
   - curacao.exo.birds
@@ -33,9 +33,28 @@ reference:
   - curacao.nat.herps.sum
 - subtitle: "Southeastern Pennsylvania farmer report data"
   desc: >
-    Dataframes used to produce the first and second iterations of the Southeastern Pennsylvania farmer reports
+    Dataframes to produce the first and second iterations of the southeastern Pennsylvania farmer reports
   contents:
   - abun.rich.sepa
   - arth.div.pie.sepa
   - interact.rich.sepa
   - plastic.sepa
+- subtitle: "Southeastern Pennsylvania property manager tick report data"
+  desc: >
+    Data to produce the tick reports for property managers around southeastern Pennsylvania
+  contents:
+  - pathogens
+  - pathogens.county
+  - pathogens.table
+  - mammals.each.site
+  - mammals.photos
+  - mammals.species.richness
+  - mammals.species.richness.county
+  - ticks.caught
+  - ticks.caught.county
+  - ticks.caught.table
+  - tick.sites
+
+
+
+

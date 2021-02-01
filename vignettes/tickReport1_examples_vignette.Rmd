@@ -1,0 +1,18 @@
+---
+title: "Sample Reports - Southeastern PA Property Managers (Tick)"
+output: html_document
+---
+
+Click the links below to see six examples of southeastern Pennsylvania property manager (tick) reports.
+
+[Property Manager Report 1](https://dbturner.github.io/c4bi_reports/tick_report_1.html)
+
+[Property Manager Report 2](https://dbturner.github.io/c4bi_reports/tick_report_2.html)
+
+[Property Manager Report 3](https://dbturner.github.io/c4bi_reports/tick_report_3.html)
+
+[Property Manager Report 4](https://dbturner.github.io/c4bi_reports/tick_report_4.html)
+
+[Property Manager Report 5](https://dbturner.github.io/c4bi_reports/tick_report_5.html)
+
+[Property Manager Report 6](https://dbturner.github.io/c4bi_reports/tick_report_6.html)
