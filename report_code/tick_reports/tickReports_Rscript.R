@@ -47,7 +47,6 @@ Owners <- factor(unique(tick.sites$Ownership))
 
 
 # SECTION 3: Run a "for loop" that will cycle through the datasets to create individualized biodiversity reports.           --------------------------------------------------
-
 for (i in Owners){ ## ends at line 403
 
 
@@ -204,7 +203,7 @@ for (i in Owners){ ## ends at line 403
     } ## starts at line 194
 
   ## Again define the assign the table output to an object
-  pathogens.table <- pathogens.table %>%
+  pathogens.table.kable <- pathogens.table %>%
     filter(Ownership == i) %>%
     ungroup() %>%
     rename("Number of nymphs tested" = total_nymphs_site) %>%

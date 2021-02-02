@@ -188,7 +188,7 @@ diseases %>%
 # Diseases found
  __At each of your properties, nymphs tested positive for agents of the following tick-borne diseases:__
 ```{r detected_disease_table, echo = FALSE}
-pathogens.table ## print the table stating which pathogens were present at each site
+pathogens.table.kable ## print the table stating which pathogens were present at each site
 ```
 
 <br>
