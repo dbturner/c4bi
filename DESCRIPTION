@@ -1,21 +1,37 @@
 Package: c4bi
 Type: Package
 Title: Coding for broader impact
-Version: 0.1.0
-Authors@R: c(person("Daniel", 
+Version: 1.0.0
+Authors@R: c(person("Daniel B.", 
                   "Turner", 
                   email = "danturner137@gmail.com",
                   role = c("aut", "cre")),
-             person("Matthew",
-                    "Helmus",
-                    role = c("aut")),
-             person("Jocelyn",
+             person("Jocelyn E.",
                     "Behm",
+                    role = c("aut")),
+             person("Payton M.",
+                    "Phillips",
+                    role = c("aut")),
+             person("Victoria A.",
+                    "Ramirez",
+                    role = c("aut")),
+             person("Matthew R.",
+                    "Helmus",
                     role = c("aut")))
-Description: A collection of tools to create iteratively produced customizable documents using R and RMarkdown.
+Description: A collection of tools to create iterative individualized reports using R and RMarkdown.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    ggplot2
+    ggplot2,
+    dplyr,
+    rmarkdown,
+    reshape2,
+    tidyr,
+    kableExtra,
+    here,
+    ggsci,
+    RColorBrewer,
+    plyr,
+    knitr
 RoxygenNote: 7.1.1
