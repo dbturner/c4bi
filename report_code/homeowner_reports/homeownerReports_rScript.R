@@ -307,7 +307,7 @@ arthType_pie <- ggplot(data = compmeans1, aes(x = "", y = Proportion, fill = Ord
 report_names <- curacao.arthropods$ReportName # create vector that will determine report names and customizable text in the report
 i=1 # start loop at the first site
 
-for (i in 1:5) { # <>< edits to have all reports spit out at once
+for (i in 1:3) { # <>< edits to have all reports spit out at once
   # for the sake of demonstration, we will only produce the first five sites' reports
   # vector of garden report names
   report_name <- report_names[i]

@@ -3,10 +3,8 @@ title: "Sample Reports - Curaçao Homeowners"
 output: html_document
 ---
 
-Click the links below to see six examples of homeowner stakeholder reports.
+Click the links below to see three examples of homeowner stakeholder reports.
 
   * [Homeowner Report - Garden #1](https://dbturner.github.io/c4bi_reports/homeownerReport_example_A_Garden.html)
   * [Homeowner Report - Garden #2](https://dbturner.github.io/c4bi_reports/homeownerReport_example_B_Garden.html)
-  * [Homeowner Report - Garden #3](https://dbturner.github.io/c4bi_reports/homeownerReport_example_D_Garden.html)
   * [Homeowner Report - Forest](https://dbturner.github.io/c4bi_reports/homeownerReport_example_C_Forest.html)
-  * [Homeowner Report - Scrub](https://dbturner.github.io/c4bi_reports/homeownerReport_example_E_Scrub.html)
