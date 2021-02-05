@@ -1,9 +1,9 @@
-# RScript for Second Farm Biodiversity Reports
+# RScript for Second Round of southeatern PA Farm Reports
 # Authors: Daniel B. Turner, Jocelyn E. Behm, & Matthew R. Helmus
 # Description - This script will complete the following tasks in sections:
 #     1. Load data from farm biodiversity surveys.
 #     2. Create objects or lists of some plots to be used in the reports.
-#     3. Run a "for loop" that will cycle through the datasets to create individualized biodiversity reports.
+#     3. Run a "for loop" that will cycle through the datasets to create individualized reports.
 
 # SECTION 1: Load data from farm biodiversity surveys.                                  --------------------------------------------------
 

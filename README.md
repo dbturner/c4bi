@@ -13,6 +13,6 @@ We provide a template [R Script](https://github.com/dbturner/c4bi/blob/main/repo
 
 We present three case studies using this method to demostrate the breadth of ecological questions and stakeholder groups these reports may apply. The first case study is on a project in Curaçao where we sampled the biodiversity of home gardens (i.e., yards) across the island. The second case study is on a project in southeastern Pennsylvania where we sampled ground-dwelling invertebrates on small organic farms along the Philadelphia urbanization gradient. The third case study examines tick-borne diseases and host diversity in forest patches around southeastern Pennsylvania.
 
-All source code for this project and website can be viewed **[here](https://github.com/dbturner/c4bi)**.
+All source code for this project and website can be viewed in our GitHub repository **[here](https://github.com/dbturner/c4bi)**.
 
 We recommend users of this package first read [_our publication_](#citation) to understand the conceptual framework behind the project.

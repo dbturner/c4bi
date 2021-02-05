@@ -15,10 +15,10 @@ Science is meant to be shared! `c4bi` and its accompanying [publication](#doi) p
 <hr>
 
 ## Instructions for use
-1. Clone (download) the code repository to a local folder on your computer. The repository can be found [here](https://github.com/dbturner/c4bi). 
+1. Clone (download) the code repository to a local folder on your computer. The repository can be found [here](https://github.com/dbturner/c4bi). NOTE: This repository is large due to many photo files (~100MB). If you want to avoid cloning the entire repository and still want to employ this framework, choose the template files in the `report_code` folder and copy them to your local computer. Alternatively, you can delete files from the repository on your local device as needed after you learn the gist of workflow. The instructions below apply if you are working with the entire repository.
 2. Choose the repository folder for either the template or one of the case studies. These folders are located within the 'report_code' folder.
 2. Open the `.R` Script file for the template or case study.
-3. Edit the `.R` Script by setting the working directory to the folder for the respective script (e.g., 'template' if you are working on the 'template_rScript.R' file).
+3. Edit the `.R` Script by setting the working directory to the `c4bi` repository.
 4. Install any packages not previously installed on your device. Below are the required packages.
 
 ```

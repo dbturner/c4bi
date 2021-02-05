@@ -1,7 +1,9 @@
-# Parent script for Curaçao reports
-# Author: Daniel B Turner, Matthew R. Helmus
-# last updated by D.T: 2 December 2018
-# last updated by M.R.H: 20 December 2018
+# RScript for Curaçao homeowner reports
+# Authors: Daniel B. Turner, Jocelyn E. Behm, & Matthew R. Helmus
+# Description - This script will complete the following tasks in sections:
+#     1. Load data from farm biodiversity surveys.
+#     2. Create objects or lists of some plots to be used in the reports.
+#     3. Run a "for loop" that will cycle through the datasets to create individualized reports.
 
 rm(list=ls())
 

@@ -21,7 +21,7 @@ library(ggsci)
 
 
 # b. Load data files
-## Note that these are already tidied in the tidy_tick_data vignette,
+## Note that these are already tidied in a another script,
 ## so minimal data manipulation will have to take place here
 load(here::here("data/tick.sites.rda"))
 load(here::here("data/ticks.caught.table.rda"))
@@ -46,7 +46,7 @@ Owners <- factor(unique(tick.sites$Ownership))
 
 
 
-# SECTION 3: Run a "for loop" that will cycle through the datasets to create individualized biodiversity reports.           --------------------------------------------------
+# SECTION 3: Run a "for loop" that will cycle through the datasets to create individualized reports.           --------------------------------------------------
 for (i in Owners){ ## ends at line 403
 
 

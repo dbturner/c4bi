@@ -1,8 +1,8 @@
 # Template script for c4bi
 # Authors' names
 # Description of the script - This script will populate objects
-# into the global environment that are called from the `template_rmd.Rmd`
-# to produce individual reports for the sample dataset, `PlantGrowth` (built into R).
+# into the global environment that are called in the `template_rmd.Rmd`
+# to produce individual reports for the sample dataset, `town.rda` (provided when cloning repository).
 
 
 # SECTION 1: Load packages and data ----------
