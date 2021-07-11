@@ -5,7 +5,7 @@
 <sup>2</sup>[Department of Entomology](https://www.canr.msu.edu/ent/), Michigan State University;
 <sup>3</sup>[Ecology, Evolution, and Behavior Program](https://eeb.msu.edu/), Michigan State University
 
-[![DOI](https://zenodo.org/badge/265937470.svg)]
+![DOI](https://zenodo.org/badge/265937470.svg)
 
 <hr>
 This package provides template code and case study code and data to create stakeholder reports for ecological research projects.  Stakeholder reports are individualized summaries of a research project that are given to stakeholders (eg homeowners, farmers, land managers) to increase effective communication between researchers and the stakeholders property is sampled.  
