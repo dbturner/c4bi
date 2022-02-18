@@ -17,4 +17,4 @@ We present three case studies using this method to demostrate the breadth of eco
 
 All source code for this project and website can be viewed in our GitHub repository **[here](https://github.com/dbturner/c4bi)**.
 
-We recommend users of this package first read [_our publication_](#citation) to understand the conceptual framework behind the project.
+We recommend users of this package first read [_our publication_](https://doi.org/10.1002/fee.2469) to understand the conceptual framework behind the project.
